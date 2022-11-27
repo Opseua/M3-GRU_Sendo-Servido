@@ -44,7 +44,7 @@ const EmpListing = () => {
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="/adicionar_funcionario" className="btn btn-success">Add New (+)</Link>
+                        <Link to="/adicionar_funcionario" className="btn btn-success">Adicionar</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
@@ -65,9 +65,9 @@ const EmpListing = () => {
                                         <td>{item.name}</td>
                                         <td>{item.email}</td>
                                         <td>{item.phone}</td>
-                                        <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
-                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remove</a>
-                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Details</a>
+                                        <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
+                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</a>
+                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhe</a>
                                         </td>
                                     </tr>
                                 ))
