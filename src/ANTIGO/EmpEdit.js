@@ -7,7 +7,7 @@ const EmpEdit = () => {
     //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:8000/employee/" + empid).then((res) => {
+        fetch("https://server-1.onrender.com/funcionarios/" + empid).then((res) => {
             return res.json();
         }).then((resp) => {
             idchange(resp.id);
@@ -35,7 +35,7 @@ const EmpEdit = () => {
       const empdata={id,name,email,phone,active};
       
 
-      fetch("http://localhost:8000/employee/"+empid,{
+      fetch("https://server-1.onrender.com/funcionarios/"+empid,{
         method:"PUT",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(empdata)

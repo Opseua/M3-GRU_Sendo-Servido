@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const EmpCreate = () => {
 
     const[id,idchange]=useState("");
-    const[name,namechange]=useState("");
+    const[inf_1,namechange]=useState("");
     const[email,emailchange]=useState("");
     const[phone,phonechange]=useState("");
     const[active,activechange]=useState(true);
@@ -15,10 +15,10 @@ const EmpCreate = () => {
 
     const handlesubmit=(e)=>{
       e.preventDefault();
-      const empdata={name,email,phone,active};
+      const empdata={inf_1,email,phone,active};
       
 
-      fetch("http://localhost:8000/employee",{
+      fetch("https://server-1.onrender.com/funcionarios",{
         method:"POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(empdata)
@@ -55,9 +55,9 @@ const EmpCreate = () => {
 
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Name</label>
-                                            <input required value={name} onMouseDown={e=>valchange(true)} onChange={e=>namechange(e.target.value)} className="form-control"></input>
-                                        {name.length==0 && validation && <span className="text-danger">Enter the name</span>}
+                                            <label>Nome</label>
+                                            <input required value={inf_1} onMouseDown={e=>valchange(true)} onChange={e=>namechange(e.target.value)} className="form-control"></input>
+                                        {inf_1.length==0 && validation && <span className="text-danger">Enter the name</span>}
                                         </div>
                                     </div>
 
