@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/M3-GRU_Sendo-Servido/static/css/main.44f8b8b5.css",
+    "main.js": "/M3-GRU_Sendo-Servido/static/js/main.244de87b.js",
+    "index.html": "/M3-GRU_Sendo-Servido/index.html",
+    "main.44f8b8b5.css.map": "/M3-GRU_Sendo-Servido/static/css/main.44f8b8b5.css.map",
+    "main.244de87b.js.map": "/M3-GRU_Sendo-Servido/static/js/main.244de87b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44f8b8b5.css",
+    "static/js/main.244de87b.js"
+  ]
+}
