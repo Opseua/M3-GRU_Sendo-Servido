@@ -6,14 +6,14 @@ const EmpListing = () => {
     const navigate = useNavigate();
 
     const LoadDetail = (id) => {
-        navigate("/employee/detail/" + id);
+        navigate("/editar_funcionario/" + id);
     }
     const LoadEdit = (id) => {
-        navigate("/employee/edit/" + id);
+        navigate("/editar_funcionario/" + id);
     }
     const Removefunction = (id) => {
         if (window.confirm('Do you want to remove?')) {
-            fetch("http://localhost:8000/employee/" + id, {
+            fetch("https://server-1.onrender.com/funcionarios/" + id, {
                 method: "DELETE"
             }).then((res) => {
                 alert('Removed successfully.')
@@ -28,7 +28,7 @@ const EmpListing = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:8000/employee").then((res) => {
+        fetch("https://server-1.onrender.com/funcionarios").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -44,7 +44,7 @@ const EmpListing = () => {
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="employee/create" className="btn btn-success">Add New (+)</Link>
+                        <Link to="/adicionar_funcionario" className="btn btn-success">Add New (+)</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
