@@ -38,13 +38,14 @@ const Rota_1_Listar = () => {
     }, [])
     return (
         <div className="container">
+            <br></br>
             <div className="card">
-                <div className="card-title">
+                <div id="card-title" className="card-title">
                     <h2>Listar: ROTA_1</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="rota_1/adicionar" className="btn btn-success">Adicionar ROTA_1 (+)</Link>
+                        <Link to="rota_1/adicionar" className="btn btn-success_add">Adicionar ROTA_1 (+)</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">

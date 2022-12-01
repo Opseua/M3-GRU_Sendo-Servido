@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Rota_1_Adicionar = () => {
+const Rota1Adicionar = () => {
 
     const [id, idchange] = useState("");
     const [name, namechange] = useState("");
@@ -37,7 +37,7 @@ const Rota_1_Adicionar = () => {
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
                     <form className="container" onSubmit={handlesubmit}>
-
+                    <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
                                 <h2>Adicionar ROTA_1</h2>
@@ -104,4 +104,4 @@ const Rota_1_Adicionar = () => {
     );
 }
 
-export default Rota_1_Adicionar;
+export default Rota1Adicionar;

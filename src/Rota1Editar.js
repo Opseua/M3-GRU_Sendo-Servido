@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Rota_1_Editar = () => {
-    const { rota_1_id } = useParams();
+const Rota1Editar = () => {
+    const { Rota1id } = useParams();
 
     //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("https://server-1.onrender.com/rota_1/" + rota_1_id).then((res) => {
+        fetch("https://server-1.onrender.com/rota_1/" + Rota1id).then((res) => {
             return res.json();
         }).then((resp) => {
             idchange(resp.id);
@@ -35,7 +35,7 @@ const Rota_1_Editar = () => {
         const empdata = { id, name, email, phone, active };
 
 
-        fetch("https://server-1.onrender.com/rota_1/" + rota_1_id, {
+        fetch("https://server-1.onrender.com/rota_1/" + Rota1id, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
@@ -52,8 +52,8 @@ const Rota_1_Editar = () => {
 
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
+                <br></br>
                     <form className="container" onSubmit={handlesubmit}>
-
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
                                 <h2>Employee Edit</h2>
@@ -120,4 +120,4 @@ const Rota_1_Editar = () => {
     );
 }
 
-export default Rota_1_Editar;
+export default Rota1Editar;
