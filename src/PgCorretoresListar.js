@@ -41,20 +41,22 @@ const PgInquilinoListar = () => {
             <br></br>
             <div className="card">
                 <div id="card-title" className="card-title">
-                    <h2>Listar: ROTA_1</h2>
+                    <h2>Listar Corretores</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="rota_1/adicionar" className="btn btn-success_add">Adicionar ROTA_1 (+)</Link>
+                        <Link to="Corretores/adicionar" className="btn btn-success_add">Adicionar Corretor (+)</Link>
+                        &nbsp;
+                        <Link to="FormasDePagamento/listar" className="btn btn-success_add">Formas de Pagamento</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
                             <tr>
                                 <td>ID</td>
-                                <td>atributo_1</td>
-                                <td>atributo_2</td>
-                                <td>atributo_3</td>
-                                <td>Opções</td>
+                                <td>Nome</td>
+                                <td>CPF</td>
+                                <td>Idade</td>
+                                <td>Salário</td>
                             </tr>
                         </thead>
                         <tbody>

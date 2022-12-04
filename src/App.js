@@ -1,5 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+// Páginas: Corretores //
+import PgCorretoresAdicionar from './PgCorretoresAdicionar';
+import PgCorretoresDetalhar from './PgCorretoresDetalhar';
+import PgCorretoresEditar from './PgCorretoresEditar';
+import PgCorretoresListar from './PgCorretoresListar';
+
 // Páginas: ImovelResidencial //
 import PgImovelResidencialAdicionar from './PgImovelResidencialAdicionar';
 import PgImovelResidencialDetalhar from './PgImovelResidencialDetalhar';
@@ -24,21 +30,22 @@ import PgFormasDePagamentoDetalhar from './PgFormasDePagamentoDetalhar';
 import PgFormasDePagamentoEditar from './PgFormasDePagamentoEditar';
 import PgFormasDePagamentoListar from './PgFormasDePagamentoListar';
 
-// Páginas: Corretores //
-import PgCorretoresAdicionar from './PgCorretoresAdicionar';
-import PgCorretoresDetalhar from './PgCorretoresDetalhar';
-import PgCorretoresEditar from './PgCorretoresEditar';
-import PgCorretoresListar from './PgCorretoresListar';
+
 
 
 function App() {
   return (
     <div id="App" className="App">
-      <h1 id="Titulo" className="Titulo">IMOBILIARIA | Nome aqui</h1>
+      <h1 id="Titulo" className="Titulo">DREAMS IMOBILIÁRIA</h1>
       <BrowserRouter>
         <Routes>
         
-          <Route path='/' element={<PgImovelResidencialListar />}></Route>
+          <Route path='/' element={<PgCorretoresListar />}></Route>
+          <Route path='/Corretores/adicionar' element={<PgCorretoresAdicionar />}></Route>
+          <Route path='/Corretores/detalhar/:id' element={<PgCorretoresDetalhar />}></Route>
+          <Route path='/Corretores/editar/:id' element={<PgCorretoresEditar />}></Route>
+
+          <Route path='/ImovelResidencial/listar' element={<PgImovelResidencialListar />}></Route>
           <Route path='/ImovelResidencial/adicionar' element={<PgImovelResidencialAdicionar />}></Route>
           <Route path='/ImovelResidencial/detalhar/:id' element={<PgImovelResidencialDetalhar />}></Route>
           <Route path='/ImovelResidencial/editar/:id' element={<PgImovelResidencialEditar />}></Route>

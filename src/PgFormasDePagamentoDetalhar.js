@@ -27,7 +27,7 @@ const PgFormasDePagamentoDetalhar = () => {
                <br></br>
             <div className="card_row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                    <h2>Detalhe ROTA_1</h2>
+                    <h2>Detalhe Forma de Pagamento</h2>
                 </div>
                 
                 <div className="card-body"></div>

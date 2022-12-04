@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const PgInquilinoAdicionar = () => {
+const PgCorretoresAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -19,7 +19,7 @@ const PgInquilinoAdicionar = () => {
         const empdata = { nome, cpf, idade, salario, active };
 
 
-        fetch("https://server-1.onrender.com/rota_1/", {
+        fetch("https://server-1.onrender.com/corretores/adicionar", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
@@ -41,7 +41,7 @@ const PgInquilinoAdicionar = () => {
                     <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar ROTA_1</h2>
+                                <h2>Adicionar Corretor</h2>
                             </div>
                             <div className="card-body">
 
@@ -105,4 +105,4 @@ const PgInquilinoAdicionar = () => {
     );
 }
 
-export default PgInquilinoAdicionar;
+export default PgCorretoresAdicionar;

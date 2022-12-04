@@ -40,7 +40,7 @@ const PgFormasDePagamentoAdicionar = () => {
                     <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar ROTA_1</h2>
+                                <h2>Adicionar Forma de Pagamento</h2>
                             </div>
                             <div className="card-body">
 

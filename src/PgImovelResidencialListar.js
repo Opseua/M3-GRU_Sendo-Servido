@@ -41,7 +41,7 @@ const PgImovelResidencialListar = () => {
             <br></br>
             <div className="card">
                 <div id="card-title" className="card-title">
-                    <h2>Listar: ROTA_1</h2>
+                    <h2>Listar Imóveis Residenciais</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">

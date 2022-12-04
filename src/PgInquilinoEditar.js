@@ -56,7 +56,7 @@ const PgInquilinoEditar = () => {
                     <form className="container" onSubmit={handlesubmit}>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Employee Edit</h2>
+                                <h2>Editar Inquilino</h2>
                             </div>
                             <div className="card-body">
 

@@ -40,7 +40,7 @@ const PgInquilinoAdicionar = () => {
                     <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar ROTA_1</h2>
+                                <h2>Adicionar Inquilino</h2>
                             </div>
                             <div className="card-body">
 

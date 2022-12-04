@@ -56,7 +56,7 @@ const PgFormasDePagamentoEditar = () => {
                     <form className="container" onSubmit={handlesubmit}>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Employee Edit</h2>
+                                <h2>Editar Forma de Pagamento</h2>
                             </div>
                             <div className="card-body">
 
