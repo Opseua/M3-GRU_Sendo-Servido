@@ -7,10 +7,10 @@ import PgImovelResidencialEditar from './PgImovelResidencialEditar';
 import PgImovelResidencialListar from './PgImovelResidencialListar';
 
 // Páginas: ImovelComercial //
-import PgImovelResidencialAdicionar from './PgImovelResidencialAdicionar';
-import PgImovelResidencialDetalhar from './PgImovelResidencialDetalhar';
-import PgImovelResidencialEditar from './PgImovelResidencialEditar';
-import PgImovelResidencialListar from './PgImovelResidencialListar';
+import PgImovelComercialAdicionar from './PgImovelComercialAdicionar';
+import PgImovelComercialDetalhar from './PgImovelComercialDetalhar';
+import PgImovelComercialEditar from './PgImovelComercialEditar';
+import PgImovelComercialListar from './PgImovelComercialListar';
 
 // Páginas: Inquilino //
 import PgInquilinoAdicionar from './PgInquilinoAdicionar';
@@ -25,10 +25,10 @@ import PgFormasDePagamentoEditar from './PgFormasDePagamentoEditar';
 import PgFormasDePagamentoListar from './PgFormasDePagamentoListar';
 
 // Páginas: Corretores //
-import Rota1Adicionar from './Rota1Adicionar';
-import Rota1Detalhar from './Rota1Detalhar';
-import Rota1Editar from './Rota1Editar';
-import Rota1Listar from './Rota1Listar';
+import PgCorretoresAdicionar from './PgCorretoresAdicionar';
+import PgCorretoresDetalhar from './PgCorretoresDetalhar';
+import PgCorretoresEditar from './PgCorretoresEditar';
+import PgCorretoresListar from './PgCorretoresListar';
 
 
 function App() {
@@ -37,11 +37,19 @@ function App() {
       <h1 id="Titulo" className="Titulo">IMOBILIARIA | Nome aqui</h1>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Rota1Listar />}></Route>
-          <Route path='/rota_1/adicionar' element={<Rota1Adicionar />}></Route>
+        
+          <Route path='/' element={<PgImovelResidencialListar />}></Route>
+          <Route path='/ImovelResidencial/adicionar' element={<PgImovelResidencialAdicionar />}></Route>
+          <Route path='/ImovelResidencial/detalhar/:id' element={<PgImovelResidencialDetalhar />}></Route>
+          <Route path='/ImovelResidencial/editar/:id' element={<PgImovelResidencialEditar />}></Route>
 
-          <Route path='/rota_1/detalhar/:Rota1id' element={<Rota1Detalhar />}></Route>
-          <Route path='/rota_1/editar/:Rota1id' element={<Rota1Editar />}></Route>
+          <Route path='/PgImovelComercial/listar' element={<PgImovelComercialListar />}></Route>
+          <Route path='/ImovelComercial/adicionar' element={<PgImovelComercialAdicionar />}></Route>
+          <Route path='/ImovelComercial/detalhar/:id' element={<PgImovelComercialDetalhar />}></Route>
+          <Route path='/PgImovelComercial/editar/:id' element={<PgImovelComercialEditar />}></Route>
+
+
+
         </Routes>
       </BrowserRouter>
     </div>
