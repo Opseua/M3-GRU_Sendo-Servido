@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const PgCorretoresAdicionar = () => {
+const Pgcorretoradicionar = () => {
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
     const [cpf, cpfchange] = useState("");
     const [idade, idadechange] = useState("");
     const [salario, salariochange] = useState("");
-    const [active, activechange] = useState(true);
     const [validation, valchange] = useState(false);
 
 
@@ -16,15 +15,15 @@ const PgCorretoresAdicionar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { nome, cpf, idade, salario, active };
+        const empdata = { nome, cpf, idade, salario };
 
 
-        fetch("https://server-1.onrender.com/corretores/adicionar", {
+        fetch("https://server-2.onrender.com/corretores", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Saved successfully.')
+            alert('Corretor adicionado.')
             navigate('/');
         }).catch((err) => {
             console.log(err.message)
@@ -38,7 +37,7 @@ const PgCorretoresAdicionar = () => {
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
                     <form className="container" onSubmit={handlesubmit}>
-                    <br></br>
+                        <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
                                 <h2>Adicionar Corretor</h2>
@@ -47,6 +46,7 @@ const PgCorretoresAdicionar = () => {
 
                                 <div className="row">
 
+                                    {/* Formulário opção: ID */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>ID</label>
@@ -54,37 +54,45 @@ const PgCorretoresAdicionar = () => {
                                         </div>
                                     </div>
 
+                                    {/* Formulário opção: NOME */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>atributo_1</label>
-                                            <input required value={nome} onMouseDown={e => valchange(true)} onChange={e => namechange(e.target.value)} className="form-control"></input>
-                                            {name.length == 0 && validation && <span className="text-danger">Enter the name</span>}
+                                            <label>Nome</label>
+                                            <input required value={nome} onMouseDown={e => valchange(true)} onChange={e => nomechange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
+                                    {/* Formulário opção: CPF */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>atributo_2</label>
-                                            <input value={email} onChange={e => emailchange(e.target.value)} className="form-control"></input>
+                                            <label>CPF</label>
+                                            <input type="number" required value={cpf} onMouseDown={e => valchange(true)} onChange={e => cpfchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
+                                    {/* Formulário opção: IDADE */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>atributo_3</label>
-                                            <input value={phone} onChange={e => phonechange(e.target.value)} className="form-control"></input>
+                                            <label>Idade</label>
+                                            <input type="number" required value={idade} onMouseDown={e => valchange(true)} onChange={e => idadechange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-12">
-                                        <div className="form-check">
-                                            <input checked={active} onChange={e => activechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
-                                            <label className="form-check-label">true/false ROTA_1</label>
-
-                                        </div>
-                                    </div>
+                                    {/* Formulário opção: SALÁRIO */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
+                                            <label>Salário</label>
+                                            <input type="number" required value={salario} onMouseDown={e => valchange(true)} onChange={e => salariochange(e.target.value)} className="form-control"></input>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    {/* Formulário botão: SALVAR e VOLTAR */}
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <br></br>
                                             <button className="btn btn-success" type="submit">Salvar</button>
                                             &nbsp;
                                             <Link to="/" className="btn btn-danger">Voltar</Link>
@@ -105,4 +113,4 @@ const PgCorretoresAdicionar = () => {
     );
 }
 
-export default PgCorretoresAdicionar;
+export default Pgcorretoradicionar;

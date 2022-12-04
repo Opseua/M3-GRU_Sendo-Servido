@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const PgInquilinoListar = () => {
+const Pgcorretoreslistar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
@@ -87,4 +87,4 @@ const PgInquilinoListar = () => {
     );
 }
 
-export default PgInquilinoListar;
+export default Pgcorretoreslistar;

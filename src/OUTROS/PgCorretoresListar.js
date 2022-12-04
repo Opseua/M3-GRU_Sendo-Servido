@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const EmpListing = () => {
+const PgInquilinoListar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
     const LoadDetail = (id) => {
-        navigate("/editar_funcionario/" + id);
+        navigate("/rota_1/detalhar/" + id);
     }
     const LoadEdit = (id) => {
-        navigate("/editar_funcionario/" + id);
+        navigate("/rota_1/editar/" + id);
     }
     const Removefunction = (id) => {
-        if (window.confirm('Do you want to remove?')) {
-            fetch("https://server-1.onrender.com/funcionarios/" + id, {
+        if (window.confirm('Tem certeza que deseja deletar?')) {
+            fetch("https://server-1.onrender.com/rota_1/" + id, {
                 method: "DELETE"
             }).then((res) => {
-                alert('Removed successfully.')
+                alert('Removido com sucesso.')
                 window.location.reload();
             }).catch((err) => {
                 console.log(err.message)
@@ -28,7 +28,7 @@ const EmpListing = () => {
 
 
     useEffect(() => {
-        fetch("https://server-1.onrender.com/funcionarios").then((res) => {
+        fetch("https://server-1.onrender.com/rota_1/").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -38,22 +38,25 @@ const EmpListing = () => {
     }, [])
     return (
         <div className="container">
+            <br></br>
             <div className="card">
-                <div className="card-title">
-                    <h2>Employee Listing</h2>
+                <div id="card-title" className="card-title">
+                    <h2>Listar Corretores</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="/adicionar_funcionario" className="btn btn-success">Adicionar</Link>
+                        <Link to="Corretores/adicionar" className="btn btn-success_add">Adicionar Corretor (+)</Link>
+                        &nbsp;
+                        <Link to="FormasDePagamento/listar" className="btn btn-success_add">Formas de Pagamento</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
                             <tr>
                                 <td>ID</td>
-                                <td>Name</td>
-                                <td>Email</td>
-                                <td>Phone</td>
-                                <td>Action</td>
+                                <td>Nome</td>
+                                <td>CPF</td>
+                                <td>Idade</td>
+                                <td>Salário</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,8 +69,10 @@ const EmpListing = () => {
                                         <td>{item.email}</td>
                                         <td>{item.phone}</td>
                                         <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
-                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</a>
-                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhe</a>
+                                            &nbsp;
+                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Deletar</a>
+                                            &nbsp;
+                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
                                         </td>
                                     </tr>
                                 ))
@@ -82,4 +87,4 @@ const EmpListing = () => {
     );
 }
 
-export default EmpListing;
+export default PgInquilinoListar;
