@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Rota_1_Listar = () => {
+const PgFormasDePagamentoListar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
@@ -85,4 +85,4 @@ const Rota_1_Listar = () => {
     );
 }
 
-export default Rota_1_Listar;
+export default PgFormasDePagamentoListar;

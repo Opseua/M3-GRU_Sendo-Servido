@@ -4,7 +4,7 @@ import ImagemCasa from '../src/img/logo.jpg';
 
 
 
-const Rota1Detalhar = () => {
+const PgFormasDePagamentoDetalhar = () => {
     const { Rota1id } = useParams();
 
     const [empdata, empdatachange] = useState({});
@@ -59,4 +59,4 @@ const Rota1Detalhar = () => {
     );
 }
 
-export default Rota1Detalhar;
+export default PgFormasDePagamentoDetalhar;

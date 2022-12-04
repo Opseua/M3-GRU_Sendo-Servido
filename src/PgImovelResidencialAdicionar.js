@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Rota1Editar = () => {
-    const { Rota1id } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
-
-    useEffect(() => {
-        fetch("https://server-1.onrender.com/rota_1/" + Rota1id).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            idchange(resp.id);
-            namechange(resp.name);
-            emailchange(resp.email);
-            phonechange(resp.phone);
-            activechange(resp.isactive);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+const PgImovelResidencialAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [name, namechange] = useState("");
@@ -32,31 +15,32 @@ const Rota1Editar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { id, name, email, phone, active };
+        const empdata = { name, email, phone, active };
 
 
-        fetch("https://server-1.onrender.com/rota_1/" + Rota1id, {
-            method: "PUT",
+        fetch("https://server-1.onrender.com/rota_1/", {
+            method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('ROTA_1 editado com sucesso.')
+            alert('Saved successfully.')
             navigate('/');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
+
     return (
         <div>
 
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
-                <br></br>
                     <form className="container" onSubmit={handlesubmit}>
+                    <br></br>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Employee Edit</h2>
+                                <h2>Adicionar ROTA_1</h2>
                             </div>
                             <div className="card-body">
 
@@ -120,4 +104,4 @@ const Rota1Editar = () => {
     );
 }
 
-export default Rota1Editar;
+export default PgImovelResidencialAdicionar;

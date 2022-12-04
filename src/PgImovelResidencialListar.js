@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const EmpListing = () => {
+const PgImovelResidencialListar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
     const LoadDetail = (id) => {
-        navigate("/employee/detail/" + id);
+        navigate("/rota_1/detalhar/" + id);
     }
     const LoadEdit = (id) => {
-        navigate("/employee/edit/" + id);
+        navigate("/rota_1/editar/" + id);
     }
     const Removefunction = (id) => {
-        if (window.confirm('Do you want to remove?')) {
-            fetch("http://localhost:8000/employee/" + id, {
+        if (window.confirm('Tem certeza que deseja deletar?')) {
+            fetch("https://server-1.onrender.com/rota_1/" + id, {
                 method: "DELETE"
             }).then((res) => {
-                alert('Removed successfully.')
+                alert('Removido com sucesso.')
                 window.location.reload();
             }).catch((err) => {
                 console.log(err.message)
@@ -28,7 +28,7 @@ const EmpListing = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:8000/employee").then((res) => {
+        fetch("https://server-1.onrender.com/rota_1/").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -38,22 +38,23 @@ const EmpListing = () => {
     }, [])
     return (
         <div className="container">
+            <br></br>
             <div className="card">
-                <div className="card-title">
-                    <h2>Employee Listing</h2>
+                <div id="card-title" className="card-title">
+                    <h2>Listar: ROTA_1</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
-                        <Link to="employee/create" className="btn btn-success">Add New (+)</Link>
+                        <Link to="rota_1/adicionar" className="btn btn-success_add">Adicionar ROTA_1 (+)</Link>
                     </div>
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
                             <tr>
                                 <td>ID</td>
-                                <td>Name</td>
-                                <td>Email</td>
-                                <td>Phone</td>
-                                <td>Action</td>
+                                <td>atributo_1</td>
+                                <td>atributo_2</td>
+                                <td>atributo_3</td>
+                                <td>Opções</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,9 +66,11 @@ const EmpListing = () => {
                                         <td>{item.name}</td>
                                         <td>{item.email}</td>
                                         <td>{item.phone}</td>
-                                        <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Edit</a>
-                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remove</a>
-                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Details</a>
+                                        <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
+                                            &nbsp;
+                                            <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Deletar</a>
+                                            &nbsp;
+                                            <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
                                         </td>
                                     </tr>
                                 ))
@@ -82,4 +85,4 @@ const EmpListing = () => {
     );
 }
 
-export default EmpListing;
+export default PgImovelResidencialListar;

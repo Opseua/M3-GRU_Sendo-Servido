@@ -1,13 +1,35 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import EmpListing from './EmpListing';
-import EmpCreate from './EmpCreate';
-import EmpDetail from './EmpDetail';
-import EmpEdit from './EmpEdit';
 
-import Rota1Listar from './Rota1Listar';
+// Páginas: ImovelResidencial //
+import PgImovelResidencialAdicionar from './PgImovelResidencialAdicionar';
+import PgImovelResidencialDetalhar from './PgImovelResidencialDetalhar';
+import PgImovelResidencialEditar from './PgImovelResidencialEditar';
+import PgImovelResidencialListar from './PgImovelResidencialListar';
+
+// Páginas: ImovelComercial //
+import PgImovelResidencialAdicionar from './PgImovelResidencialAdicionar';
+import PgImovelResidencialDetalhar from './PgImovelResidencialDetalhar';
+import PgImovelResidencialEditar from './PgImovelResidencialEditar';
+import PgImovelResidencialListar from './PgImovelResidencialListar';
+
+// Páginas: Inquilino //
+import PgInquilinoAdicionar from './PgInquilinoAdicionar';
+import PgInquilinoDetalhar from './PgInquilinoDetalhar';
+import PgInquilinoEditar from './PgInquilinoEditar';
+import PgInquilinoListar from './PgInquilinoListar';
+
+// Páginas: FormasDePagamento //
+import PgFormasDePagamentoAdicionar from './PgFormasDePagamentoAdicionar';
+import PgFormasDePagamentoDetalhar from './PgFormasDePagamentoDetalhar';
+import PgFormasDePagamentoEditar from './PgFormasDePagamentoEditar';
+import PgFormasDePagamentoListar from './PgFormasDePagamentoListar';
+
+// Páginas: Corretores //
 import Rota1Adicionar from './Rota1Adicionar';
 import Rota1Detalhar from './Rota1Detalhar';
 import Rota1Editar from './Rota1Editar';
+import Rota1Listar from './Rota1Listar';
+
 
 function App() {
   return (
