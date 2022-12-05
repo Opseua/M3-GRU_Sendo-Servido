@@ -21,6 +21,9 @@ import Pgimovelcomercialadicionar from './Pgimovelcomercialadicionar';
 // Páginas: Imóveis Residenciais //
 import Pgimoveisresidenciaislistar from './Pgimoveisresidenciaislistar';
 import Pgimovelresidencialdetalhar from './Pgimovelresidencialdetalhar';
+import Pgimovelresidencialeditar from './Pgimovelresidencialeditar';
+
+
 
 
 
@@ -48,6 +51,7 @@ function App() {
 
           <Route exact path='/imoveis_residenciais/listar' element={<Pgimoveisresidenciaislistar />}></Route>
           <Route exact path='/imovel_residencial/detalhar/:empid' element={<Pgimovelresidencialdetalhar />}></Route>
+          <Route exact path='/imovel_residencial/editar/:empid' element={<Pgimovelresidencialeditar />}></Route>
 
         </Routes>
       </BrowserRouter>
