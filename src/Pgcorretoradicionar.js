@@ -40,7 +40,7 @@ const Pgcorretoradicionar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar corretor(a)</h2>
+                                <h2>Adicionar corretor</h2>
                             </div>
                             <div className="card-body">
 

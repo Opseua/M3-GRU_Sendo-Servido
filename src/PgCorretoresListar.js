@@ -42,7 +42,7 @@ const Pgcorretoreslistar = () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2>Listar corretores(as)</h2>
+                    <h2>Listar corretores</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
