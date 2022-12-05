@@ -27,9 +27,13 @@ import Pgimovelresidencialadicionar from './Pgimovelresidencialadicionar';
 // Páginas: Imóveis Residenciais //
 import Pginquilinoslistar from './Pginquilinoslistar';
 import Pginquilinodetalhar from './Pginquilinodetalhar';
+import Pginquilinoeditar from './Pginquilinoeditar';
+import Pginquilinoadicionar from './Pginquilinoadicionar';
 
 
 
+
+// ROTAS //
 function App() {
   return (
     <div id="App" className="App">
@@ -59,6 +63,8 @@ function App() {
 
           <Route exact path='/inquilinos/listar' element={<Pginquilinoslistar />}></Route>
           <Route exact path='/inquilino/detalhar/:empid' element={<Pginquilinodetalhar />}></Route>
+          <Route exact path='/inquilino/editar/:empid' element={<Pginquilinoeditar />}></Route>
+          <Route exact path='/inquilino/adicionar' element={<Pginquilinoadicionar />}></Route>
 
         </Routes>
       </BrowserRouter>

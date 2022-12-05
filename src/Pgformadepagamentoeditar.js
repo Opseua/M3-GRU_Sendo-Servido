@@ -62,7 +62,7 @@ const Pgformadepagamentoeditar = () => {
 
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>ID</label>
+                                            <label><b>ID</b></label>
                                             <input value={id} disabled="disabled" className="form-control"></input>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ const Pgformadepagamentoeditar = () => {
                                     {/* OPCAO: Metodo */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Método</label>
+                                            <label><b>Método</b></label>
                                             <input required value={metodo} onMouseDown={e => valchange(true)} onChange={e => metodochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ const Pgformadepagamentoeditar = () => {
                                     {/* OPCAO: Conta */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Conta</label>
+                                            <label><b>Conta</b></label>
                                             <input required value={conta} onMouseDown={e => valchange(true)} onChange={e => contachange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -86,7 +86,7 @@ const Pgformadepagamentoeditar = () => {
                                     {/* OPCAO: Limite de depósito */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Limite de depósito</label>
+                                            <label><b>Limite de depósito</b></label>
                                             <input required value={limite_de_deposito} onMouseDown={e => valchange(true)} onChange={e => limite_de_depositochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>

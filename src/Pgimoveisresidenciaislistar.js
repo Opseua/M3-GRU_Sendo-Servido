@@ -75,15 +75,15 @@ const Pgimoveisresidenciaislistar = () => {
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
                             <tr>
-                                <td>ID</td>
+                                <td><b>ID</b></td>
 
                                 {/* Nome das colunas */}
-                                <td>Tipo de imóvel</td>
-                                <td>Área</td>
-                                <td>Quartos</td>
+                                <td><b>Tipo de imóvel</b></td>
+                                <td><b>Área</b></td>
+                                <td><b>Quartos</b></td>
 
                                 {/* Coluna padrao */}
-                                <td>Opções</td>
+                                <td><b>Opções</b></td>
                             </tr>
                         </thead>
                         <tbody>

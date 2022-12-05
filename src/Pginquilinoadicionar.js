@@ -1,30 +1,16 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Pgcorretoreditar = () => {
-    const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
-
-    useEffect(() => {
-        fetch("https://server-2.onrender.com/corretor/editar/" + empid).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            idchange(resp.id);
-            nomechange(resp.nome);
-            cpfchange(resp.cpf);
-            idadechange(resp.idade);
-            salariochange(resp.salario);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+const Pginquilinoadicionar = () => {
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
+    const [salario, salariochange] = useState("");
     const [cpf, cpfchange] = useState("");
     const [idade, idadechange] = useState("");
-    const [salario, salariochange] = useState("");
+    const [profissao, profissaochange] = useState("");
+    const [contato, contatochange] = useState("");
+    const [tempo_como_inquilino, tempo_como_inquilinochange] = useState("");
     const [validation, valchange] = useState(false);
 
 
@@ -32,21 +18,22 @@ const Pgcorretoreditar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { id, nome, cpf, idade, salario };
+        const empdata = { nome, cpf, idade, salario };
 
 
-        fetch("https://server-2.onrender.com/corretor/editar/" + empid, {
-            method: "PUT",
+        fetch("https://server-2.onrender.com/inquilino/adicionar", {
+            method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Editado com sucesso.')
-            navigate('/corretores/listar/');
+            alert('Adicionado com sucesso.')
+            navigate('/inquilinos/listar');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
+
     return (
         <div>
 
@@ -56,7 +43,7 @@ const Pgcorretoreditar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Editar corretor(a)</h2>
+                                <h2>Adicionar inquilino</h2>
                             </div>
                             <div className="card-body">
 
@@ -77,6 +64,14 @@ const Pgcorretoreditar = () => {
                                         </div>
                                     </div>
 
+                                    {/* OPCAO: Salário */}
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label><b>Salário</b></label>
+                                            <input required value={salario} onMouseDown={e => valchange(true)} onChange={e => salariochange(e.target.value)} className="form-control"></input>
+                                        </div>
+                                    </div>
+
                                     {/* OPCAO: CPF */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
@@ -93,17 +88,29 @@ const Pgcorretoreditar = () => {
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Salário */}
+                                    {/* OPCAO: Profissão */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label><b>Salário</b></label>
-                                            <input required value={salario} onMouseDown={e => valchange(true)} onChange={e => salariochange(e.target.value)} className="form-control"></input>
+                                            <label><b>Profissão</b></label>
+                                            <input required value={profissao} onMouseDown={e => valchange(true)} onChange={e => profissaochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
+                                    {/* OPCAO: Contato */}
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label><b>Contato</b></label>
+                                            <input required value={contato} onMouseDown={e => valchange(true)} onChange={e => contatochange(e.target.value)} className="form-control"></input>
+                                        </div>
+                                    </div>
 
-
-
+                                    {/* OPCAO: Tempo como inquilino */}
+                                    <div className="col-lg-12">
+                                        <div className="form-group">
+                                            <label><b>Tempo como inquilino</b></label>
+                                            <input required value={tempo_como_inquilino} onMouseDown={e => valchange(true)} onChange={e => tempo_como_inquilinochange(e.target.value)} className="form-control"></input>
+                                        </div>
+                                    </div>
 
 
 
@@ -115,7 +122,7 @@ const Pgcorretoreditar = () => {
                                             <br></br>
                                             <button className="btn btn-success" type="submit">Salvar</button>
                                             &nbsp;
-                                            <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
+                                            <Link to="/inquilinos/listar" className="btn btn-danger">Voltar</Link>
                                         </div>
                                     </div>
 
@@ -133,4 +140,4 @@ const Pgcorretoreditar = () => {
     );
 }
 
-export default Pgcorretoreditar;
+export default Pginquilinoadicionar;

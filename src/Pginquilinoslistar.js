@@ -75,15 +75,15 @@ const Pginquilinoslistar = () => {
                     <table className="table table-bordered">
                         <thead className="bg-dark text-white">
                             <tr>
-                                <td>ID</td>
+                                <td><b>ID</b></td>
 
                                 {/* Nome das colunas */}
-                                <td>Nome</td>
-                                <td>Salário</td>
-                                <td>CPF</td>
+                                <td><b>Nome</b></td>
+                                <td><b>Salário</b></td>
+                                <td><b>CPF</b></td>
 
                                 {/* Coluna padrao */}
-                                <td>Opções</td>
+                                <td><b>Opções</b></td>
                             </tr>
                         </thead>
                         <tbody>

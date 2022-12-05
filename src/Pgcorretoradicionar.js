@@ -48,7 +48,7 @@ const Pgcorretoradicionar = () => {
 
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>ID</label>
+                                            <label><b>ID</b></label>
                                             <input value={id} disabled="disabled" className="form-control"></input>
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@ const Pgcorretoradicionar = () => {
                                     {/* OPCAO: Nome */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Nome</label>
+                                            <label><b>Nome</b></label>
                                             <input required value={nome} onMouseDown={e => valchange(true)} onChange={e => nomechange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@ const Pgcorretoradicionar = () => {
                                     {/* OPCAO: CPF */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>CPF</label>
+                                            <label><b>CPF</b></label>
                                             <input required value={cpf} onMouseDown={e => valchange(true)} onChange={e => cpfchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@ const Pgcorretoradicionar = () => {
                                     {/* OPCAO: Idade */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Idade</label>
+                                            <label><b>Idade</b></label>
                                             <input required value={idade} onMouseDown={e => valchange(true)} onChange={e => idadechange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@ const Pgcorretoradicionar = () => {
                                     {/* OPCAO: Salário */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Salário</label>
+                                            <label><b>Salário</b></label>
                                             <input required value={salario} onMouseDown={e => valchange(true)} onChange={e => salariochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>

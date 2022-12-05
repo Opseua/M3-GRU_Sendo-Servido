@@ -74,7 +74,7 @@ const Pgimovelresidencialeditar = () => {
 
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>ID</label>
+                                            <label><b>ID</b></label>
                                             <input value={id} disabled="disabled" className="form-control"></input>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Tipo de imóvel */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de imóvel</label>
+                                            <label><b>Tipo de imóvel</b></label>
                                             <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Área */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Área</label>
+                                            <label><b>Área</b></label>
                                             <input required value={area} onMouseDown={e => valchange(true)} onChange={e => areachange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Quartos */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Quartos</label>
+                                            <label><b>Quartos</b></label>
                                             <input required value={quartos} onMouseDown={e => valchange(true)} onChange={e => quartoschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -106,7 +106,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Banheiros */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Banheiros</label>
+                                            <label><b>Banheiros</b></label>
                                             <input required value={banheiros} onMouseDown={e => valchange(true)} onChange={e => banheiroschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -114,7 +114,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Garagens */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Garagens</label>
+                                            <label><b>Garagens</b></label>
                                             <input required value={garagens} onMouseDown={e => valchange(true)} onChange={e => garagenschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Endereço */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Endereço</label>
+                                            <label><b>Endereco</b></label>
                                             <input required value={endereco} onMouseDown={e => valchange(true)} onChange={e => enderecochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -130,16 +130,15 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Tipo de contrato */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de contrato</label>
+                                            <label><b>Tipo de contrato</b></label>
                                             <input required value={tipo_de_contrato} onMouseDown={e => valchange(true)} onChange={e => tipo_de_contratochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-
                                     {/* OPCAO: Tipo de imóvel */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de imóvel</label>
+                                            <label><b>Tipo de imóvel</b></label>
                                             <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -147,7 +146,7 @@ const Pgimovelresidencialeditar = () => {
                                     {/* OPCAO: Valor do condomínio */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Valor do condomínio</label>
+                                            <label><b>Valor do condomínio</b></label>
                                             <input required value={valor_do_condominio} onMouseDown={e => valchange(true)} onChange={e => valor_do_condominiochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>

@@ -72,7 +72,7 @@ const Pgimovelcomercialeditar = () => {
 
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>ID</label>
+                                            <label><b>ID</b></label>
                                             <input value={id} disabled="disabled" className="form-control"></input>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@ const Pgimovelcomercialeditar = () => {
                                     {/* OPCAO: Tipo de imóvel */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de imóvel</label>
+                                            <label><b>Tipo de imóvel</b></label>
                                             <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@ const Pgimovelcomercialeditar = () => {
                                     {/* OPCAO: Endereco */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Endereço</label>
+                                            <label><b>Endereço</b></label>
                                             <input required value={endereco} onMouseDown={e => valchange(true)} onChange={e => enderecochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@ const Pgimovelcomercialeditar = () => {
                                     {/* OPCAO: Salas */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Salas</label>
+                                            <label><b>Salas</b></label>
                                             <input required value={salas} onMouseDown={e => valchange(true)} onChange={e => salaschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@ const Pgimovelcomercialeditar = () => {
                                     {/* OPCAO: Banheiros */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Banheiros</label>
+                                            <label><b>Banheiros</b></label>
                                             <input required value={banheiros} onMouseDown={e => valchange(true)} onChange={e => banheiroschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -112,7 +112,7 @@ const Pgimovelcomercialeditar = () => {
                                   {/* OPCAO: Garagens */}
                                   <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Garagens</label>
+                                            <label><b>Garagens</b></label>
                                             <input required value={garagens} onMouseDown={e => valchange(true)} onChange={e => garagenschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@ const Pgimovelcomercialeditar = () => {
                                   {/* OPCAO: Tipo de contrato */}
                                   <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de contrato</label>
+                                            <label><b>Tipo de contrato</b></label>
                                             <input required value={tipo_de_contrato} onMouseDown={e => valchange(true)} onChange={e => tipo_de_contratochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -129,7 +129,7 @@ const Pgimovelcomercialeditar = () => {
                                   {/* OPCAO: Tipo de imóvel */}
                                   <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de imóvel</label>
+                                            <label><b>Tipo de imóvel</b></label>
                                             <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@ const Pgimovelcomercialeditar = () => {
                                   {/* OPCAO: Valor do condomínio */}
                                   <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Valor do condomínio</label>
+                                            <label><b>Valor do condomínio</b></label>
                                             <input required value={valor_do_condominio} onMouseDown={e => valchange(true)} onChange={e => valor_do_condominiochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
