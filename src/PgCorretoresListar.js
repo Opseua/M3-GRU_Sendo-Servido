@@ -81,6 +81,8 @@ const Pgcorretoreslistar = () => {
                                 <td>Nome</td>
                                 <td>CPF</td>
                                 <td>Idade</td>
+
+                                {/* Coluna padrao */}
                                 <td>Opções</td>
                             </tr>
                         </thead>
