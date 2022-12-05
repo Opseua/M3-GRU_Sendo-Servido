@@ -52,23 +52,23 @@ const ImoveisResidenciaisListar = () => {
 
                         &nbsp;
                         {/* Botão para rota CORRETORES */}
-                        <Link to="/corretores/listar" className="btn btn-success_rotas">Corretores</Link>
+                        <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
 
                         &nbsp;
                         {/* Botão para rota FORMAS DE PAGAMENTO */}
-                        <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas">Formas de pagamento</Link>
+                        <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_2">Formas de pagamento</Link>
 
                         &nbsp;
                         {/* Botão para rota IMÓVEIS COMERCIAIS */}
-                        <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas">Imóveis comerciais</Link>
+                        <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
 
                         &nbsp;
                         {/* Botão para rota IMÓVEIS RESIDENCIAIS */}
-                        <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas">Imóveis residenciais</Link>
+                        <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_2">Imóveis residenciais</Link>
 
                         &nbsp;
                         {/* Botão para rota INQUILINOS */}
-                        <Link to="/inquilinos/listar" className="btn btn-success_rotas">Inquilinos</Link>
+                        <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
                         
                         <br></br><br></br>
                     </div>
