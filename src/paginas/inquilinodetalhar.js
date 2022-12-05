@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import ImagemCasa from '../src/img/logo.jpg';
 
 
-const Pgcorretordetalhar = () => {
+
+const Pginquilinodetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("https://server-2.onrender.com/corretor/detalhar/" + empid).then((res) => {
+        fetch("https://server-2.onrender.com/inquilino/detalhar/" + empid).then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -26,7 +26,7 @@ const Pgcorretordetalhar = () => {
                 
             <div className="card row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                <h2>Detalhe corretor</h2>
+                <h2>Detalhe inquilino</h2>
                 </div>
                 <div className="card-body"></div>
 
@@ -36,13 +36,16 @@ const Pgcorretordetalhar = () => {
                         <h2>Nome: <b>{empdata.nome}</b></h2>
                         <br></br>
 
+                        <h5>Salário: {empdata.salario}</h5>
                         <h5>CPF: {empdata.cpf}</h5>
                         <h5>Idade: {empdata.idade}</h5>
-                        <h5>Salário: {empdata.salario}</h5>
+                        <h5>Profissão: {empdata.profissao}</h5>
+                        <h5>Contato: {empdata.contato}</h5>
+                        <h5>Tempo como inquino: {empdata.tempo_como_inquilino}</h5>
                         <br></br>
 
                         {/* Botão VOLTAR */}
-                        <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
+                        <Link to="/inquilinos/listar" className="btn btn-danger">Voltar</Link>
                     </div>
                 }
             </div>
@@ -53,4 +56,4 @@ const Pgcorretordetalhar = () => {
     );
 }
 
-export default Pgcorretordetalhar;
+export default Pginquilinodetalhar;

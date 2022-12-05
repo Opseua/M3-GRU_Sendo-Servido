@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import ImagemCasa from '../src/img/logo.jpg';
 
 
-const Pgimovelresidencialdetalhar = () => {
+
+const Pgimovelcomercialdetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("https://server-2.onrender.com/imovel_residencial/detalhar/" + empid).then((res) => {
+        fetch("https://server-2.onrender.com/imovel_comercial/detalhar/" + empid).then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -26,7 +26,7 @@ const Pgimovelresidencialdetalhar = () => {
                 
             <div className="card row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                <h2>Detalhe imóvel residencial</h2>
+                <h2>Detalhe imóvel comercial</h2>
                 </div>
                 <div className="card-body"></div>
 
@@ -36,18 +36,17 @@ const Pgimovelresidencialdetalhar = () => {
                         <h2>Tipo de imóvel: <b>{empdata.tipo_de_imovel}</b></h2>
                         <br></br>
 
-                        <h5>Área: {empdata.area}</h5>
-                        <h5>Quartos: {empdata.quartos}</h5>
+                        <h5>Endereço: {empdata.endereco}</h5>
+                        <h5>Salas: {empdata.salas}</h5>
                         <h5>Banheiros: {empdata.banheiros}</h5>
                         <h5>Garagens: {empdata.garagens}</h5>
-                        <h5>Endereço: {empdata.endereco}</h5>
                         <h5>Tipo de contrato: {empdata.tipo_de_contrato}</h5>
                         <h5>Valor do imóvel: {empdata.valor_do_imovel}</h5>
                         <h5>Valor do condomínio: {empdata.valor_do_condominio}</h5>
                         <br></br>
 
                         {/* Botão VOLTAR */}
-                        <Link to="/imoveis_residenciais/listar" className="btn btn-danger">Voltar</Link>
+                        <Link to="/imoveis_comerciais/listar" className="btn btn-danger">Voltar</Link>
                     </div>
                 }
             </div>
@@ -58,4 +57,4 @@ const Pgimovelresidencialdetalhar = () => {
     );
 }
 
-export default Pgimovelresidencialdetalhar;
+export default Pgimovelcomercialdetalhar;
