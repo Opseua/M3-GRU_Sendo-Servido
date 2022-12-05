@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgcorretoreslistar = () => {
+const Pgformasdepagamentolistar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
     const LoadDetail = (id) => {
-        navigate("/corretor/detalhar/" + id);
+        navigate("/forma_de_pagamento/detalhar/" + id);
     }
     const LoadEdit = (id) => {
-        navigate("/corretor/editar/" + id);
+        navigate("/forma_de_pagamento/editar/" + id);
     }
 
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Do you want to remove?')) {
-            fetch("https://server-2.onrender.com/corretor/remover/" + id, {
+            fetch("https://server-2.onrender.com/forma_de_pagamento/remover/" + id, {
                 method: "DELETE"
             }).then((res) => {
                 alert('Removido com sucesso.')
@@ -30,7 +30,7 @@ const Pgcorretoreslistar = () => {
 
     {/* Função LISTAR INFORMAÇÃO */ }
     useEffect(() => {
-        fetch("https://server-2.onrender.com/corretores/listar").then((res) => {
+        fetch("https://server-2.onrender.com/formas_de_pagamento/listar").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -42,18 +42,18 @@ const Pgcorretoreslistar = () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2>Listar Corretores(as)</h2>
+                    <h2>Listar Formas de pagamento</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
 
                         {/* Botão ADICIONAR (+) */}
-                        <Link to="/corretor/adicionar" className="btn btn-success">Adicionar (+)</Link>
+                        <Link to="/forma_de_pagamento/adicionar" className="btn btn-success">Adicionar (+)</Link>
 
                         &nbsp;
-                        {/* Botão para rota FORMAS DE PAGAMENTO */}
-                        <Link to="/formas_de_pagamento/listar" className="btn btn-success">Formas de pagamento</Link>
-
+                        {/* Botão para rota CORRETORES */}
+                        <Link to="/corretores/listar" className="btn btn-success">Corretores</Link>
+                        
                         <br></br><br></br>
                     </div>
                     <table className="table table-bordered">
@@ -62,9 +62,9 @@ const Pgcorretoreslistar = () => {
                                 <td>ID</td>
 
                                 {/* Nome das colunas */}
-                                <td>Nome</td>
-                                <td>CPF</td>
-                                <td>Idade</td>
+                                <td>Método</td>
+                                <td>Conta</td>
+                                <td>Limite de depósito</td>
                                 <td>Opções</td>
                             </tr>
                         </thead>
@@ -76,9 +76,9 @@ const Pgcorretoreslistar = () => {
 
                                         {/* Informação das colunas */}
                                         <td>{item.id}</td>
-                                        <td>{item.nome}</td>
-                                        <td>{item.cpf}</td>
-                                        <td>{item.idade}</td>
+                                        <td>{item.metodo}</td>
+                                        <td>{item.conta}</td>
+                                        <td>{item.limite_de_deposito}</td>
 
                                         {/* Botão EDITAR, REMOVER e DETALHAR */}
                                         <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
@@ -100,4 +100,4 @@ const Pgcorretoreslistar = () => {
     );
 }
 
-export default Pgcorretoreslistar;
+export default Pgformasdepagamentolistar;

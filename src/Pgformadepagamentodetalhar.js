@@ -3,13 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import ImagemCasa from '../src/img/logo.jpg';
 
 
-const Pgcorretordetalhar = () => {
+const Pgformadepagamentodetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
-        fetch("https://server-2.onrender.com/corretor/detalhar/" + empid).then((res) => {
+        fetch("https://server-2.onrender.com/forma_de_pagamento/detalhar/" + empid).then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -26,23 +26,22 @@ const Pgcorretordetalhar = () => {
                 
             <div className="card row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                <h2>Detalhe Corretor(a)</h2>
+                <h2>Detalhe Forma de pagamento</h2>
                 </div>
                 <div className="card-body"></div>
 
                 {empdata &&
                     <div>
                         <h5>ID: {empdata.id}</h5>
-                        <h2>Nome: <b>{empdata.nome}</b></h2>
+                        <h2>Método: <b>{empdata.metodo}</b></h2>
                         <br></br>
 
-                        <h5>CPF: {empdata.cpf}</h5>
-                        <h5>Idade: {empdata.idade}</h5>
-                        <h5>Salário: {empdata.salario}</h5>
+                        <h5>Conta: {empdata.conta}</h5>
+                        <h5>Limite de depósito: {empdata.limite_de_deposito}</h5>
                         <br></br>
 
                         {/* Botão VOLTAR */}
-                        <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
+                        <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
                     </div>
                 }
             </div>
@@ -53,4 +52,4 @@ const Pgcorretordetalhar = () => {
     );
 }
 
-export default Pgcorretordetalhar;
+export default Pgformadepagamentodetalhar;

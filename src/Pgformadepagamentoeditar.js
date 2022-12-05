@@ -1,13 +1,28 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pgcorretoradicionar = () => {
+const Pgformadepagamentoeditar = () => {
+    const { empid } = useParams();
+
+    //const [empdata, empdatachange] = useState({});
+
+    useEffect(() => {
+        fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid).then((res) => {
+            return res.json();
+        }).then((resp) => {
+            idchange(resp.id);
+            metodochange(resp.metodo);
+            contachange(resp.conta);
+            limite_de_depositochange(resp.limite_de_deposito);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, []);
 
     const [id, idchange] = useState("");
-    const [nome, nomechange] = useState("");
-    const [cpf, cpfchange] = useState("");
-    const [idade, idadechange] = useState("");
-    const [salario, salariochange] = useState("");
+    const [metodo, metodochange] = useState("");
+    const [conta, contachange] = useState("");
+    const [limite_de_deposito, limite_de_depositochange] = useState("");
     const [validation, valchange] = useState(false);
 
 
@@ -15,22 +30,21 @@ const Pgcorretoradicionar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { nome, cpf, idade, salario };
+        const empdata = { id, metodo, conta, limite_de_deposito };
 
 
-        fetch("https://server-2.onrender.com/corretor/adicionar", {
-            method: "POST",
+        fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid, {
+            method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Adicionado com sucesso.')
-            navigate('/');
+            alert('Editado com sucesso.')
+            navigate('/formas_de_pagamento/listar/');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
-
     return (
         <div>
 
@@ -40,7 +54,7 @@ const Pgcorretoradicionar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar corretor(a)</h2>
+                                <h2>Editar Corretor(a)</h2>
                             </div>
                             <div className="card-body">
 
@@ -53,37 +67,32 @@ const Pgcorretoradicionar = () => {
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Nome */}
+                                    {/* OPCAO: Metodo */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Nome</label>
-                                            <input required value={nome} onMouseDown={e => valchange(true)} onChange={e => nomechange(e.target.value)} className="form-control"></input>
+                                            <label>Método</label>
+                                            <input required value={metodo} onMouseDown={e => valchange(true)} onChange={e => metodochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: CPF */}
+                                    {/* OPCAO: Conta */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>CPF</label>
-                                            <input required value={cpf} onMouseDown={e => valchange(true)} onChange={e => cpfchange(e.target.value)} className="form-control"></input>
+                                            <label>Conta</label>
+                                            <input required value={conta} onMouseDown={e => valchange(true)} onChange={e => contachange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Idade */}
+                                    {/* OPCAO: Limite de depósito */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Idade</label>
-                                            <input required value={idade} onMouseDown={e => valchange(true)} onChange={e => idadechange(e.target.value)} className="form-control"></input>
+                                            <label>Limite de depósito</label>
+                                            <input required value={limite_de_deposito} onMouseDown={e => valchange(true)} onChange={e => limite_de_depositochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Salário */}
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Salário</label>
-                                            <input required value={salario} onMouseDown={e => valchange(true)} onChange={e => salariochange(e.target.value)} className="form-control"></input>
-                                        </div>
-                                    </div>
+
+
 
 
 
@@ -96,7 +105,7 @@ const Pgcorretoradicionar = () => {
                                             <br></br>
                                             <button className="btn btn-success" type="submit">Salvar</button>
                                             &nbsp;
-                                            <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
+                                            <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
                                         </div>
                                     </div>
 
@@ -114,4 +123,4 @@ const Pgcorretoradicionar = () => {
     );
 }
 
-export default Pgcorretoradicionar;
+export default Pgformadepagamentoeditar;

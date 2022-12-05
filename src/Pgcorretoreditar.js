@@ -1,7 +1,24 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pgcorretoradicionar = () => {
+const Pgcorretoreditar = () => {
+    const { empid } = useParams();
+
+    //const [empdata, empdatachange] = useState({});
+
+    useEffect(() => {
+        fetch("https://server-2.onrender.com/corretor/editar/" + empid).then((res) => {
+            return res.json();
+        }).then((resp) => {
+            idchange(resp.id);
+            nomechange(resp.nome);
+            cpfchange(resp.cpf);
+            idadechange(resp.idade);
+            salariochange(resp.salario);
+        }).catch((err) => {
+            console.log(err.message);
+        })
+    }, []);
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -15,22 +32,21 @@ const Pgcorretoradicionar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { nome, cpf, idade, salario };
+        const empdata = { id, nome, cpf, idade, salario };
 
 
-        fetch("https://server-2.onrender.com/corretor/adicionar", {
-            method: "POST",
+        fetch("https://server-2.onrender.com/corretor/editar/" + empid, {
+            method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Adicionado com sucesso.')
-            navigate('/');
+            alert('Editado com sucesso.')
+            navigate('/corretores/listar/');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
-
     return (
         <div>
 
@@ -40,7 +56,7 @@ const Pgcorretoradicionar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Adicionar corretor(a)</h2>
+                                <h2>Editar Corretor(a)</h2>
                             </div>
                             <div className="card-body">
 
@@ -90,6 +106,9 @@ const Pgcorretoradicionar = () => {
 
 
 
+
+
+
                                     {/* Botão SALVAR e VOLTAR */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
@@ -114,4 +133,4 @@ const Pgcorretoradicionar = () => {
     );
 }
 
-export default Pgcorretoradicionar;
+export default Pgcorretoreditar;
