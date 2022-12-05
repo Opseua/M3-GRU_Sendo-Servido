@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgcorretoreslistar = () => {
+const Pgimoveiscomerciaislistar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
     const LoadDetail = (id) => {
-        navigate("/corretor/detalhar/" + id);
+        navigate("/imovel_comercial/detalhar/" + id);
     }
     const LoadEdit = (id) => {
-        navigate("/corretor/editar/" + id);
+        navigate("/imovel_comercial/editar/" + id);
     }
 
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
-            fetch("https://server-2.onrender.com/corretor/deletar/" + id, {
+            fetch("https://server-2.onrender.com/imovel_comercial/deletar/" + id, {
                 method: "DELETE"
             }).then((res) => {
                 alert('Removido com sucesso.')
@@ -30,7 +30,7 @@ const Pgcorretoreslistar = () => {
 
     {/* Função LISTAR INFORMAÇÃO */ }
     useEffect(() => {
-        fetch("https://server-2.onrender.com/corretores/listar").then((res) => {
+        fetch("https://server-2.onrender.com/imoveis_comerciais/listar").then((res) => {
             return res.json();
         }).then((resp) => {
             empdatachange(resp);
@@ -42,34 +42,34 @@ const Pgcorretoreslistar = () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2>Listar corretores(as)</h2>
+                    <h2>Listar imóveis comerciais</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
 
                         {/* Botão ADICIONAR (+) */}
-                        <Link to="/corretor/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
+                        <Link to="/forma_de_pagamento/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
 
                         &nbsp;
                         {/* Botão para rota CORRETORES */}
-                        <Link to="/corretores/listar" className="btn btn-success_rotas">Corretores</Link>
+                        <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
 
                         &nbsp;
                         {/* Botão para rota FORMAS DE PAGAMENTO */}
-                        <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas">Formas de pagamento</Link>
+                        <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_1">Formas de pagamento</Link>
 
                         &nbsp;
                         {/* Botão para rota IMÓVEIS COMERCIAIS */}
-                        <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas">Imóveis comerciais</Link>
+                        <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
 
                         &nbsp;
                         {/* Botão para rota IMÓVEIS RESIDENCIAIS */}
-                        <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas">Imóveis residenciais</Link>
+                        <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_1">Imóveis residenciais</Link>
 
                         &nbsp;
                         {/* Botão para rota INQUILINOS */}
-                        <Link to="/inquilinos/listar" className="btn btn-success_rotas">Inquilinos</Link>
-
+                        <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
+                        
                         <br></br><br></br>
                     </div>
                     <table className="table table-bordered">
@@ -78,9 +78,9 @@ const Pgcorretoreslistar = () => {
                                 <td>ID</td>
 
                                 {/* Nome das colunas */}
-                                <td>Nome</td>
-                                <td>CPF</td>
-                                <td>Idade</td>
+                                <td>Método</td>
+                                <td>Conta</td>
+                                <td>Limite de depósito</td>
                                 <td>Opções</td>
                             </tr>
                         </thead>
@@ -92,9 +92,9 @@ const Pgcorretoreslistar = () => {
 
                                         {/* Informação das colunas */}
                                         <td>{item.id}</td>
-                                        <td>{item.nome}</td>
-                                        <td>{item.cpf}</td>
-                                        <td>{item.idade}</td>
+                                        <td>{item.metodo}</td>
+                                        <td>{item.conta}</td>
+                                        <td>{item.limite_de_deposito}</td>
 
                                         {/* Botão EDITAR, REMOVER e DETALHAR */}
                                         <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
@@ -116,4 +116,4 @@ const Pgcorretoreslistar = () => {
     );
 }
 
-export default Pgcorretoreslistar;
+export default Pgimoveiscomerciaislistar;

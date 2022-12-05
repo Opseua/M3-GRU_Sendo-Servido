@@ -15,7 +15,7 @@ const Pgformasdepagamentolistar = () => {
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
-            fetch("https://server-2.onrender.com/forma_de_pagamento/remover/" + id, {
+            fetch("https://server-2.onrender.com/forma_de_pagamento/deletar/" + id, {
                 method: "DELETE"
             }).then((res) => {
                 alert('Removido com sucesso.')
@@ -48,11 +48,27 @@ const Pgformasdepagamentolistar = () => {
                     <div className="divbtn">
 
                         {/* Botão ADICIONAR (+) */}
-                        <Link to="/forma_de_pagamento/adicionar" className="btn btn-success">Adicionar (+)</Link>
+                        <Link to="/forma_de_pagamento/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
 
                         &nbsp;
                         {/* Botão para rota CORRETORES */}
-                        <Link to="/corretores/listar" className="btn btn-success">Corretores</Link>
+                        <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
+
+                        &nbsp;
+                        {/* Botão para rota FORMAS DE PAGAMENTO */}
+                        <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_1">Formas de pagamento</Link>
+
+                        &nbsp;
+                        {/* Botão para rota IMÓVEIS COMERCIAIS */}
+                        <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
+
+                        &nbsp;
+                        {/* Botão para rota IMÓVEIS RESIDENCIAIS */}
+                        <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_1">Imóveis residenciais</Link>
+
+                        &nbsp;
+                        {/* Botão para rota INQUILINOS */}
+                        <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
                         
                         <br></br><br></br>
                     </div>
