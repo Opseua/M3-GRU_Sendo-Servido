@@ -34,7 +34,7 @@ import InquilinoAdicionar from './paginas/InquilinoAdicionar';
 
 
 // ROTAS //
-function App() {
+function AppServer() {
   return (
     <div id="App" className="App">
       <h1 id="Titulo" className="Titulo">DREAMS IMOBILIÁRIA</h1>
@@ -73,4 +73,4 @@ function App() {
 
 }
 
-export default App;
+export default AppServer;
