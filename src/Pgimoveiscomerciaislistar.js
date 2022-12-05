@@ -48,7 +48,7 @@ const Pgimoveiscomerciaislistar = () => {
                     <div className="divbtn">
 
                         {/* Botão ADICIONAR (+) */}
-                        <Link to="/forma_de_pagamento/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
+                        <Link to="/imovel_comercial/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
 
                         &nbsp;
                         {/* Botão para rota CORRETORES */}

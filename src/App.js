@@ -16,6 +16,7 @@ import Pgformadepagamentoadicionar from './Pgformadepagamentoadicionar';
 import Pgimoveiscomerciaislistar from './Pgimoveiscomerciaislistar';
 import Pgimovelcomercialdetalhar from './Pgimovelcomercialdetalhar';
 import Pgimovelcomercialeditar from './Pgimovelcomercialeditar';
+import Pgimovelcomercialadicionar from './Pgimovelcomercialadicionar';
 
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route exact path='/imoveis_comerciais/listar' element={<Pgimoveiscomerciaislistar />}></Route>
           <Route exact path='/imovel_comercial/detalhar/:empid' element={<Pgimovelcomercialdetalhar />}></Route>
           <Route exact path='/imovel_comercial/editar/:empid' element={<Pgimovelcomercialeditar />}></Route>
+          <Route exact path='/imovel_comercial/adicionar' element={<Pgimovelcomercialadicionar />}></Route>
 
         </Routes>
       </BrowserRouter>

@@ -26,7 +26,7 @@ const Pgimovelcomercialdetalhar = () => {
                 
             <div className="card row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                <h2>Detalhe imóvel residencial</h2>
+                <h2>Detalhe imóvel comercial</h2>
                 </div>
                 <div className="card-body"></div>
 
@@ -46,7 +46,7 @@ const Pgimovelcomercialdetalhar = () => {
                         <br></br>
 
                         {/* Botão VOLTAR */}
-                        <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
+                        <Link to="/imoveis_comerciais/listar" className="btn btn-danger">Voltar</Link>
                     </div>
                 }
             </div>

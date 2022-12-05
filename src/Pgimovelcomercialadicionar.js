@@ -1,28 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Pgimovelcomercialeditar = () => {
-    const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
-
-    useEffect(() => {
-        fetch("https://server-2.onrender.com/imovel_comercial/editar/" + empid).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            idchange(resp.id);
-            tipo_de_imovelchange(resp.tipo_de_imovel);
-            enderecochange(resp.endereco);
-            salaschange(resp.salas);
-            banheiroschange(resp.banheiros);
-            garagenschange(resp.garagens);
-            tipo_de_contratochange(resp.tipo_de_contrato);
-            valor_do_imovelchange(resp.valor_do_imovel);
-            valor_do_condominiochange(resp.valor_do_condominio);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+const Pgimovelcomercialadicionar = () => {
 
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");
@@ -40,21 +19,22 @@ const Pgimovelcomercialeditar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { id, tipo_de_imovel, endereco, salas, banheiros, garagens, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
+        const empdata = { tipo_de_imovel, endereco, salas, banheiros, garagens, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
 
 
-        fetch("https://server-2.onrender.com/imovel_comercial/editar/" + empid, {
-            method: "PUT",
+        fetch("https://server-2.onrender.com/imovel_comercial/adicionar", {
+            method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Editado com sucesso.')
-            navigate('/imoveis_comerciais/listar/');
+            alert('Adicionado com sucesso.')
+            navigate('/imoveis_comerciais/listar');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
+
     return (
         <div>
 
@@ -64,7 +44,7 @@ const Pgimovelcomercialeditar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Editar imóvel comercial</h2>
+                                <h2>Adicionar imóvel comercial</h2>
                             </div>
                             <div className="card-body">
 
@@ -85,7 +65,7 @@ const Pgimovelcomercialeditar = () => {
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Endereco */}
+                                    {/* OPCAO: Endereço */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Endereço</label>
@@ -109,38 +89,41 @@ const Pgimovelcomercialeditar = () => {
                                         </div>
                                     </div>
 
-                                  {/* OPCAO: Garagens */}
-                                  <div className="col-lg-12">
+                                    {/* OPCAO: Garagens */}
+                                    <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Garagens</label>
                                             <input required value={garagens} onMouseDown={e => valchange(true)} onChange={e => garagenschange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                  {/* OPCAO: Tipo de contrato */}
-                                  <div className="col-lg-12">
+
+                                    {/* OPCAO: Tipo de contrato */}
+                                    <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Tipo de contrato</label>
                                             <input required value={tipo_de_contrato} onMouseDown={e => valchange(true)} onChange={e => tipo_de_contratochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-
-                                  {/* OPCAO: Tipo de imóvel */}
-                                  <div className="col-lg-12">
+                                    {/* OPCAO: Valor do imóvel */}
+                                    <div className="col-lg-12">
                                         <div className="form-group">
-                                            <label>Tipo de imóvel</label>
-                                            <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
+                                            <label>Valor do imóvel</label>
+                                            <input required value={valor_do_imovel} onMouseDown={e => valchange(true)} onChange={e => valor_do_imovelchange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
 
-                                  {/* OPCAO: Valor do condomínio */}
-                                  <div className="col-lg-12">
+                                    {/* OPCAO: Valor do condomínio */}
+                                    <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Valor do condomínio</label>
                                             <input required value={valor_do_condominio} onMouseDown={e => valchange(true)} onChange={e => valor_do_condominiochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
+
+
+
 
 
 
@@ -171,4 +154,4 @@ const Pgimovelcomercialeditar = () => {
     );
 }
 
-export default Pgimovelcomercialeditar;
+export default Pgimovelcomercialadicionar;
