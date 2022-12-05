@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import ImagemCasa from '../img/logo.jpg';
 
 
-const Pgimovelresidencialdetalhar = () => {
+const ImovelResidencialDetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
@@ -58,4 +58,4 @@ const Pgimovelresidencialdetalhar = () => {
     );
 }
 
-export default Pgimovelresidencialdetalhar;
+export default ImovelResidencialDetalhar;

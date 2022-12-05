@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgcorretoreslistar = () => {
+const CorretoresListar = () => {
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
@@ -118,4 +118,4 @@ const Pgcorretoreslistar = () => {
     );
 }
 
-export default Pgcorretoreslistar;
+export default CorretoresListar;

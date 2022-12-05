@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ImagemCasa from '../img/logo.jpg';
 
 
-
-const Pginquilinodetalhar = () => {
+const InquilinoDetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
@@ -56,4 +56,4 @@ const Pginquilinodetalhar = () => {
     );
 }
 
-export default Pginquilinodetalhar;
+export default InquilinoDetalhar;

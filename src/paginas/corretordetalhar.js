@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ImagemCasa from '../img/logo.jpg';
 
 
-
-const Pgcorretordetalhar = () => {
+const CorretorDetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
@@ -53,4 +53,4 @@ const Pgcorretordetalhar = () => {
     );
 }
 
-export default Pgcorretordetalhar;
+export default CorretorDetalhar;

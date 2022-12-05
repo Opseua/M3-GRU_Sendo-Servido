@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ImagemCasa from '../img/logo.jpg';
 
 
-
-const Pgformadepagamentodetalhar = () => {
+const FormaDePagamentoDetalhar = () => {
     const { empid } = useParams();
 
     const [empdata, empdatachange] = useState({});
@@ -52,4 +52,4 @@ const Pgformadepagamentodetalhar = () => {
     );
 }
 
-export default Pgformadepagamentodetalhar;
+export default FormaDePagamentoDetalhar;

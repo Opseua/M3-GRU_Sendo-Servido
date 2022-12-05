@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pginquilinoadicionar = () => {
+const InquilinoAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -140,4 +140,4 @@ const Pginquilinoadicionar = () => {
     );
 }
 
-export default Pginquilinoadicionar;
+export default InquilinoAdicionar;

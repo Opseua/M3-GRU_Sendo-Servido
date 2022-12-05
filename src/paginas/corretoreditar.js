@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pgcorretoreditar = () => {
+const CorretorEditar = () => {
     const { empid } = useParams();
 
     //const [empdata, empdatachange] = useState({});
@@ -133,4 +133,4 @@ const Pgcorretoreditar = () => {
     );
 }
 
-export default Pgcorretoreditar;
+export default CorretorEditar;

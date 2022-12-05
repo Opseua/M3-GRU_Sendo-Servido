@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgformadepagamentoadicionar = () => {
+const FormaDePagamentoAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [metodo, metodochange] = useState("");
@@ -104,4 +104,4 @@ const Pgformadepagamentoadicionar = () => {
     );
 }
 
-export default Pgformadepagamentoadicionar;
+export default FormaDePagamentoAdicionar;

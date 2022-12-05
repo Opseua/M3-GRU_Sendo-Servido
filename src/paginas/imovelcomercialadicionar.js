@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgimovelcomercialadicionar = () => {
+const ImovelComercialAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");
@@ -154,4 +154,4 @@ const Pgimovelcomercialadicionar = () => {
     );
 }
 
-export default Pgimovelcomercialadicionar;
+export default ImovelComercialAdicionar;

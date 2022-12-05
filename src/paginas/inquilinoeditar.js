@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pginquilinoeditar = () => {
+const InquilinoEditar = () => {
     const { empid } = useParams();
 
     //const [empdata, empdatachange] = useState({});
@@ -163,4 +163,4 @@ const Pginquilinoeditar = () => {
     );
 }
 
-export default Pginquilinoeditar;
+export default InquilinoEditar;

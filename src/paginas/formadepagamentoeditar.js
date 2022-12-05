@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pgformadepagamentoeditar = () => {
+const FormaDePagamentoEditar = () => {
     const { empid } = useParams();
 
     //const [empdata, empdatachange] = useState({});
@@ -123,4 +123,4 @@ const Pgformadepagamentoeditar = () => {
     );
 }
 
-export default Pgformadepagamentoeditar;
+export default FormaDePagamentoEditar;

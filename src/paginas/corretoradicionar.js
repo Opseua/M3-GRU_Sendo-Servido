@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Pgcorretoradicionar = () => {
+const CorretorAdicionar = () => {
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -114,4 +114,4 @@ const Pgcorretoradicionar = () => {
     );
 }
 
-export default Pgcorretoradicionar;
+export default CorretorAdicionar;

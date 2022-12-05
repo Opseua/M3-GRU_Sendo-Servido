@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-const Pgimovelresidencialeditar = () => {
+const ImovelResidencialEditar = () => {
     const { empid } = useParams();
 
     //const [empdata, empdatachange] = useState({});
@@ -180,4 +180,4 @@ const Pgimovelresidencialeditar = () => {
     );
 }
 
-export default Pgimovelresidencialeditar;
+export default ImovelResidencialEditar;
