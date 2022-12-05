@@ -18,7 +18,7 @@ const Pginquilinoadicionar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { nome, cpf, idade, salario };
+        const empdata = { nome, salario, cpf, idade, profissao, contato, tempo_como_inquilino };
 
 
         fetch("https://server-2.onrender.com/inquilino/adicionar", {
