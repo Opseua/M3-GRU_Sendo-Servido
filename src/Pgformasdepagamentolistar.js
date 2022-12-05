@@ -14,7 +14,7 @@ const Pgformasdepagamentolistar = () => {
 
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
-        if (window.confirm('Do you want to remove?')) {
+        if (window.confirm('Tem certeza que seja remover?')) {
             fetch("https://server-2.onrender.com/forma_de_pagamento/remover/" + id, {
                 method: "DELETE"
             }).then((res) => {
@@ -42,7 +42,7 @@ const Pgformasdepagamentolistar = () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2>Listar Formas de pagamento</h2>
+                    <h2>Listar formas de pagamento</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">

@@ -1,23 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const Pgformadepagamentoeditar = () => {
-    const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
-
-    useEffect(() => {
-        fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid).then((res) => {
-            return res.json();
-        }).then((resp) => {
-            idchange(resp.id);
-            metodochange(resp.metodo);
-            contachange(resp.conta);
-            limite_de_depositochange(resp.limite_de_deposito);
-        }).catch((err) => {
-            console.log(err.message);
-        })
-    }, []);
+const Pgformadepagamentoadicionar = () => {
 
     const [id, idchange] = useState("");
     const [metodo, metodochange] = useState("");
@@ -30,21 +14,22 @@ const Pgformadepagamentoeditar = () => {
 
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empdata = { id, metodo, conta, limite_de_deposito };
+        const empdata = { metodo, conta, limite_de_deposito };
 
 
-        fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid, {
-            method: "PUT",
+        fetch("https://server-2.onrender.com/forma_de_pagamento/adicionar", {
+            method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
-            alert('Editado com sucesso.')
-            navigate('/formas_de_pagamento/listar/');
+            alert('Adicionado com sucesso.')
+            navigate('/formas_de_pagamento/listar');
         }).catch((err) => {
             console.log(err.message)
         })
 
     }
+
     return (
         <div>
 
@@ -54,7 +39,7 @@ const Pgformadepagamentoeditar = () => {
 
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div className="card-title">
-                                <h2>Editar forma de pagamento</h2>
+                                <h2>Adicionar forma de pagamento</h2>
                             </div>
                             <div className="card-body">
 
@@ -67,7 +52,7 @@ const Pgformadepagamentoeditar = () => {
                                         </div>
                                     </div>
 
-                                    {/* OPCAO: Metodo */}
+                                    {/* OPCAO: Método */}
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                             <label>Método</label>
@@ -90,10 +75,6 @@ const Pgformadepagamentoeditar = () => {
                                             <input required value={limite_de_deposito} onMouseDown={e => valchange(true)} onChange={e => limite_de_depositochange(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
-
-
-
-
 
 
 
@@ -123,4 +104,4 @@ const Pgformadepagamentoeditar = () => {
     );
 }
 
-export default Pgformadepagamentoeditar;
+export default Pgformadepagamentoadicionar;

@@ -24,7 +24,7 @@ const Pgcorretoradicionar = () => {
             body: JSON.stringify(empdata)
         }).then((res) => {
             alert('Adicionado com sucesso.')
-            navigate('/');
+            navigate('/corretores/listar');
         }).catch((err) => {
             console.log(err.message)
         })

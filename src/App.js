@@ -10,6 +10,7 @@ import Pgcorretoradicionar from './Pgcorretoradicionar';
 import Pgformasdepagamentolistar from './Pgformasdepagamentolistar';
 import Pgformadepagamentodetalhar from './Pgformadepagamentodetalhar';
 import Pgformadepagamentoeditar from './Pgformadepagamentoeditar';
+import Pgformadepagamentoadicionar from './Pgformadepagamentoadicionar';
 
 
 
@@ -29,7 +30,7 @@ function App() {
           <Route exact path='/formas_de_pagamento/listar' element={<Pgformasdepagamentolistar />}></Route>
           <Route exact path='/forma_de_pagamento/detalhar/:empid' element={<Pgformadepagamentodetalhar />}></Route>
           <Route exact path='/forma_de_pagamento/editar/:empid' element={<Pgformadepagamentoeditar />}></Route>
-
+          <Route exact path='/forma_de_pagamento/adicionar' element={<Pgformadepagamentoadicionar />}></Route>
 
 
         </Routes>

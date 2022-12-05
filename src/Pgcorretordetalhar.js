@@ -26,7 +26,7 @@ const Pgcorretordetalhar = () => {
                 
             <div className="card row" style={{ "textAlign": "left" }}>
                 <div className="card-title">
-                <h2>Detalhe Corretor(a)</h2>
+                <h2>Detalhe corretor(a)</h2>
                 </div>
                 <div className="card-body"></div>
 

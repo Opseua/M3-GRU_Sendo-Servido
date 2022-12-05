@@ -14,7 +14,7 @@ const Pgcorretoreslistar = () => {
 
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
-        if (window.confirm('Do you want to remove?')) {
+        if (window.confirm('Tem certeza que seja remover?')) {
             fetch("https://server-2.onrender.com/corretor/remover/" + id, {
                 method: "DELETE"
             }).then((res) => {
@@ -42,7 +42,7 @@ const Pgcorretoreslistar = () => {
         <div className="container">
             <div className="card">
                 <div className="card-title">
-                    <h2>Listar Corretores(as)</h2>
+                    <h2>Listar corretores(as)</h2>
                 </div>
                 <div className="card-body">
                     <div className="divbtn">
