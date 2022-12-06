@@ -1,13 +1,16 @@
 import React from "react";
-import "../App.css";
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/NavBar/NavBar";
+import style from "./Main.module.css";
 
 export default function Main() {
   return (
-    <div className="App">
-      <NavBar />
-      <Footer />
-    </div>
+    <>
+        <NavBar />
+        <div className={style.main}>
+          
+        </div>
+        <Footer />
+    </>
   );
 }
