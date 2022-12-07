@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ImagemCasa from '../img/logo.jpg';
+import ClipLoader from "react-spinners/ClipLoader";
 
 
 const ImovelComercialDetalhar = () => {
-    const { empid } = useParams();
 
+    const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("#21d4fd");
+
+    const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
     useEffect(() => {

@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ImovelResidencialAdicionar = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("#21d4fd");
 
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");

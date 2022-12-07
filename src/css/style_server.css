@@ -36,19 +36,22 @@
   background-color: red;
   padding: 3vh;
   border-radius: 2vh;
-  
-
-
-  
-    
-
 
 }
 
 
 
 
+.animacao{
+  
 
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  
+
+
+}
 
 
 

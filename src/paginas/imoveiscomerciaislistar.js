@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ImoveisComerciaisListar = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("#21d4fd");
+
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 

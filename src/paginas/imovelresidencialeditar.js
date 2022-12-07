@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const ImovelResidencialEditar = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [color, setColor] = useState("#21d4fd");
+
     const { empid } = useParams();
 
     //const [empdata, empdatachange] = useState({});
