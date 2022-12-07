@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const CorretoresListar = () => {
@@ -24,12 +27,14 @@ const CorretoresListar = () => {
     {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
+            setLoading(true);
             fetch("https://server-2.onrender.com/corretor/deletar/" + id, {
                 method: "DELETE"
             }).then((res) => {
-                alert('Removido com sucesso.')
+                setLoading(false);
                 window.location.reload();
             }).catch((err) => {
+                setLoading(false);
                 console.log(err.message)
             })
         }
@@ -53,6 +58,8 @@ const CorretoresListar = () => {
     }, [])
     return (
 
+        
+
         <div className="animacao">
             {loading ?
                 <  ClipLoader
@@ -61,6 +68,24 @@ const CorretoresListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
+                
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                 <div className="container">
@@ -128,7 +153,7 @@ const CorretoresListar = () => {
                                                 {/* Botão EDITAR, REMOVER e DETALHAR */}
                                                 <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
                                                     &nbsp;
-                                                    <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</a>
+                                                    <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger" >Remover</a>
                                                     &nbsp;
                                                     <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
                                                 </td>
