@@ -1,19 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
-import './index.css';
+import './home.css';
 import { motion } from 'framer-motion';
 
-import imagem1 from '../src/imagens/1.jpg';
-import imagem2 from '../src/imagens/2.jpg';
-import imagem3 from '../src/imagens/3.jpg';
-import imagem4 from '../src/imagens/4.jpg';
-import imagem5 from '../src/imagens/5.jpeg';
-import imagem6 from '../src/imagens/6.jpg';
-import imagem7 from '../src/imagens/7.jpg';
-import imagem8 from '../src/imagens/8.jpg'
+import carrossel_1 from '../src/imagens/carrossel_1.jpg';
+import carrossel_2 from '../src/imagens/carrossel_2.jpg';
+import carrossel_3 from '../src/imagens/carrossel_3.jpg';
+import carrossel_4 from '../src/imagens/carrossel_4.jpg';
+import carrossel_5 from '../src/imagens/carrossel_5.jpeg';
+import carrossel_6 from '../src/imagens/carrossel_6.jpg';
+import carrossel_7 from '../src/imagens/carrossel_7.jpg';
+import carrossel_8 from '../src/imagens/carrossel_8.jpg';
 import icon_chevron from '../src/imagens/right_chevron_icon.png';
 
-const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8];
+const imagens = [carrossel_1, carrossel_2, carrossel_3, carrossel_4, carrossel_5, carrossel_6, carrossel_7, carrossel_8];
 const icon = [icon_chevron];
 
 function App() {
