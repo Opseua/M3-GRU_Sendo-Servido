@@ -85,3 +85,58 @@ p {
   transform: rotate(180deg);
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(#4895ff, #9027C2);
+}
+ 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+
+
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgb(248, 4, 248);
+  padding: 30px;
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(#4895ff, #9027C2);
+  background-size:150% 
+
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+ 
+.card p   {
+  font-size: 16px;
+}
+ 
+.image {
+  float:right;
+  width: 300px;
+  height: 200px;
+  border: 3px solid rgb(#9027C2);
+  border-radius: 20px;
+}
+.blue {
+  border-left: 3px solid #4895ff;
+}
+ 
+.green {
+  border-left: 3px solid #ffffff;
+  
+}
+ 
+.red {
+  border-left: 3px solid #b3404a;
+}
+
