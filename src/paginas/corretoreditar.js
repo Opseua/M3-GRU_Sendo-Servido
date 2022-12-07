@@ -2,10 +2,15 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const CorretorEditar = () => {
 
     const [loading, setLoading] = useState(false);
     const [color, setColor] = useState("#21d4fd");
+
+    
 
     const { empid } = useParams();
 
@@ -42,14 +47,27 @@ const CorretorEditar = () => {
         e.preventDefault();
         const empdata = { id, nome, cpf, idade, salario };
 
-        setLoading(true);
+        setLoading(false);
         fetch("https://server-2.onrender.com/corretor/editar/" + empid, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
             setLoading(false);
+            
+            const notify = () => toast("Wow so easy!");
+            
             alert('Editado com sucesso.')
+
+
+
+
+            
+
+
+
+
+
             navigate('/corretores/listar/');
         }).catch((err) => {
             setLoading(false);

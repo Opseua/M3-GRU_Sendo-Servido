@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 
 
 const CorretoresListar = () => {
@@ -32,7 +29,6 @@ const CorretoresListar = () => {
                 method: "DELETE"
             }).then((res) => {
                 setLoading(false);
-                window.location.reload();
             }).catch((err) => {
                 setLoading(false);
                 console.log(err.message)
@@ -58,7 +54,6 @@ const CorretoresListar = () => {
     }, [])
     return (
 
-        
 
         <div className="animacao">
             {loading ?
@@ -68,28 +63,9 @@ const CorretoresListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-                
-
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                 <div className="container">
-
                     <div className="card">
                         <div className="card-title">
                             <h2>Listar corretores</h2>
