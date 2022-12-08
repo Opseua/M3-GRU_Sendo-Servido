@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
-import './home.css';
+import './style_home.css';
 import { motion } from 'framer-motion';
 
 import carrossel_1 from '../src/imagens/carrossel_1.jpg';
@@ -16,7 +16,7 @@ import icon_chevron from '../src/imagens/right_chevron_icon.png';
 const imagens = [carrossel_1, carrossel_2, carrossel_3, carrossel_4, carrossel_5, carrossel_6, carrossel_7, carrossel_8];
 const icon = [icon_chevron];
 
-function App() {
+function AppHome() {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
 
@@ -72,4 +72,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppHome;
