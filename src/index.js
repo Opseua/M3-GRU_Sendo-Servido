@@ -1,7 +1,7 @@
 // ################################ ORLANDO ################################ //
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppServer from './AppServer';
+import AppServer from './paginas/AppServer.js';
 import './css/style_server.css'
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
 // ################################ ORLANDO ################################ //
