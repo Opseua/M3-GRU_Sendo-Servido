@@ -9,8 +9,9 @@ import AppLogin from './paginas/AppLogin.js';
 
 // ORLANDO (Server) //
 import AppServer from './paginas/AppServer.js';
-import './css/style_server.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
+// import './css/style_server.css'; //
 
 
 
