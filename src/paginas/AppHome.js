@@ -25,12 +25,12 @@ function AppHome() {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, []);
 
-  const handleLeftClick = (e) =>{
+  const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
   }
 
-  const handleRightClick = (e) =>{
+  const handleRightClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.offsetWidth;
   }
@@ -41,24 +41,24 @@ function AppHome() {
       <div>
         <h1>DREAMS IMOBILIÁRIA</h1>
         <h2 className='slogan'>REALIZANDO SONHOS DESDE 2005</h2>
-        <motion.div ref={carousel} className='carousel' whileTop={{cursor: "grabbing"}}>
+        <motion.div ref={carousel} className='carousel' whileTop={{ cursor: "grabbing" }}>
           <motion.div
-          className='inner'
-          drag="x"
-          dragConstraints={{ right: 0, left: -width}}>
+            className='inner'
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}>
             {imagens.map(imagem => (
               <motion.div className='item' key={imagem}>
-                <img src={imagem} alt="Imóvel"/>
+                <img src={imagem} alt="Imóvel" />
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
         <div className='buttons'>
-              <button onClick={handleLeftClick}><img src={icon} alt="Scroll Left"/></button>
-              <button onClick={handleRightClick}><img src={icon} alt="Scroll Rigth"/></button>
+          <button onClick={handleLeftClick}><img src={icon} alt="Scroll Left" /></button>
+          <button onClick={handleRightClick}><img src={icon} alt="Scroll Rigth" /></button>
         </div>
       </div>
-      <hr/>
+      <hr />
 
       <div className='quem-somos'>
         <h2>QUEM SOMOS</h2>
