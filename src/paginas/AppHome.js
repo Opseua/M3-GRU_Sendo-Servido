@@ -3,15 +3,16 @@ import React from 'react';
 import '../css/style_home.css';
 import { motion } from 'framer-motion';
 
-import carrossel_1 from '../src/imagens/carrossel_1.jpg';
-import carrossel_2 from '../src/imagens/carrossel_2.jpg';
-import carrossel_3 from '../src/imagens/carrossel_3.jpg';
-import carrossel_4 from '../src/imagens/carrossel_4.jpg';
-import carrossel_5 from '../src/imagens/carrossel_5.jpg';
-import carrossel_6 from '../src/imagens/carrossel_6.jpg';
-import carrossel_7 from '../src/imagens/carrossel_7.jpg';
-import carrossel_8 from '../src/imagens/carrossel_8.jpg';
-import icon_chevron from '../src/imagens/right_chevron_icon.png';
+import carrossel_1 from '../imagens/carrossel_1.jpg';
+import carrossel_2 from '../imagens/carrossel_2.jpg';
+import carrossel_3 from '../imagens/carrossel_3.jpg';
+import carrossel_4 from '../imagens/carrossel_4.jpg';
+import carrossel_5 from '../imagens/carrossel_5.jpg';
+import carrossel_6 from '../imagens/carrossel_6.jpg';
+import carrossel_7 from '../imagens/carrossel_7.jpg';
+import carrossel_8 from '../imagens/carrossel_8.jpg';
+import icon_chevron from '../imagens/right_chevron_icon.png'
+
 
 const imagens = [carrossel_1, carrossel_2, carrossel_3, carrossel_4, carrossel_5, carrossel_6, carrossel_7, carrossel_8];
 const icon = [icon_chevron];
