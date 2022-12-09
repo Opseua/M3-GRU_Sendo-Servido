@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+.body {
+height: 100vh;
 
+}
 
 .Titulo {
   color: #fff;
@@ -16,16 +13,13 @@
 
 }
 
-.App {
-  height: 100%;
+.AppServer {
+  height: 100vh;
   background-color: #212529;
   
 }
 
-.App.App {
-  height: 100vh;
-  background-color: #212529;
-}
+
 
 .Imagemcasa {
   height: 200px;

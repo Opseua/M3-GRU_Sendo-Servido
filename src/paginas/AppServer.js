@@ -36,7 +36,7 @@ import InquilinoAdicionar from './InquilinoAdicionar';
 // ROTAS //
 function AppServer() {
   return (
-    <div id="App" className="App">
+    <div id="AppServer" className="AppServer">
       <h1 id="Titulo" className="Titulo">DREAMS IMOBILIÁRIA</h1>
       <BrowserRouter>
         <Routes>
