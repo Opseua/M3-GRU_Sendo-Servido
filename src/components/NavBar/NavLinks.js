@@ -1,20 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { BsPersonCircle } from "react-icons/bs";
+import { GoHome } from "react-icons/go";
+import { MdMonitor } from "react-icons/md";
 import style from "./NavBar.module.css";
 
 export default function NavLinks() {
   return (
     <ul className={style.listaItens}>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <GoHome  className={style.loginIcone}/>
+        </Link>
       </li>
       <li>
-        <Link to="/">Apresentação</Link>
+        <Link to="/">
+          <MdMonitor className={style.loginIcone}/>
+        </Link>
       </li>
       <li>
         <BsPersonCircle className={style.loginIcone} />
-        <Link to="/">Login</Link>
+        <Link to="/"></Link>
       </li>
     </ul>
   );
