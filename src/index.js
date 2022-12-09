@@ -9,6 +9,10 @@ import AppLogin from './paginas/AppLogin.js';
 
 // ORLANDO (Server) //
 import AppServer from './paginas/AppServer.js';
+import './css/style_server.css'
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
+
+
 
 
 
@@ -17,8 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <AppHome />
-    <AppLogin />
+
     <AppServer />
 
   </React.StrictMode>
