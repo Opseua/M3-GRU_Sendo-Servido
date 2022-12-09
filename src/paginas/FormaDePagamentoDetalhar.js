@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import ImagemCasa from '../img/logo.jpg';
 import ClipLoader from "react-spinners/ClipLoader";
 
 

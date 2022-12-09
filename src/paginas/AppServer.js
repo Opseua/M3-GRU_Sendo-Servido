@@ -1,34 +1,34 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Páginas: Corretores //
-import CorretoresListar from './paginas/CorretoresListar';
-import CorretorDetalhar from './paginas/CorretorDetalhar';
-import CorretorEditar from './paginas/CorretorEditar';
-import CorretorAdicionar from './paginas/CorretorAdicionar';
+import CorretoresListar from './CorretoresListar';
+import CorretorDetalhar from './CorretorDetalhar';
+import CorretorEditar from './CorretorEditar';
+import CorretorAdicionar from './CorretorAdicionar';
 
 // Páginas: Formas de pagamento //
-import FormasDePagamentoListar from './paginas/FormasDePagamentoListar';
-import FormaDePagamentoDetalhar from './paginas/FormaDePagamentoDetalhar';
-import FormaDePagamentoEditar from './paginas/FormaDePagamentoEditar';
-import FormaDePagamentoAdicionar from './paginas/FormaDePagamentoAdicionar';
+import FormasDePagamentoListar from './FormasDePagamentoListar';
+import FormaDePagamentoDetalhar from './FormaDePagamentoDetalhar';
+import FormaDePagamentoEditar from './FormaDePagamentoEditar';
+import FormaDePagamentoAdicionar from './FormaDePagamentoAdicionar';
 
 // Páginas: Imóveis Comerciais //
-import ImoveisComerciaisListar from './paginas/ImoveisComerciaisListar';
-import ImovelComercialDetalhar from './paginas/ImovelComercialDetalhar';
-import ImovelComercialEditar from './paginas/ImovelComercialEditar';
-import ImovelComercialAdicionar from './paginas/ImovelComercialAdicionar';
+import ImoveisComerciaisListar from './ImoveisComerciaisListar';
+import ImovelComercialDetalhar from './ImovelComercialDetalhar';
+import ImovelComercialEditar from './ImovelComercialEditar';
+import ImovelComercialAdicionar from './ImovelComercialAdicionar';
 
 // Páginas: Imóveis Residenciais //
-import ImoveisResidenciaisListar from './paginas/ImoveisResidenciaisListar';
-import ImovelResidencialDetalhar from './paginas/ImovelResidencialDetalhar';
-import ImovelResidencialEditar from './paginas/ImovelResidencialEditar';
-import ImovelResidencialAdicionar from './paginas/ImovelResidencialAdicionar';
+import ImoveisResidenciaisListar from './ImoveisResidenciaisListar';
+import ImovelResidencialDetalhar from './ImovelResidencialDetalhar';
+import ImovelResidencialEditar from './ImovelResidencialEditar';
+import ImovelResidencialAdicionar from './ImovelResidencialAdicionar';
 
 // Páginas: Imóveis Residenciais //
-import InquilinosListar from './paginas/InquilinosListar';
-import InquilinoDetalhar from './paginas/InquilinoDetalhar';
-import InquilinoEditar from './paginas/InquilinoEditar';
-import InquilinoAdicionar from './paginas/InquilinoAdicionar';
+import InquilinosListar from './InquilinosListar';
+import InquilinoDetalhar from './InquilinoDetalhar';
+import InquilinoEditar from './InquilinoEditar';
+import InquilinoAdicionar from './InquilinoAdicionar';
 
 
 
