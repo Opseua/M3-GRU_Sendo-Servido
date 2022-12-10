@@ -37,8 +37,6 @@ const CorretorDetalhar = () => {
 
 
                 <div>
-                    {/* <div className="row">
-                <div className="offset-lg-3 col-lg-6"> */}
 
                     <div className="container">
 
@@ -59,14 +57,11 @@ const CorretorDetalhar = () => {
                                     <h5>Salário: {empdata.salario}</h5>
                                     <br></br>
 
-                                    {/* Botão VOLTAR */}
                                     <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
                                 </div>
                             }
                         </div>
                     </div>
-                    {/* </div>
-            </div> */}
                 </div >
 
             }

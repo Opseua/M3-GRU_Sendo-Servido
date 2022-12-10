@@ -36,9 +36,6 @@ const ImovelResidencialDetalhar = () => {
 
 
                 <div>
-                    {/* <div className="row">
-                <div className="offset-lg-3 col-lg-6"> */}
-
                     <div className="container">
 
                         <div className="card row" style={{ "textAlign": "left" }}>
@@ -63,14 +60,11 @@ const ImovelResidencialDetalhar = () => {
                                     <h5>Valor do condomínio: {empdata.valor_do_condominio}</h5>
                                     <br></br>
 
-                                    {/* Botão VOLTAR */}
                                     <Link to="/imoveis_residenciais/listar" className="btn btn-danger">Voltar</Link>
                                 </div>
                             }
                         </div>
                     </div>
-                    {/* </div>
-            </div> */}
                 </div >
 
 

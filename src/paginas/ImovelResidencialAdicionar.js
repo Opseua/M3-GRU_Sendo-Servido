@@ -75,7 +75,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Tipo de imóvel */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tipo de imóvel</b></label>
@@ -83,7 +82,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Área */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Área</b></label>
@@ -91,7 +89,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Quartos */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Quartos</b></label>
@@ -99,7 +96,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Banheiros */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Banheiros</b></label>
@@ -107,7 +103,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Garagens */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Garagens</b></label>
@@ -115,7 +110,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Endereço */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Endereco</b></label>
@@ -123,8 +117,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-
-                                            {/* OPCAO: Tipo de contrato */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tipo de contrato</b></label>
@@ -132,7 +124,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Valor do imóvel */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Valor do imóvel</b></label>
@@ -140,7 +131,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Valor do condomínio */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Valor do condomínio</b></label>
@@ -148,15 +138,6 @@ const ImovelResidencialAdicionar = () => {
                                                 </div>
                                             </div>
 
-
-
-
-
-
-
-
-
-                                            {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>

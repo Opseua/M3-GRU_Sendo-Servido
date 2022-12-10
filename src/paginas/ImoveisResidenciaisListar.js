@@ -17,7 +17,6 @@ const ImoveisResidenciaisListar = () => {
         navigate("/imovel_residencial/editar/" + id);
     }
 
-    {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
             setLoading(true);
@@ -36,7 +35,6 @@ const ImoveisResidenciaisListar = () => {
 
 
 
-    {/* Função LISTAR INFORMAÇÃO */ }
     useEffect(() => {
         setLoading(true);
         fetch("https://server-2.onrender.com/imoveis_residenciais/listar").then((res) => {
@@ -69,27 +67,21 @@ const ImoveisResidenciaisListar = () => {
                         <div className="card-body">
                             <div className="divbtn">
 
-                                {/* Botão ADICIONAR (+) */}
                                 <Link to="/imovel_residencial/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
 
                                 &nbsp;
-                                {/* Botão para rota CORRETORES */}
                                 <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
 
                                 &nbsp;
-                                {/* Botão para rota FORMAS DE PAGAMENTO */}
                                 <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_2">Formas de pagamento</Link>
 
                                 &nbsp;
-                                {/* Botão para rota IMÓVEIS COMERCIAIS */}
                                 <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
 
                                 &nbsp;
-                                {/* Botão para rota IMÓVEIS RESIDENCIAIS */}
                                 <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_2">Imóveis residenciais</Link>
 
                                 &nbsp;
-                                {/* Botão para rota INQUILINOS */}
                                 <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
 
                                 <br></br><br></br>
@@ -99,12 +91,10 @@ const ImoveisResidenciaisListar = () => {
                                     <tr>
                                         <td><b>ID</b></td>
 
-                                        {/* Nome das colunas */}
                                         <td><b>Tipo de imóvel</b></td>
                                         <td><b>Área</b></td>
                                         <td><b>Quartos</b></td>
 
-                                        {/* Coluna padrao */}
                                         <td><b>Opções</b></td>
                                     </tr>
                                 </thead>
@@ -114,18 +104,16 @@ const ImoveisResidenciaisListar = () => {
                                         empdata.map(item => (
                                             <tr key={item.id}>
 
-                                                {/* Informação das colunas */}
                                                 <td>{item.id}</td>
                                                 <td>{item.tipo_de_imovel}</td>
                                                 <td>{item.area}</td>
                                                 <td>{item.quartos}</td>
 
-                                                {/* Botão EDITAR, REMOVER e DETALHAR */}
-                                                <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
+                                                <td><button onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</button>
                                                     &nbsp;
-                                                    <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</a>
+                                                    <button onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</button>
                                                     &nbsp;
-                                                    <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
+                                                    <button onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</button>
                                                 </td>
                                             </tr>
                                         ))

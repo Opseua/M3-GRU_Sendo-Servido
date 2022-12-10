@@ -70,7 +70,6 @@ const CorretorAdicionar = () => {
                                             </div>
                                         </div>
 
-                                        {/* OPCAO: Nome */}
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <label><b>Nome</b></label>
@@ -78,7 +77,6 @@ const CorretorAdicionar = () => {
                                             </div>
                                         </div>
 
-                                        {/* OPCAO: CPF */}
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <label><b>CPF</b></label>
@@ -86,7 +84,6 @@ const CorretorAdicionar = () => {
                                             </div>
                                         </div>
 
-                                        {/* OPCAO: Idade */}
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <label><b>Idade</b></label>
@@ -94,7 +91,6 @@ const CorretorAdicionar = () => {
                                             </div>
                                         </div>
 
-                                        {/* OPCAO: Salário */}
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <label><b>Salário</b></label>
@@ -103,11 +99,6 @@ const CorretorAdicionar = () => {
                                         </div>
 
 
-
-
-
-
-                                        {/* Botão SALVAR e VOLTAR */}
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <br></br>

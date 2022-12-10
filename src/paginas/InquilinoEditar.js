@@ -96,7 +96,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Nome */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Nome</b></label>
@@ -104,7 +103,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Salário */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Salário</b></label>
@@ -112,7 +110,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: CPF */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>CPF</b></label>
@@ -120,7 +117,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Idade */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Idade</b></label>
@@ -128,7 +124,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Profissão */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Profissão</b></label>
@@ -136,7 +131,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Contato */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Contato</b></label>
@@ -144,7 +138,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Tempo como inquilino */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tempo como inquilino</b></label>
@@ -153,14 +146,6 @@ const InquilinoEditar = () => {
                                             </div>
 
 
-
-
-
-
-
-
-
-                                            {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>

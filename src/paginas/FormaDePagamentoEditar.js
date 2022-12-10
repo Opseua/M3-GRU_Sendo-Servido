@@ -88,7 +88,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Metodo */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Método</b></label>
@@ -96,7 +95,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Conta */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Conta</b></label>
@@ -104,7 +102,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Limite de depósito */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Limite de depósito</b></label>
@@ -114,13 +111,6 @@ const FormaDePagamentoEditar = () => {
 
 
 
-
-
-
-
-
-
-                                            {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>

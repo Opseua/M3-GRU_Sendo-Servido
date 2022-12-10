@@ -36,9 +36,6 @@ const FormaDePagamentoDetalhar = () => {
 
 
                 <div>
-                    {/* <div className="row">
-                <div className="offset-lg-3 col-lg-6"> */}
-
                     <div className="container">
 
                         <div className="card row" style={{ "textAlign": "left" }}>
@@ -57,14 +54,11 @@ const FormaDePagamentoDetalhar = () => {
                                     <h5>Limite de depósito: {empdata.limite_de_deposito}</h5>
                                     <br></br>
 
-                                    {/* Botão VOLTAR */}
                                     <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
                                 </div>
                             }
                         </div>
                     </div>
-                    {/* </div>
-            </div> */}
                 </div >
 
             }

@@ -37,8 +37,6 @@ const CorretoresListar = () => {
     }
 
 
-
-    {/* Função LISTAR INFORMAÇÃO */ }
     useEffect(() => {
 
         setLoading(true);
@@ -74,27 +72,21 @@ const CorretoresListar = () => {
                         <div className="card-body">
                             <div className="divbtn">
 
-                                {/* Botão ADICIONAR (+) */}
                                 <Link to="/corretor/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
 
                                 &nbsp;
-                                {/* Botão para rota CORRETORES */}
                                 <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
 
                                 &nbsp;
-                                {/* Botão para rota FORMAS DE PAGAMENTO */}
                                 <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_2">Formas de pagamento</Link>
 
                                 &nbsp;
-                                {/* Botão para rota IMÓVEIS COMERCIAIS */}
                                 <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
 
                                 &nbsp;
-                                {/* Botão para rota IMÓVEIS RESIDENCIAIS */}
                                 <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_2">Imóveis residenciais</Link>
 
                                 &nbsp;
-                                {/* Botão para rota INQUILINOS */}
                                 <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
 
                                 <br></br><br></br>
@@ -104,12 +96,10 @@ const CorretoresListar = () => {
                                     <tr>
                                         <td><b>ID</b></td>
 
-                                        {/* Nome das colunas */}
                                         <td><b>Nome</b></td>
                                         <td><b>CPF</b></td>
                                         <td><b>Idade</b></td>
 
-                                        {/* Coluna padrao */}
                                         <td><b>Opções</b></td>
                                     </tr>
                                 </thead>
@@ -119,19 +109,16 @@ const CorretoresListar = () => {
                                         empdata.map(item => (
                                             <tr key={item.id}>
 
-
-                                                {/* Informação das colunas */}
                                                 <td>{item.id}</td>
                                                 <td>{item.nome}</td>
                                                 <td>{item.cpf}</td>
                                                 <td>{item.idade}</td>
 
-                                                {/* Botão EDITAR, REMOVER e DETALHAR */}
-                                                <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
+                                                <td><button onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</button>
                                                     &nbsp;
-                                                    <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger" >Remover</a>
+                                                    <button onClick={() => { Removefunction(item.id) }} className="btn btn-danger" >Remover</button>
                                                     &nbsp;
-                                                    <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
+                                                    <button onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</button>
                                                 </td>
                                             </tr>
                                         ))
