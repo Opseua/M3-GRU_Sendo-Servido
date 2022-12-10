@@ -6,12 +6,13 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 const FormaDePagamentoDetalhar = () => {
+
     const [loading, setLoading] = useState(false);
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
+    setLoading(true);
     useEffect(() => {
-        setLoading(true);
         fetch("https://server-2.onrender.com/forma_de_pagamento/detalhar/" + empid).then((res) => {
             return res.json();
         }).then((resp) => {
@@ -32,6 +33,7 @@ const FormaDePagamentoDetalhar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
+
 
                 <div>
                     <div className="container">

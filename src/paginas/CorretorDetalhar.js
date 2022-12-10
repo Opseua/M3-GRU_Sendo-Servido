@@ -8,7 +8,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretorDetalhar = () => {
 
     const [loading, setLoading] = useState(false);
-
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
