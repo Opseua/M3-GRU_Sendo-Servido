@@ -2,27 +2,27 @@
 
 // eslint-disable-next-line
 
-import ViewAvisoDeResposta from './model.js'
+import ViewAvisoDeResposta from './view.js'
+import ModelApiData from './model.js'
 
 
-function ModelGetPost(inf_1,inf_2,inf_3) {
-    try {
-        let res = await axios({
-            url: inf_2,
-            method: inf_1,
-            timeout: 8000,
-            data: inf_3,
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-        if (res.status == 200) {
-            return res
+
+
+
+
+function ControllerGetPost(cont1, cont2, cont3) {
+
+    ModelApiData(cont1, cont2).then((res) => {
+        if (res == 'ERRO') {
+            
+            return
         }
-    }
-    catch (err) {
-        return 'ERRO';
-    }
+
+        return res
+    });
+
+
+
 }
 
-export default ModelGetPost
+export default ControllerGetPost
