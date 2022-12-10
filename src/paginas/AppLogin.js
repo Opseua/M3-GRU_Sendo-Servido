@@ -1,10 +1,18 @@
+// eslint-disable-next-line
+
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/style_login.css";
 
 
 function AppLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+  const AbrirLink = (link) => {
+    navigate("/" + link);
+  }
 
   return (
     <div className="login_container">
@@ -17,7 +25,7 @@ function AppLogin() {
             </span>
 
             <div className="wrap-input">
-              <input
+              <input required
                 className={email !== "" ? "has-val input" : "input"}
                 type="email"
                 value={email}
@@ -38,6 +46,14 @@ function AppLogin() {
 
             <div className="container-login-form-btn">
               <button className="login-form-btn">Login</button>
+              <button href="/teste" className="login-form-btn">BOTAO 1</button>
+              <button onClick={() => { AbrirLink('teste') }} className="login-form-btn">BOTAO 2</button>
+              <Link to="/inquilinos/listar" className="login-form-btn">BOTAO 3</Link>
+              <Link style={{ textDecoration: 'none', color: 'white' }} to="/inquilinos/listar" className="login-form-btn">BOTAO 4</Link>
+
+              
+
+
             </div>
 
             <div className="text-center">

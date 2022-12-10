@@ -147,6 +147,7 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 13px;
+  text-decoration: 'none';
 }
 
 .login-form-btn {
@@ -166,10 +167,12 @@ html {
   background: -o-linear-gradient(to left, #21d4fd, #b721ff);
   background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
   background: linear-gradient(to left, #21d4fd, #b721ff);
+  text-decoration: 'none';
 }
 
 .login-form-btn:hover {
   cursor: pointer;
+  text-decoration: 'none';
 }
 
 .text-center {
