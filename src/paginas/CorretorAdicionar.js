@@ -6,8 +6,6 @@ import NavBar from "../componentes/NavBar/NavBar";
 
 const CorretorAdicionar = () => {
   const [loading, setLoading] = useState(false);
-  const [color, setColor] = useState("#21d4fd");
-
   const [id, idchange] = useState("");
   const [nome, nomechange] = useState("");
   const [cpf, cpfchange] = useState("");
@@ -15,8 +13,9 @@ const CorretorAdicionar = () => {
   const [salario, salariochange] = useState("");
   const [validation, valchange] = useState(false);
 
-  const navigate = useNavigate();
+  console.log(idchange, validation);
 
+  const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
     const empdata = { nome, cpf, idade, salario };
@@ -42,8 +41,8 @@ const CorretorAdicionar = () => {
     <div className="animacao">
       {loading ? (
         <ClipLoader
-        className="animacaooo"
-          color={color}
+          className="animacaooo"
+          color="#21d4fd"
           size={150}
           aria-label="Loading Spinner"
           data-
@@ -66,79 +65,46 @@ const CorretorAdicionar = () => {
                           <label>
                             <b>ID</b>
                           </label>
-                          <input
-                            value={id}
-                            disabled="disabled"
-                            className="form-control"
-                          ></input>
+                          <input value={id} disabled="disabled" className="form-control"></input>
                         </div>
                       </div>
 
-                      {/* OPCAO: Nome */}
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label>
                             <b>Nome</b>
                           </label>
-                          <input
-                            required
-                            value={nome}
-                            onMouseDown={(e) => valchange(true)}
-                            onChange={(e) => nomechange(e.target.value)}
-                            className="form-control"
-                          ></input>
+                          <input requiredvalue={nome} onMouseDown={(e) => valchange(true)} onChange={(e) => nomechange(e.target.value)} className="form-control"></input>
                         </div>
                       </div>
 
-                      {/* OPCAO: CPF */}
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label>
                             <b>CPF</b>
                           </label>
-                          <input
-                            required
-                            value={cpf}
-                            onMouseDown={(e) => valchange(true)}
-                            onChange={(e) => cpfchange(e.target.value)}
-                            className="form-control"
-                          ></input>
+                          <input required value={cpf} onMouseDown={(e) => valchange(true)} onChange={(e) => cpfchange(e.target.value)} className="form-control"></input>
                         </div>
                       </div>
 
-                      {/* OPCAO: Idade */}
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label>
                             <b>Idade</b>
                           </label>
-                          <input
-                            required
-                            value={idade}
-                            onMouseDown={(e) => valchange(true)}
-                            onChange={(e) => idadechange(e.target.value)}
-                            className="form-control"
-                          ></input>
+                          <input required value={idade} onMouseDown={(e) => valchange(true)} onChange={(e) => idadechange(e.target.value)} className="form-control"></input>
                         </div>
                       </div>
 
-                      {/* OPCAO: Salário */}
                       <div className="col-lg-12">
                         <div className="form-group">
                           <label>
                             <b>Salário</b>
                           </label>
-                          <input
-                            required
-                            value={salario}
-                            onMouseDown={(e) => valchange(true)}
-                            onChange={(e) => salariochange(e.target.value)}
-                            className="form-control"
-                          ></input>
+                          <input required value={salario} onMouseDown={(e) => valchange(true)} onChange={(e) => salariochange(e.target.value)} className="form-control"></input>
                         </div>
                       </div>
 
-                      {/* Botão SALVAR e VOLTAR */}
                       <div className="col-lg-12">
                         <div className="form-group">
                           <br></br>
@@ -146,12 +112,7 @@ const CorretorAdicionar = () => {
                             Salvar
                           </button>
                           &nbsp;
-                          <Link
-                            to="/corretores/listar"
-                            className="btn btn-danger"
-                          >
-                            Voltar
-                          </Link>
+                          <Link to="/corretores/listar"className="btn btn-danger">Voltar</Link>
                         </div>
                       </div>
                     </div>
