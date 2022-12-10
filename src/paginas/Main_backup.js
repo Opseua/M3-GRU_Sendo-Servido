@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "../components/Footer/Footer";
-import NavBar from "../components/NavBar/NavBar";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 import style from "./Main.module.css";
 
 export default function Main() {

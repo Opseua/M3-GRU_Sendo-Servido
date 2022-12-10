@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+
 // Páginas: Corretores //
 import CorretoresListar from './CorretoresListar';
 import CorretorDetalhar from './CorretorDetalhar';
@@ -29,6 +30,7 @@ import InquilinosListar from './InquilinosListar';
 import InquilinoDetalhar from './InquilinoDetalhar';
 import InquilinoEditar from './InquilinoEditar';
 import InquilinoAdicionar from './InquilinoAdicionar';
+import Main from './Main_backup';
 
 
 
@@ -40,6 +42,8 @@ function AppServer() {
       <h1 id="Titulo" className="Titulo">DREAMS IMOBILIÁRIA</h1>
       <BrowserRouter>
         <Routes>
+
+        <Route exact path='/' element={<Main />}></Route>
 
           <Route exact path='/corretores/listar' element={<CorretoresListar />}></Route>
           <Route exact path='/corretor/detalhar/:empid' element={<CorretorDetalhar />}></Route>
