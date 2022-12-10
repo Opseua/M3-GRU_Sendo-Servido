@@ -7,8 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImoveisResidenciaisListar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
@@ -36,7 +34,6 @@ const ImoveisResidenciaisListar = () => {
     }
 
 
-
     useEffect(() => {
         setLoading(true);
         fetch("https://server-2.onrender.com/imoveis_residenciais/listar").then((res) => {
@@ -59,7 +56,6 @@ const ImoveisResidenciaisListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="container">
                     <div className="card">
@@ -122,12 +118,10 @@ const ImoveisResidenciaisListar = () => {
                                     }
 
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

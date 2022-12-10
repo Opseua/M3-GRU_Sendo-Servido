@@ -6,10 +6,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 const FormaDePagamentoDetalhar = () => {
-
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
@@ -35,7 +32,6 @@ const FormaDePagamentoDetalhar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div>
                     <div className="container">

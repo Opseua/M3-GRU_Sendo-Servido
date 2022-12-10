@@ -7,11 +7,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImoveisComerciaisListar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
-
+    
     const LoadDetail = (id) => {
         navigate("/imovel_comercial/detalhar/" + id);
     }
@@ -36,7 +34,6 @@ const ImoveisComerciaisListar = () => {
     }
 
 
-
     useEffect(() => {
         setLoading(true);
         fetch("https://server-2.onrender.com/imoveis_comerciais/listar").then((res) => {
@@ -59,7 +56,6 @@ const ImoveisComerciaisListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="container">
                     <div className="card">
@@ -122,12 +118,10 @@ const ImoveisComerciaisListar = () => {
                                     }
 
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

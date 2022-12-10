@@ -7,8 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const FormaDePagamentoAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [id, idchange] = useState("");
     const [metodo, metodochange] = useState("");
     const [conta, contachange] = useState("");
@@ -18,11 +16,9 @@ const FormaDePagamentoAdicionar = () => {
     console.log(validation, idchange);
 
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { metodo, conta, limite_de_deposito };
-
         setLoading(true);
         fetch("https://server-2.onrender.com/forma_de_pagamento/adicionar", {
             method: "POST",
@@ -50,9 +46,7 @@ const FormaDePagamentoAdicionar = () => {
                     data- testid="carregador"
                 /> :
 
-
                 <div>
-
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
@@ -93,7 +87,6 @@ const FormaDePagamentoAdicionar = () => {
                                                 </div>
                                             </div>
 
-
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
@@ -104,17 +97,12 @@ const FormaDePagamentoAdicionar = () => {
                                             </div>
 
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

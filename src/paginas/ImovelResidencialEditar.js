@@ -7,11 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImovelResidencialEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -80,7 +76,6 @@ const ImovelResidencialEditar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div>
 
@@ -176,17 +171,12 @@ const ImovelResidencialEditar = () => {
                                             </div>
 
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

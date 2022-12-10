@@ -7,11 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const InquilinoEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -76,7 +72,6 @@ const InquilinoEditar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div>
 
@@ -148,7 +143,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
@@ -159,17 +153,12 @@ const InquilinoEditar = () => {
                                             </div>
 
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

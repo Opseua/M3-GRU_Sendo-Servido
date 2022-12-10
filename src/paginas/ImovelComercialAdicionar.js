@@ -7,8 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImovelComercialAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");
     const [endereco, enderecochange] = useState("");
@@ -54,7 +52,6 @@ const ImovelComercialAdicionar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="row">
                     <div className="offset-lg-3 col-lg-6">
@@ -132,7 +129,6 @@ const ImovelComercialAdicionar = () => {
                                             </div>
                                         </div>
 
-
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <br></br>
@@ -143,16 +139,11 @@ const ImovelComercialAdicionar = () => {
                                         </div>
 
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </form>
-
                     </div>
                 </div>
-
 
             }
         </div>

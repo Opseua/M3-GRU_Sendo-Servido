@@ -7,8 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretorAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-
-
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
     const [cpf, cpfchange] = useState("");
@@ -19,7 +17,6 @@ const CorretorAdicionar = () => {
     console.log(idchange, validation);
 
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { nome, cpf, idade, salario };
@@ -37,11 +34,9 @@ const CorretorAdicionar = () => {
             setLoading(false);
             console.log(err.message)
         })
-
     }
 
     return (
-
 
         <div className="animacao">
             {loading ?
@@ -52,7 +47,6 @@ const CorretorAdicionar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="row">
                     <div className="offset-lg-3 col-lg-6">
@@ -101,7 +95,6 @@ const CorretorAdicionar = () => {
                                             </div>
                                         </div>
 
-
                                         <div className="col-lg-12">
                                             <div className="form-group">
                                                 <br></br>
@@ -112,20 +105,14 @@ const CorretorAdicionar = () => {
                                         </div>
 
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </form>
-
                     </div>
                 </div>
 
-
             }
         </div>
-
     );
 }
 

@@ -8,8 +8,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImovelResidencialDetalhar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
@@ -35,7 +33,6 @@ const ImovelResidencialDetalhar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div>
                     <div className="container">
@@ -68,7 +65,6 @@ const ImovelResidencialDetalhar = () => {
                         </div>
                     </div>
                 </div >
-
 
             }
         </div>

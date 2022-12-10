@@ -7,8 +7,6 @@ import ClipLoader from "react-spinners/ClipLoader";
 const InquilinosListar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
 
@@ -58,7 +56,6 @@ const InquilinosListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="container">
                     <div className="card">
@@ -121,12 +118,10 @@ const InquilinosListar = () => {
                                     }
 
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

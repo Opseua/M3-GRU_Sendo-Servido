@@ -8,13 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretorEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
-    
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -54,12 +48,9 @@ const CorretorEditar = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(empdata)
         }).then((res) => {
+
             setLoading(false);
-            
-            
             alert('Editado com sucesso.')
-
-
 
             navigate('/corretores/listar/');
         }).catch((err) => {
@@ -79,9 +70,7 @@ const CorretorEditar = () => {
                     data- testid="carregador"
                 /> :
 
-
                 <div>
-
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
@@ -129,8 +118,6 @@ const CorretorEditar = () => {
                                                 </div>
                                             </div>
 
-
-
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
@@ -141,17 +128,12 @@ const CorretorEditar = () => {
                                             </div>
 
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

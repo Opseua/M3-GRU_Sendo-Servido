@@ -7,11 +7,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 const FormasDePagamentoListar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
-
+    
     const LoadDetail = (id) => {
         navigate("/forma_de_pagamento/detalhar/" + id);
     }
@@ -58,7 +56,6 @@ const FormasDePagamentoListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="container">
                     <div className="card">
@@ -121,12 +118,10 @@ const FormasDePagamentoListar = () => {
                                     }
 
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
                 </div>
-
 
             }
         </div>

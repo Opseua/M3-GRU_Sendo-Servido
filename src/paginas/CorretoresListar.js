@@ -5,23 +5,18 @@ import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
 
-
 const CorretoresListar = () => {
 
     const [loading, setLoading] = useState(false);
-
-
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
-
+    
     const LoadDetail = (id) => {
         navigate("/corretor/detalhar/" + id);
     }
     const LoadEdit = (id) => {
         navigate("/corretor/editar/" + id);
     }
-
-
 
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
@@ -39,7 +34,6 @@ const CorretoresListar = () => {
         }
     }
 
-
     useEffect(() => {
 
         setLoading(true);
@@ -55,7 +49,6 @@ const CorretoresListar = () => {
     }, [])
     return (
 
-
         <div className="animacao">
             {loading ?
                 <  ClipLoader
@@ -64,7 +57,6 @@ const CorretoresListar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div className="container">
                     <div className="card">
@@ -128,14 +120,10 @@ const CorretoresListar = () => {
                                     }
 
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
-
                 </div>
-
-
             }
         </div>
     );

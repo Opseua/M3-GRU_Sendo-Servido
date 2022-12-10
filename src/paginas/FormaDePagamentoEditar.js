@@ -4,14 +4,11 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
+
 const FormaDePagamentoEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -38,11 +35,9 @@ const FormaDePagamentoEditar = () => {
     console.log(validation);
 
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { id, metodo, conta, limite_de_deposito };
-
         setLoading(true);
         fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid, {
             method: "PUT",
@@ -68,7 +63,6 @@ const FormaDePagamentoEditar = () => {
                     aria-label="Loading Spinner"
                     data- testid="carregador"
                 /> :
-
 
                 <div>
 
@@ -112,8 +106,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-
-
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
@@ -124,13 +116,9 @@ const FormaDePagamentoEditar = () => {
                                             </div>
 
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
                 </div>

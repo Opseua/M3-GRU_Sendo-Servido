@@ -1,5 +1,3 @@
-// eslint-disable-next-line
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 // Páginas: Corretores //

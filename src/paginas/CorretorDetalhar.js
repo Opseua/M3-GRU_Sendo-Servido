@@ -8,12 +8,9 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretorDetalhar = () => {
 
     const [loading, setLoading] = useState(false);
-    
-
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
-    
     useEffect(() => {
         setLoading(true);
         fetch("https://server-2.onrender.com/corretor/detalhar/" + empid).then((res) => {
@@ -26,6 +23,7 @@ const CorretorDetalhar = () => {
             console.log(err.message);
         })
     }, [empid]);
+
     return (
 
         <div className="animacao">
@@ -37,11 +35,8 @@ const CorretorDetalhar = () => {
                     data- testid="carregador"
                 /> :
 
-
                 <div>
-
                     <div className="container">
-
                         <div className="card row" style={{ "textAlign": "left" }}>
                             <div className="card-title">
                                 <h2>Detalhe corretor</h2>
