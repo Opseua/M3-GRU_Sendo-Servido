@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -5,7 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretorAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-    
+
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -14,6 +16,7 @@ const CorretorAdicionar = () => {
     const [salario, salariochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(idchange, validation);
 
     const navigate = useNavigate();
 

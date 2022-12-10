@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -23,7 +25,7 @@ const CorretorDetalhar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
     return (
 
         <div className="animacao">

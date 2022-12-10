@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -29,7 +31,7 @@ const InquilinoEditar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -41,6 +43,7 @@ const InquilinoEditar = () => {
     const [tempo_como_inquilino, tempo_como_inquilinochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation);
 
     const navigate = useNavigate();
 

@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -19,6 +21,7 @@ const ImovelResidencialAdicionar = () => {
     const [valor_do_condominio, valor_do_condominiochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation, idchange);
 
     const navigate = useNavigate();
 

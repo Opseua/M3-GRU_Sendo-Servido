@@ -1,9 +1,9 @@
+// eslint-disable-next-line
+
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const CorretorEditar = () => {
 
@@ -31,7 +31,7 @@ const CorretorEditar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");
@@ -40,6 +40,7 @@ const CorretorEditar = () => {
     const [salario, salariochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation);
 
     const navigate = useNavigate();
 
@@ -55,16 +56,8 @@ const CorretorEditar = () => {
         }).then((res) => {
             setLoading(false);
             
-            const notify = () => toast("Wow so easy!");
             
             alert('Editado com sucesso.')
-
-
-
-
-            
-
-
 
 
 
