@@ -21,7 +21,6 @@ const CorretoresListar = () => {
 
 
 
-    {/* Função REMOVER INFORMAÇÃO */ }
     const Removefunction = (id) => {
         if (window.confirm('Tem certeza que seja remover?')) {
             setLoading(true);
