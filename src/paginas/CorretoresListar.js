@@ -7,7 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretoresListar = () => {
 
     const [loading, setLoading] = useState(false);
-    
+
 
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
@@ -29,6 +29,8 @@ const CorretoresListar = () => {
                 method: "DELETE"
             }).then((res) => {
                 setLoading(false);
+                window.location.reload();
+                alert('Removido com sucesso')
             }).catch((err) => {
                 setLoading(false);
                 console.log(err.message)
