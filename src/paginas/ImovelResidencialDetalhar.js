@@ -6,7 +6,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const ImovelResidencialDetalhar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
+    
 
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
@@ -28,7 +28,7 @@ const ImovelResidencialDetalhar = () => {
         <div className="animacao">
             {loading ?
                 <  ClipLoader
-                    color={color}
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
                     data- testid="carregador"

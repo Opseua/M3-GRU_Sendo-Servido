@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const CorretorEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
+    
 
     
 
@@ -80,7 +80,7 @@ const CorretorEditar = () => {
         <div className="animacao">
             {loading ?
                 <  ClipLoader
-                    color={color}
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
                     data- testid="carregador"

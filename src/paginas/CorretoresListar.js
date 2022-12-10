@@ -7,7 +7,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const CorretoresListar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
+    
 
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
@@ -56,7 +56,7 @@ const CorretoresListar = () => {
         <div className="animacao">
             {loading ?
                 <  ClipLoader
-                    color={color}
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
                     data- testid="carregador"

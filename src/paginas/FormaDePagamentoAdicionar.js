@@ -5,7 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const FormaDePagamentoAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
+    
 
     const [id, idchange] = useState("");
     const [metodo, metodochange] = useState("");
@@ -41,7 +41,7 @@ const FormaDePagamentoAdicionar = () => {
         <div className="animacao">
             {loading ?
                 <  ClipLoader
-                    color={color}
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
                     data- testid="carregador"
