@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
+import '../css/style_server.css';
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
 
 const CorretoresListar = () => {
 
@@ -59,6 +61,7 @@ const CorretoresListar = () => {
                 /> :
 
                 <div className="container">
+                    <h1 id="titulo" className="titulo">DREAMS IMOBILIÁRIA</h1>
                     <div className="card">
                         <div className="card-title">
                             <h2>Listar corretores</h2>

@@ -36,7 +36,7 @@ const ImovelComercialDetalhar = () => {
 
                 <div>
                     <div className="container">
-
+                    <h1 id="titulo" className="titulo">DREAMS IMOBILIÁRIA</h1>
                         <div className="card row" style={{ "textAlign": "left" }}>
                             <div className="card-title">
                                 <h2>Detalhe imóvel comercial</h2>

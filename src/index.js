@@ -1,17 +1,15 @@
-// ################################ ORLANDO ################################ //
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppServer from './paginas/AppServer.js';
-import './css/style_server.css'
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
-// ################################ ORLANDO ################################ //
+import './css/style_index.css';
 
+// ROTAS //
+import Rotas from './rotas/Rotas.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppServer />
+    <Rotas />
   </React.StrictMode>
 );
 

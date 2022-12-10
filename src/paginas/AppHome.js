@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import { motion } from 'framer-motion';
+import "../css/style_home.css";
 
 import carrossel_1 from '../imagens/carrossel_1.jpg';
 import carrossel_2 from '../imagens/carrossel_2.jpg';

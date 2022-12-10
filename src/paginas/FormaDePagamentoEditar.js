@@ -69,7 +69,7 @@ const FormaDePagamentoEditar = () => {
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
-
+                            <h1 id="titulo" className="titulo">DREAMS IMOBILIÁRIA</h1>
                                 <div className="card" style={{ "textAlign": "left" }}>
                                     <div className="card-title">
                                         <h2>Editar forma de pagamento</h2>
