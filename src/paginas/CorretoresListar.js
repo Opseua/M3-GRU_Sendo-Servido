@@ -3,16 +3,26 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import ApiData from '../componentes/mvc/model.js'
+import AvisoDeResposta from '../componentes/mvc/view.js'
+
 
 import '../css/style_server.css';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css'; //
 
 const CorretoresListar = () => {
 
+
+    const LinkOk = (inf_1, inf_2, inf_3) => {
+        ApiData(inf_1, inf_2, inf_3).then(res => console.log(res.data.nome));
+    };
+
+
+
     const [loading, setLoading] = useState(false);
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
-    
+
     const LoadDetail = (id) => {
         navigate("/corretor/detalhar/" + id);
     }
@@ -39,13 +49,15 @@ const CorretoresListar = () => {
     useEffect(() => {
 
         setLoading(true);
-        fetch("https://server-2.onrender.com/corretores/listar").then((res) => {
-            return res.json();
-        }).then((resp) => {
+
+        ApiData('get', "https://server-2.onrender.com/corretores/lista").then((res) => {
+        return res;
+        }).then((res) => {
             setLoading(false);
-            empdatachange(resp);
+            empdatachange(res.data);
         }).catch((err) => {
             setLoading(false);
+            AvisoDeResposta('Erro ao obter lista de corretores');
             console.log(err.message);
         })
     }, [])
@@ -117,6 +129,8 @@ const CorretoresListar = () => {
                                                     <button onClick={() => { Removefunction(item.id) }} className="btn btn-danger" >Remover</button>
                                                     &nbsp;
                                                     <button onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</button>
+                                                    &nbsp;
+                                                    <button onClick={() => { LinkOk('get', 'https://server-2.onrender.com/corretor/detalhar/' + item.id) }} className="btn btn-primary">TESTE</button>
                                                 </td>
                                             </tr>
                                         ))

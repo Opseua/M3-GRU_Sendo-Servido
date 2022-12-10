@@ -3,7 +3,6 @@
 import { useState } from "react";
 import "../css/style_login.css";
 
-import { Teste } from "../componentes/mvc/model";
 
 function AppLogin() {
 
@@ -43,7 +42,6 @@ function AppLogin() {
             <div className="container-login-form-btn">
               <button className="login-form-btn">Login</button>
               <button href="/teste" className="login-form-btn">BOTAO 1</button>
-
 
 
 

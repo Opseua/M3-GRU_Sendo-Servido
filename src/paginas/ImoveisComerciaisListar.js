@@ -36,8 +36,9 @@ const ImoveisComerciaisListar = () => {
 
     useEffect(() => {
         setLoading(true);
-        fetch("https://server-2.onrender.com/imoveis_comerciais/listar").then((res) => {
-            return res.json();
+        fetch("https://server-2.onrender.com/imoveis_comerciais/listar").then((res) => { 
+        return res.json();
+
         }).then((resp) => {
             setLoading(false);
             empdatachange(resp);
