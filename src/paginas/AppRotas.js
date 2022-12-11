@@ -45,9 +45,9 @@ function AppRotas() {
       <BrowserRouter>
         <Routes>
 
-          <Route exact path='/' element={<Main />}></Route>
+          <Route exact path='/main' element={<Main />}></Route>
 
-          <Route exact path='/home' element={<AppHome />}></Route>
+          <Route exact path='/' element={<AppHome />}></Route>
 
           <Route exact path='/corretores/listar' element={<CorretoresListar />}></Route>
           <Route exact path='/corretor/detalhar/:empid' element={<CorretorDetalhar />}></Route>
