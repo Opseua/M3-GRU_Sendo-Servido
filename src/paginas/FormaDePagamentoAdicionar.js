@@ -13,6 +13,8 @@ const FormaDePagamentoAdicionar = () => {
     const [limite_de_deposito, limite_de_depositochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(idchange, validation);
+
     const navigate = useNavigate();
     const handlesubmit = (e) => {
         e.preventDefault();

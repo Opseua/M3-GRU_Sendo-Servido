@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
@@ -53,8 +52,6 @@ const CorretorEditar = () => {
     })
       .then((res) => {
         setLoading(false);
-
-        const notify = () => toast("Wow so easy!");
 
         alert("Editado com sucesso.");
 
