@@ -109,11 +109,12 @@ const FormasDePagamentoListar = () => {
                                                     <td>{item.conta}</td>
                                                     <td>{item.limite_de_deposito}</td>
 
-                                                    <td><a onClick={() => { LoadEdit(item.id) }} className="btn btn-success">Editar</a>
+                                                    <td>
+                                                        <button onClick={() => { LoadEdit(item.id); }} className="btn btn-success">Editar</button>
                                                         &nbsp;
-                                                        <a onClick={() => { Removefunction(item.id) }} className="btn btn-danger">Remover</a>
+                                                        <button onClick={() => { Removefunction(item.id); }} className="btn btn-danger">Remover</button>
                                                         &nbsp;
-                                                        <a onClick={() => { LoadDetail(item.id) }} className="btn btn-primary">Detalhar</a>
+                                                        <button onClick={() => { LoadDetail(item.id); }} className="btn btn-primary">Detalhar</button>
                                                     </td>
                                                 </tr>
                                             ))

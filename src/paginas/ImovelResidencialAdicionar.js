@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 const ImovelResidencialAdicionar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
-
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");
     const [area, areachange] = useState("");
@@ -19,9 +19,7 @@ const ImovelResidencialAdicionar = () => {
     const [valor_do_condominio, valor_do_condominiochange] = useState("");
     const [validation, valchange] = useState(false);
 
-
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { tipo_de_imovel, area, quartos, banheiros, garagens, endereco, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
@@ -43,19 +41,19 @@ const ImovelResidencialAdicionar = () => {
     }
 
     return (
-
         <div className="animacao">
-            {loading ?
-                <  ClipLoader
-                    color={color}
+            {loading ? (
+                <ClipLoader
+                    className="animacaooo"
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
-                    data- testid="carregador"
-                /> :
-
-
-                <div>
-
+                    data-
+                    testid="carregador"
+                />
+            ) : (
+                <>
+                    <NavBar />
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
@@ -149,13 +147,6 @@ const ImovelResidencialAdicionar = () => {
                                             </div>
 
 
-
-
-
-
-
-
-
                                             {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
@@ -165,21 +156,15 @@ const ImovelResidencialAdicionar = () => {
                                                     <Link to="/imoveis_residenciais/listar" className="btn btn-danger">Voltar</Link>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
-                </div>
-
-
-            }
+                    <Footer />
+                </>
+            )}
         </div>
 
     );

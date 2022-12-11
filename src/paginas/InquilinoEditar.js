@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 const InquilinoEditar = () => {
 
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -66,17 +64,18 @@ const InquilinoEditar = () => {
     return (
 
         <div className="animacao">
-            {loading ?
-                <  ClipLoader
-                    color={color}
+            {loading ? (
+                <ClipLoader
+                    className="animacaooo"
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
-                    data- testid="carregador"
-                /> :
-
-
-                <div>
-
+                    data-
+                    testid="carregador"
+                />
+            ) : (
+                <>
+                    <NavBar />
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
@@ -152,14 +151,6 @@ const InquilinoEditar = () => {
                                                 </div>
                                             </div>
 
-
-
-
-
-
-
-
-
                                             {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
@@ -169,21 +160,15 @@ const InquilinoEditar = () => {
                                                     <Link to="/inquilinos/listar" className="btn btn-danger">Voltar</Link>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
-                </div>
-
-
-            }
+                    <Footer />
+                </>
+            )}
         </div>
 
     );

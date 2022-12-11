@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 
 const ImovelComercialDetalhar = () => {
-
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
-
     const { empid } = useParams();
     const [empdata, empdatachange] = useState({});
 
@@ -24,21 +23,19 @@ const ImovelComercialDetalhar = () => {
         })
     }, []);
     return (
-
         <div className="animacao">
-            {loading ?
-                <  ClipLoader
-                    color={color}
+            {loading ? (
+                <ClipLoader
+                    className="animacaooo"
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
-                    data- testid="carregador"
-                /> :
-
-
-                <div>
-                    {/* <div className="row">
-                <div className="offset-lg-3 col-lg-6"> */}
-
+                    data-
+                    testid="carregador"
+                />
+            ) : (
+                <>
+                    <NavBar />
                     <div className="container">
 
                         <div className="card row" style={{ "textAlign": "left" }}>
@@ -68,12 +65,9 @@ const ImovelComercialDetalhar = () => {
                             }
                         </div>
                     </div>
-                    {/* </div>
-            </div> */}
-                </div >
-
-
-            }
+                    <Footer />
+                </>
+            )}
         </div>
 
     );
