@@ -35,7 +35,7 @@ const CorretoresListar = () => {
 
             
             swal("Concluído", "Removido com sucesso", "success");
-            window.location.reload();
+
       
 
 
