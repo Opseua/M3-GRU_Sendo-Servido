@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
@@ -18,6 +19,16 @@ const CorretoresListar = () => {
   };
 
   const Removefunction = (id) => {
+
+    swal({
+      title: "Remover",
+      text: "Tem certeza que deseja apagar?",
+      timer: 5000
+    }).then((value) => {if(!value == ''){swal("Botão pressioonado");return}});
+
+
+alert('ok');
+
     if (window.confirm("Tem certeza que seja remover?")) {
       setLoading(true);
       fetch("https://server-2.onrender.com/corretor/deletar/" + id, {
