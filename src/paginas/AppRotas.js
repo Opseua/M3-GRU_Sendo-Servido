@@ -30,13 +30,13 @@ import InquilinosListar from './InquilinosListar';
 import InquilinoDetalhar from './InquilinoDetalhar';
 import InquilinoEditar from './InquilinoEditar';
 import InquilinoAdicionar from './InquilinoAdicionar';
-import Main from './Main_backup';
+import Main from './Main';
 
 
 
 
 // ROTAS //
-function AppServer() {
+function AppRotas() {
   return (
     <div id="AppServer" className="AppServer">
       <BrowserRouter>
@@ -76,4 +76,4 @@ function AppServer() {
 
 }
 
-export default AppServer;
+export default AppRotas;
