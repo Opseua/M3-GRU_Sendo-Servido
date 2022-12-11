@@ -17,6 +17,8 @@ const InquilinoAdicionar = () => {
     const [tempo_como_inquilino, tempo_como_inquilinochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(idchange, validation);
+
     const navigate = useNavigate();
     const handlesubmit = (e) => {
         e.preventDefault();

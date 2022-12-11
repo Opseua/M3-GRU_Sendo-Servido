@@ -39,9 +39,9 @@ const InquilinoEditar = () => {
     const [tempo_como_inquilino, tempo_como_inquilinochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation);
 
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { id, nome, salario, cpf, idade, profissao, contato, tempo_como_inquilino };

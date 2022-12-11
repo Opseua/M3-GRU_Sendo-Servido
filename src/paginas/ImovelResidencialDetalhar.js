@@ -21,7 +21,7 @@ const ImovelResidencialDetalhar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
     return (
         <div className="animacao">
             {loading ? (

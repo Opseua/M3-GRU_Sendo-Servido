@@ -43,6 +43,8 @@ const ImovelResidencialEditar = () => {
     const [valor_do_condominio, valor_do_condominiochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation);
+
     const navigate = useNavigate();
     const handlesubmit = (e) => {
         e.preventDefault();
