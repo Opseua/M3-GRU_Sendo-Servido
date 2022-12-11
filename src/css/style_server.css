@@ -4,7 +4,7 @@
   height: 100vh;
 }
 
-.Titulo {
+.titulo {
   color: #fff;
   flex: auto;
   align-items: center;
@@ -26,6 +26,15 @@
   padding: 3vh;
   border-radius: 2vh;
 }
+
+
+.animacao{
+  flex: auto;
+  align-items: center;
+  text-align: center;
+}
+
+
 
 :root {
   --bs-blue: #0d6efd;
