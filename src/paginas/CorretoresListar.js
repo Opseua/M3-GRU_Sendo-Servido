@@ -23,26 +23,30 @@ const CorretoresListar = () => {
     swal({
       title: "Remover",
       text: "Tem certeza que deseja apagar?",
-      timer: 5000
-    }).then((value) => {if(!value == ''){swal("Botão pressioonado");return}});
-
-
-alert('ok');
-
-    if (window.confirm("Tem certeza que seja remover?")) {
-      setLoading(true);
-      fetch("https://server-2.onrender.com/corretor/deletar/" + id, {
-        method: "DELETE",
-      })
-        .then((res) => {
-          setLoading(false);
+    }).then((value) => {
+      if (!value == '') {
+  
+        setLoading(true);
+        fetch("https://server-2.onrender.com/corretor/deletar/" + id, {
+          method: "DELETE",
         })
-        .catch((err) => {
-          setLoading(false);
-          console.log(err.message);
-        });
-    }
-  };
+          .then((res) => {
+            setLoading(false);
+
+            
+            swal("Concluído", "Removido com sucesso", "success");
+            window.location.reload();
+      
+
+
+          })
+          .catch((err) => {
+            setLoading(false);
+            console.log(err.message);
+          });
+      }
+    });
+  }
 
   useEffect(() => {
     setLoading(true);
