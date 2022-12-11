@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
+import "../css/style_loader.css";
 
 const CorretoresListar = () => {
   const [loading, setLoading] = useState(false);
