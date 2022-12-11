@@ -6,32 +6,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  background-color: rgba(158, 160, 160, 0.466);
+  max-width: 80%;
+  background-color: rgba(0, 0, 0, 0.151);
 }
 
-h1 {
+.text-home-h1 {
   text-align: center;
   font-size: 50px;
-  margin: 20px 0 0 0;
+  margin: 60px 0 0 0;
 }
 
-h2 {
+.text-home-h2 {
   text-align: center;
-  color: #b721ff;
+  color: #9027C2;
+  font-size: 25px;
 }
 
-h4 {
-  color: #853da7;
+.text-home-h4 {
+  color: #9d51c0;
 }
 
 .slogan {
   text-align: center;
   font-size: 15px;
-  color: #b721ff;
+  color: rgb(248, 4, 248);
   margin: 0 0 20px 0;
 }
 
-p {
+.text-home-p {
   text-align: justify;
   text-indent: 30px;
   font-weight: 600;
@@ -65,16 +67,66 @@ p {
   text-align: center;
 }
 
-.buttons button {
+.button-home {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.buttons button img {
+.button-home img {
   width: 3.5vw;
 }
 
-.buttons button:first-child img {
+.button-home:first-child img {
   transform: rotate(180deg);
+}
+
+ 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgb(248, 4, 248);
+  padding: 30px;
+  margin: 20px;
+  width: 300px;
+  height: 400px;
+  transition: all 0.3s ease-out;
+  background: linear-gradient(#4895ff, #9027C2);
+  background-size:150% 
+
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+ 
+.card p   {
+  font-size: 16px;
+}
+ 
+.image {
+  float:right;
+  width: 300px;
+  height: 200px;
+  border: 3px solid rgb(#9027C2);
+  border-radius: 20px;
+}
+.blue {
+  border-left: 3px solid #4895ff;
+}
+ 
+.green {
+  border-left: 3px solid #ffffff;
+  
+}
+ 
+.red {
+  border-left: 3px solid #b3404a;
 }
