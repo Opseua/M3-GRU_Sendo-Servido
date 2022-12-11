@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import '../css/style_home.css';
 import { motion } from 'framer-motion';
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 import carrossel_1 from '../imagens/carrossel_1.jpg';
 import carrossel_2 from '../imagens/carrossel_2.jpg';
@@ -41,7 +43,11 @@ function AppHome() {
 
     <main className='Home'>
       <div>
-        <h1>DREAMS IMOBILIÁRIA</h1>
+
+        <>
+          <NavBar />
+        </>
+
         <h2 className='slogan'>REALIZANDO SONHOS DESDE 2005</h2>
         <motion.div ref={carousel} className='carousel' whileTop={{ cursor: "grabbing" }}>
           <motion.div
@@ -60,7 +66,7 @@ function AppHome() {
           <button onClick={handleRightClick}><img src={icon} alt="Scroll Rigth" /></button>
         </div>
       </div>
-      <hr />
+
 
       <div className='quem-somos'>
         <h2>QUEM SOMOS</h2>
@@ -70,7 +76,15 @@ function AppHome() {
         <h4>CIDADES ATENDIDAS</h4>
         <p>A Dreams Imobiliária é a única construtora presente em 160 cidades brasileiras. Hoje, é líder no mercado de construção civil no segmento de imóveis residenciais e já possui mais de 4 mil casas e apartamentos lançados em 22 estados brasileiros e no Distrito Federal. Além de construir empreendimentos direcionados à classe média, que possibilita a realização do sonho da casa própria a milhares de brasileiros, a empresa gera seis mil postos de trabalho por ano nos locais em que atua.</p>
       </div>
+
+      <>
+        <Footer />
+      </>
+
     </main>
+
+
+
   );
 }
 

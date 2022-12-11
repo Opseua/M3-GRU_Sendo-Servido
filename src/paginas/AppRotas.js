@@ -1,6 +1,8 @@
 // eslint-disable-next-line
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+// Home //
+import AppHome from './AppHome';
 
 // Páginas: Corretores //
 import CorretoresListar from './CorretoresListar';
@@ -43,7 +45,9 @@ function AppRotas() {
       <BrowserRouter>
         <Routes>
 
-        <Route exact path='/inicio' element={<Main />}></Route>
+          <Route exact path='/' element={<Main />}></Route>
+
+          <Route exact path='/home' element={<AppHome />}></Route>
 
           <Route exact path='/corretores/listar' element={<CorretoresListar />}></Route>
           <Route exact path='/corretor/detalhar/:empid' element={<CorretorDetalhar />}></Route>
