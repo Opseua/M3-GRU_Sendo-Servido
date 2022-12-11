@@ -15,20 +15,26 @@ function AppLogin() {
   const validarSenha = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$");
 
   const validate = () => {
-      if(!validarEmail.test(email)) {
-          setEmailErr(true);
-      } else {
-          setEmailErr(false);
-      }
+    if (!validarEmail.test(email)) {
+      setEmailErr(true);
+      return
+    } else {
+      setEmailErr(false);
+    }
 
-      if(!validarSenha.test(password)) {
-          setPasswordErr(true);
-      } else {
-          setPasswordErr(false);
-      }
+    if (!validarSenha.test(password)) {
+      setPasswordErr(true);
+      return
+    } else {
+      setPasswordErr(false);
+    }
   }
-  
-  console.log({email, password});
+
+  if (emailErr == false && passwordErr == false) {
+    <Link to='/componentURL' />
+  }
+
+  console.log({ email, password });
 
   return (
     <div className="container">
@@ -62,10 +68,17 @@ function AppLogin() {
               {passwordErr && <p>Por favor, digite uma senha mais segura.</p>}
             </div>
 
+
             <div className="container-login-form-btn">
               <button onClick={validate} className="login-form-btn">Login</button>
-              <Link to="/corretores/listar" className="login-form-btn">TESTE</Link>
+              <Link to="/corretores/listar" onClick={validate} className="login-form-btn">TESTE</Link>
+              <button onClick={validate} className="login-form-btn" type='button'>submit</button>
             </div>
+
+
+
+
+
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
