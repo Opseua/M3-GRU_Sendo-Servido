@@ -95,7 +95,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Tipo de imóvel */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tipo de imóvel</b></label>
@@ -103,7 +102,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Endereco */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Endereço</b></label>
@@ -111,7 +109,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Salas */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Salas</b></label>
@@ -119,7 +116,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Banheiros */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Banheiros</b></label>
@@ -127,7 +123,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Garagens */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Garagens</b></label>
@@ -135,7 +130,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Tipo de contrato */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tipo de contrato</b></label>
@@ -143,8 +137,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-
-                                            {/* OPCAO: Tipo de imóvel */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Tipo de imóvel</b></label>
@@ -152,7 +144,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Valor do condomínio */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Valor do condomínio</b></label>
@@ -160,7 +151,6 @@ const ImovelComercialEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>

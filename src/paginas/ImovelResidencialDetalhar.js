@@ -60,7 +60,6 @@ const ImovelResidencialDetalhar = () => {
                                     <h5>Valor do condomínio: {empdata.valor_do_condominio}</h5>
                                     <br></br>
 
-                                    {/* Botão VOLTAR */}
                                     <Link to="/imoveis_residenciais/listar" className="btn btn-danger">Voltar</Link>
                                 </div>
                             }

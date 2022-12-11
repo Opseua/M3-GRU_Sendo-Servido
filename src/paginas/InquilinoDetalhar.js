@@ -59,7 +59,6 @@ const InquilinoDetalhar = () => {
                                     <h5>Tempo como inquino: {empdata.tempo_como_inquilino}</h5>
                                     <br></br>
 
-                                    {/* Botão VOLTAR */}
                                     <Link to="/inquilinos/listar" className="btn btn-danger">Voltar</Link>
                                 </div>
                             }
