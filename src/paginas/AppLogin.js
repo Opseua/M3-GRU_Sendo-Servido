@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/style_login.css";
 
 
@@ -63,6 +64,7 @@ function AppLogin() {
 
             <div className="container-login-form-btn">
               <button onClick={validate} className="login-form-btn">Login</button>
+              <Link to="/corretores/listar" className="login-form-btn">TESTE</Link>
             </div>
 
             <div className="text-center">

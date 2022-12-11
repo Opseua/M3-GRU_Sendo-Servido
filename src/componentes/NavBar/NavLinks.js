@@ -10,17 +10,17 @@ export default function NavLinks() {
     <ul className={style.listaItens}>
       <li>
         <Link to="/">
-          <GoHome  className={style.loginIcone}/>
+          <GoHome className={style.loginIcone} />
         </Link>
       </li>
       <li>
-        <Link to="/">
-          <MdMonitor className={style.loginIcone}/>
+        <Link to="/corretores/listar">
+          <MdMonitor className={style.loginIcone} />
         </Link>
       </li>
       <li>
         <BsPersonCircle className={style.loginIcone} />
-        <Link to="/"></Link>
+        <Link to="/login"></Link>
       </li>
     </ul>
   );
