@@ -64,10 +64,10 @@ const CorretoresListar = () => {
       });
   }, []);
   return (
-    <div className="animacao">
+    <div className="server_animacao">
       {loading ? (
         <ClipLoader
-          className="animacaooo"
+          className="server_animacao"
           color="#21d4fd"
           size={150}
           aria-label="Loading Spinner"
@@ -77,13 +77,13 @@ const CorretoresListar = () => {
       ) : (
         <>
           <NavBar />
-          <div className="container">
-            <div className="card">
-              <div className="card-title">
+          <div className="server_container">
+            <div className="server_card">
+              <div className="server_card-title">
                 <h2>Listar corretores</h2>
               </div>
-              <div className="card-body">
-                <div className="divbtn">
+              <div className="server_card-body">
+                <div className="server_divbtn">
                   <Link to="/corretor/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
                   &nbsp;
                   <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>

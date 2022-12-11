@@ -50,7 +50,7 @@ const InquilinosListar = () => {
     }, [])
     return (
 
-        <div className="animacao">
+        <div className="server_animacao">
             {loading ? (
                 <ClipLoader
                     className="animacaooo"
