@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 const ImoveisComerciaisListar = () => {
 
     const [loading, setLoading] = useState(false);
     const [color, setColor] = useState("#21d4fd");
+    
 
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();
@@ -54,7 +57,7 @@ const ImoveisComerciaisListar = () => {
         <div className="animacao">
             {loading ?
                 <  ClipLoader
-                    color={color}
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
                     data- testid="carregador"

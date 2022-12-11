@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import Footer from "../componentes/Footer/Footer";
+import NavBar from "../componentes/NavBar/NavBar";
 
 const FormaDePagamentoEditar = () => {
-
     const [loading, setLoading] = useState(false);
-    const [color, setColor] = useState("#21d4fd");
-
     const { empid } = useParams();
-
-    //const [empdata, empdatachange] = useState({});
 
     useEffect(() => {
         setLoading(true);
@@ -33,9 +30,7 @@ const FormaDePagamentoEditar = () => {
     const [limite_de_deposito, limite_de_depositochange] = useState("");
     const [validation, valchange] = useState(false);
 
-
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { id, metodo, conta, limite_de_deposito };
@@ -56,19 +51,19 @@ const FormaDePagamentoEditar = () => {
 
     }
     return (
-
         <div className="animacao">
-            {loading ?
-                <  ClipLoader
-                    color={color}
+            {loading ? (
+                <ClipLoader
+                    className="animacaooo"
+                    color="#21d4fd"
                     size={150}
                     aria-label="Loading Spinner"
-                    data- testid="carregador"
-                /> :
-
-
-                <div>
-
+                    data-
+                    testid="carregador"
+                />
+            ) : (
+                <>
+                    <NavBar />
                     <div className="row">
                         <div className="offset-lg-3 col-lg-6">
                             <form className="container" onSubmit={handlesubmit}>
@@ -88,7 +83,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Metodo */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Método</b></label>
@@ -96,7 +90,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Conta */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Conta</b></label>
@@ -104,7 +97,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-                                            {/* OPCAO: Limite de depósito */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <label><b>Limite de depósito</b></label>
@@ -112,15 +104,6 @@ const FormaDePagamentoEditar = () => {
                                                 </div>
                                             </div>
 
-
-
-
-
-
-
-
-
-                                            {/* Botão SALVAR e VOLTAR */}
                                             <div className="col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
@@ -129,22 +112,16 @@ const FormaDePagamentoEditar = () => {
                                                     <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </form>
-
                         </div>
                     </div>
-                </div>
-
-            }
+                    <Footer />
+                </>
+            )}
         </div>
-
     );
 }
 
