@@ -4,6 +4,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // Home //
 import AppHome from './AppHome';
 
+// Login //
+import AppLogin from './AppLogin';
+
 // Páginas: Corretores //
 import CorretoresListar from './CorretoresListar';
 import CorretorDetalhar from './CorretorDetalhar';
@@ -48,6 +51,8 @@ function AppRotas() {
           <Route exact path='/main' element={<Main />}></Route>
 
           <Route exact path='/' element={<AppHome />}></Route>
+
+          <Route exact path='/login' element={<AppLogin />}></Route>
 
           <Route exact path='/corretores/listar' element={<CorretoresListar />}></Route>
           <Route exact path='/corretor/detalhar/:empid' element={<CorretorDetalhar />}></Route>

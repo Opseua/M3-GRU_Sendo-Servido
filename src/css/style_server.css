@@ -11,10 +11,6 @@
   text-align: center;
 }
 
-.AppServer {
-  height: 100vh;
-  background-color: #9EA0A0;
-}
 
 .Imagemcasa {
   height: 200px;
@@ -32,6 +28,7 @@
   flex: auto;
   align-items: center;
   text-align: center;
+  background-color: #9EA0A0;
 }
 
 
