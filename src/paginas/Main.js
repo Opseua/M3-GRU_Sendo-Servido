@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from "react";
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";

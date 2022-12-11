@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -5,7 +6,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
 const ImoveisComerciaisListar = () => {
-
     const [loading, setLoading] = useState(false);
     const [empdata, empdatachange] = useState(null);
     const navigate = useNavigate();

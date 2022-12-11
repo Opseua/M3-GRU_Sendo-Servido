@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import '../css/style_home.css';

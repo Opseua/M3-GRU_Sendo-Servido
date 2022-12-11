@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -5,7 +6,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
 const InquilinoEditar = () => {
-
     const [loading, setLoading] = useState(false);
     const { empid } = useParams();
 
@@ -27,7 +27,7 @@ const InquilinoEditar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
 
     const [id, idchange] = useState("");
     const [nome, nomechange] = useState("");

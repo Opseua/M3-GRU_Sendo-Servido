@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -5,7 +6,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
 const ImovelComercialEditar = () => {
-
     const [loading, setLoading] = useState(false);
     const { empid } = useParams();
 
@@ -28,7 +28,7 @@ const ImovelComercialEditar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
 
     const [id, idchange] = useState("");
     const [tipo_de_imovel, tipo_de_imovelchange] = useState("");
@@ -41,9 +41,9 @@ const ImovelComercialEditar = () => {
     const [valor_do_condominio, valor_do_condominiochange] = useState("");
     const [validation, valchange] = useState(false);
 
+    console.log(validation)
 
     const navigate = useNavigate();
-
     const handlesubmit = (e) => {
         e.preventDefault();
         const empdata = { id, tipo_de_imovel, endereco, salas, banheiros, garagens, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
@@ -86,6 +86,7 @@ const ImovelComercialEditar = () => {
                                     <div className="card-body">
 
                                         <div className="row">
+
 
                                             <div className="col-lg-12">
                                                 <div className="form-group">

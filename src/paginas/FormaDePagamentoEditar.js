@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -22,7 +23,7 @@ const FormaDePagamentoEditar = () => {
             setLoading(false);
             console.log(err.message);
         })
-    }, []);
+    }, [empid]);
 
     const [id, idchange] = useState("");
     const [metodo, metodochange] = useState("");
