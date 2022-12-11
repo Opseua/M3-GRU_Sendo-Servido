@@ -16,7 +16,6 @@ export default function Navigation() {
               alt="logo imobiliaria"
             ></img>
           </Link>
-          <p>Dreams Imobiliária</p>
         </div>
         <NavLinks />
       </nav>
