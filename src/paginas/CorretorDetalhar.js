@@ -60,6 +60,8 @@ const CorretorDetalhar = () => {
                   <br></br>
                   
                   <Link to="/corretores/listar" className="server_btn server_btn-danger">Voltar</Link>
+                  <br></br>
+                  <br></br>
                 </div>
               )}
             </div>

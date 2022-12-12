@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import "react-toastify/dist/ReactToastify.css";
+import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
+
 
 const CorretorEditar = () => {
   const [loading, setLoading] = useState(false);
@@ -53,8 +54,7 @@ const CorretorEditar = () => {
       .then((res) => {
         setLoading(false);
 
-        alert("Editado com sucesso.");
-
+        swal("Concluído", "Editada com sucesso!", "success");
         navigate("/corretores/listar/");
       })
       .catch((err) => {
@@ -99,7 +99,7 @@ const CorretorEditar = () => {
                           <label className="server_label">
                             <b className="server_b">Nome</b>
                           </label>
-                          <input required onMouseDown={(e) => valchange(true)} onChange={(e) => nomechange(e.target.value)} className="server_form-control"></input>
+                          <input required value={nome} onMouseDown={(e) => valchange(true)} onChange={(e) => nomechange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
 

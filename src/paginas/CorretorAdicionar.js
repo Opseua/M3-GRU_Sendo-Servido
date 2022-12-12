@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
+import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
@@ -29,8 +30,13 @@ const CorretorAdicionar = () => {
     })
       .then((res) => {
         setLoading(false);
-        alert("Adicionado com sucesso.");
+
+
+        swal("Concluído", "Adicionado com sucesso!", "success");
+
+
         navigate("/corretores/listar");
+
       })
       .catch((err) => {
         setLoading(false);
@@ -113,7 +119,7 @@ const CorretorAdicionar = () => {
                             Salvar
                           </button>
                           &nbsp;
-                          <Link to="/corretores/listar"className="server_btn server_btn-danger">Voltar</Link>
+                          <Link to="/corretores/listar" className="server_btn server_btn-danger">Voltar</Link>
                         </div>
                       </div>
                     </div>
