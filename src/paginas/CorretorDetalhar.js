@@ -26,10 +26,10 @@ const CorretorDetalhar = () => {
       });
   }, [empid]);
   return (
-    <div className="animacao">
+    <div className="server_tudo">
       {loading ? (
         <ClipLoader
-          className="animacaooo"
+          className="server_animacao"
           color="#21d4fd"
           size={150}
           aria-label="Loading Spinner"
@@ -39,27 +39,27 @@ const CorretorDetalhar = () => {
       ) : (
         <>
           <NavBar />
-          <div className="container">
-            <div className="card row" style={{ textAlign: "left" }}>
-              <div className="card-title">
-                <h2>Detalhe corretor</h2>
+          <div className="server_container">
+            <div className="server_card server_row" style={{ textAlign: "left" }}>
+              <div className="server_card-title">
+                <h2 className="server_h2">Detalhe corretor</h2>
               </div>
-              <div className="card-body"></div>
+              <div className="server_card-body"></div>
 
               {empdata && (
                 <div>
-                  <h5>ID: {empdata.id}</h5>
-                  <h2>
-                    Nome: <b>{empdata.nome}</b>
+                  <h5 className="server_h5">ID: {empdata.id}</h5>
+                  <h2 className="server_h2">
+                    Nome: <b className="server_b">{empdata.nome}</b>
                   </h2>
                   <br></br>
 
-                  <h5>CPF: {empdata.cpf}</h5>
-                  <h5>Idade: {empdata.idade}</h5>
-                  <h5>Salário: {empdata.salario}</h5>
+                  <h5 className="server_h5">CPF: {empdata.cpf}</h5>
+                  <h5 className="server_h5">Idade: {empdata.idade}</h5>
+                  <h5 className="server_h5">Salário: {empdata.salario}</h5>
                   <br></br>
                   
-                  <Link to="/corretores/listar" className="btn btn-danger">Voltar</Link>
+                  <Link to="/corretores/listar" className="server_btn server_btn-danger">Voltar</Link>
                 </div>
               )}
             </div>

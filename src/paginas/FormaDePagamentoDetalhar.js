@@ -36,25 +36,25 @@ const FormaDePagamentoDetalhar = () => {
             ) : (
                 <>
                     <NavBar />
-                    <div className="container">
+                    <div className="server_container">
 
-                        <div className="card row" style={{ "textAlign": "left" }}>
-                            <div className="card-title">
-                                <h2>Detalhe forma de pagamento</h2>
+                        <div className="server_card server_row" style={{ "textAlign": "left" }}>
+                            <div className="server_card-title">
+                                <h2 className="server_h2">Detalhe forma de pagamento</h2>
                             </div>
-                            <div className="card-body"></div>
+                            <div className="server_card-body"></div>
 
                             {empdata &&
                                 <div>
-                                    <h5>ID: {empdata.id}</h5>
-                                    <h2>Método: <b>{empdata.metodo}</b></h2>
+                                    <h5 className="server_h5">ID: {empdata.id}</h5>
+                                    <h2 className="server_h2">Método: <b className="server_b">{empdata.metodo}</b></h2>
                                     <br></br>
 
-                                    <h5>Conta: {empdata.conta}</h5>
-                                    <h5>Limite de depósito: {empdata.limite_de_deposito}</h5>
+                                    <h5 className="server_h5">Conta: {empdata.conta}</h5>
+                                    <h5 className="server_h5">Limite de depósito: {empdata.limite_de_deposito}</h5>
                                     <br></br>
 
-                                    <Link to="/formas_de_pagamento/listar" className="btn btn-danger">Voltar</Link>
+                                    <Link to="/formas_de_pagamento/listar" className="server_btn server_btn-danger">Voltar</Link>
                                 </div>
                             }
                         </div>

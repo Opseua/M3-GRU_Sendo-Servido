@@ -94,16 +94,16 @@ body {
   border-radius: 5px;
   box-shadow: 7px 7px 13px 0px rgb(248, 4, 248);
   padding: 30px;
-  margin: 20px;
-  width: 300px;
-  height: 400px;
+  margin: 30px;
+  width: 400px;
+  height: 431px;
   transition: all 0.3s ease-out;
   background: linear-gradient(#4895ff, #9027C2);
   background-size:150% 
 
 }
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-35px);
   cursor: pointer;
 }
  
@@ -112,10 +112,10 @@ body {
 }
  
 .imagem-card {
-  float:right;
-  width: 300px;
-  height: 200px;
-  border: 3px solid rgb(#9027C2);
+  float:center;
+  width: 310px;
+  height: 255px;
+  border: 2px solid rgb(#9027C2);
   border-radius: 20px;
 }
 .blue {

@@ -57,94 +57,94 @@ const ImovelResidencialAdicionar = () => {
             ) : (
                 <>
                     <NavBar />
-                    <div className="row">
-                        <div className="offset-lg-3 col-lg-6">
-                            <form className="container" onSubmit={handlesubmit}>
+                    <div className="server_row">
+                        <div className="server_offset-lg-3 col-lg-6">
+                            <form className="server_container" onSubmit={handlesubmit}>
 
-                                <div className="card" style={{ "textAlign": "left" }}>
-                                    <div className="card-title">
-                                        <h2>Adicionar imóvel residencial</h2>
+                                <div className="server_card" style={{ "textAlign": "left" }}>
+                                    <div className="server_card-title">
+                                        <h2 className="server_h2">Adicionar imóvel residencial</h2>
                                     </div>
-                                    <div className="card-body">
+                                    <div className="server_card-body">
 
-                                        <div className="row">
+                                        <div className="server_row">
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>ID</b></label>
-                                                    <input value={id} disabled="disabled" className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">ID</b></label>
+                                                    <input value={id} disabled="disabled" className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Tipo de imóvel</b></label>
-                                                    <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Tipo de imóvel</b></label>
+                                                    <input required value={tipo_de_imovel} onMouseDown={e => valchange(true)} onChange={e => tipo_de_imovelchange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Área</b></label>
-                                                    <input required value={area} onMouseDown={e => valchange(true)} onChange={e => areachange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Área</b></label>
+                                                    <input required value={area} onMouseDown={e => valchange(true)} onChange={e => areachange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Quartos</b></label>
-                                                    <input required value={quartos} onMouseDown={e => valchange(true)} onChange={e => quartoschange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Quartos</b></label>
+                                                    <input required value={quartos} onMouseDown={e => valchange(true)} onChange={e => quartoschange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Banheiros</b></label>
-                                                    <input required value={banheiros} onMouseDown={e => valchange(true)} onChange={e => banheiroschange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Banheiros</b></label>
+                                                    <input required value={banheiros} onMouseDown={e => valchange(true)} onChange={e => banheiroschange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Garagens</b></label>
-                                                    <input required value={garagens} onMouseDown={e => valchange(true)} onChange={e => garagenschange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Garagens</b></label>
+                                                    <input required value={garagens} onMouseDown={e => valchange(true)} onChange={e => garagenschange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Endereco</b></label>
-                                                    <input required value={endereco} onMouseDown={e => valchange(true)} onChange={e => enderecochange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Endereco</b></label>
+                                                    <input required value={endereco} onMouseDown={e => valchange(true)} onChange={e => enderecochange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Tipo de contrato</b></label>
-                                                    <input required value={tipo_de_contrato} onMouseDown={e => valchange(true)} onChange={e => tipo_de_contratochange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Tipo de contrato</b></label>
+                                                    <input required value={tipo_de_contrato} onMouseDown={e => valchange(true)} onChange={e => tipo_de_contratochange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Valor do imóvel</b></label>
-                                                    <input required value={valor_do_imovel} onMouseDown={e => valchange(true)} onChange={e => valor_do_imovelchange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Valor do imóvel</b></label>
+                                                    <input required value={valor_do_imovel} onMouseDown={e => valchange(true)} onChange={e => valor_do_imovelchange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
-                                                    <label><b>Valor do condomínio</b></label>
-                                                    <input required value={valor_do_condominio} onMouseDown={e => valchange(true)} onChange={e => valor_do_condominiochange(e.target.value)} className="form-control"></input>
+                                                    <label className="server_label"><b className="server_b">Valor do condomínio</b></label>
+                                                    <input required value={valor_do_condominio} onMouseDown={e => valchange(true)} onChange={e => valor_do_condominiochange(e.target.value)} className="server_form-control"></input>
                                                 </div>
                                             </div>
 
-                                            <div className="col-lg-12">
+                                            <div className="server_col-lg-12">
                                                 <div className="form-group">
                                                     <br></br>
-                                                    <button className="btn btn-success" type="submit">Salvar</button>
+                                                    <button className="server_btn server_btn-success" type="submit">Salvar</button>
                                                     &nbsp;
-                                                    <Link to="/imoveis_residenciais/listar" className="btn btn-danger">Voltar</Link>
+                                                    <Link to="/imoveis_residenciais/listar" className="server_btn server_btn-danger">Voltar</Link>
                                                 </div>
                                             </div>
                                         </div>

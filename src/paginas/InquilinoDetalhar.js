@@ -37,29 +37,29 @@ const InquilinoDetalhar = () => {
             ) : (
                 <>
                     <NavBar />
-                    <div className="container">
+                    <div className="server_container">
 
-                        <div className="card row" style={{ "textAlign": "left" }}>
-                            <div className="card-title">
-                                <h2>Detalhe inquilino</h2>
+                        <div className="server_card server_row" style={{ "textAlign": "left" }}>
+                            <div className="server_card-title">
+                                <h2 className="server_h2">Detalhe inquilino</h2>
                             </div>
-                            <div className="card-body"></div>
+                            <div className="server_card-body"></div>
 
                             {empdata &&
                                 <div>
-                                    <h5>ID: {empdata.id}</h5>
-                                    <h2>Nome: <b>{empdata.nome}</b></h2>
+                                    <h5 className="server_h5">ID: {empdata.id}</h5>
+                                    <h2 className="server_h2">Nome: <b className="server_b">{empdata.nome}</b></h2>
                                     <br></br>
 
-                                    <h5>Salário: {empdata.salario}</h5>
-                                    <h5>CPF: {empdata.cpf}</h5>
-                                    <h5>Idade: {empdata.idade}</h5>
-                                    <h5>Profissão: {empdata.profissao}</h5>
-                                    <h5>Contato: {empdata.contato}</h5>
-                                    <h5>Tempo como inquino: {empdata.tempo_como_inquilino}</h5>
+                                    <h5 className="server_h5">Salário: {empdata.salario}</h5>
+                                    <h5 className="server_h5">CPF: {empdata.cpf}</h5>
+                                    <h5 className="server_h5">Idade: {empdata.idade}</h5>
+                                    <h5 className="server_h5">Profissão: {empdata.profissao}</h5>
+                                    <h5 className="server_h5">Contato: {empdata.contato}</h5>
+                                    <h5 className="server_h5">Tempo como inquino: {empdata.tempo_como_inquilino}</h5>
                                     <br></br>
 
-                                    <Link to="/inquilinos/listar" className="btn btn-danger">Voltar</Link>
+                                    <Link to="/inquilinos/listar" className="server_btn server_btn-danger">Voltar</Link>
                                 </div>
                             }
                         </div>

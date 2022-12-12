@@ -60,62 +60,62 @@ const FormasDePagamentoListar = () => {
             ) : (
                 <>
                     <NavBar />
-                    <div className="container">
-                        <div className="card">
-                            <div className="card-title">
-                                <h2>Listar formas de pagamento</h2>
+                    <div className="server_container">
+                        <div className="server_card">
+                            <div className="server_card-title">
+                                <h2 className="server_h2">Listar formas de pagamento</h2>
                             </div>
-                            <div className="card-body">
-                                <div className="divbtn">
+                            <div className="server_card-body">
+                                <div className="divserver_btn">
 
-                                    <Link to="/forma_de_pagamento/adicionar" className="btn btn-success_add">Adicionar (+)</Link>
-
-                                    &nbsp;
-                                    <Link to="/corretores/listar" className="btn btn-success_rotas_1">Corretores</Link>
+                                    <Link to="/forma_de_pagamento/adicionar" className="server_btn server_btn-success_add">Adicionar (+)</Link>
 
                                     &nbsp;
-                                    <Link to="/formas_de_pagamento/listar" className="btn btn-success_rotas_2">Formas de pagamento</Link>
+                                    <Link to="/corretores/listar" className="server_btn server_btn-success_rotas_1">Corretores</Link>
 
                                     &nbsp;
-                                    <Link to="/imoveis_comerciais/listar" className="btn btn-success_rotas_1">Imóveis comerciais</Link>
+                                    <Link to="/formas_de_pagamento/listar" className="server_btn server_btn-success_rotas_2">Formas de pagamento</Link>
 
                                     &nbsp;
-                                    <Link to="/imoveis_residenciais/listar" className="btn btn-success_rotas_2">Imóveis residenciais</Link>
+                                    <Link to="/imoveis_comerciais/listar" className="server_btn server_btn-success_rotas_1">Imóveis comerciais</Link>
 
                                     &nbsp;
-                                    <Link to="/inquilinos/listar" className="btn btn-success_rotas_1">Inquilinos</Link>
+                                    <Link to="/imoveis_residenciais/listar" className="server_btn server_btn-success_rotas_2">Imóveis residenciais</Link>
+
+                                    &nbsp;
+                                    <Link to="/inquilinos/listar" className="server_btn server_btn-success_rotas_1">Inquilinos</Link>
 
                                     <br></br><br></br>
                                 </div>
-                                <table className="table table-bordered">
-                                    <thead className="bg-dark text-white">
-                                        <tr>
-                                            <td><b>ID</b></td>
+                                <table className="server_table-bordered">
+                                    <thead className="bg-dark server_text-white">
+                                        <tr className="server_tr">
+                                            <td className="server_td"><b className="server_b">ID</b></td>
 
-                                            <td><b>Método</b></td>
-                                            <td><b>Conta</b></td>
-                                            <td><b>Limite de depósito</b></td>
+                                            <td className="server_td"><b className="server_b">Método</b></td>
+                                            <td className="server_td"><b className="server_b">Conta</b></td>
+                                            <td className="server_td"><b className="server_b">Limite de depósito</b></td>
 
-                                            <td><b>Opções</b></td>
+                                            <td className="server_td"><b className="server_b">Opções</b></td>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody className="server_tbody">
 
                                         {empdata &&
                                             empdata.map(item => (
                                                 <tr key={item.id}>
 
-                                                    <td>{item.id}</td>
-                                                    <td>{item.metodo}</td>
-                                                    <td>{item.conta}</td>
-                                                    <td>{item.limite_de_deposito}</td>
+                                                    <td className="server_td">{item.id}</td>
+                                                    <td className="server_td">{item.metodo}</td>
+                                                    <td className="server_td">{item.conta}</td>
+                                                    <td className="server_td">{item.limite_de_deposito}</td>
 
-                                                    <td>
-                                                        <button onClick={() => { LoadEdit(item.id); }} className="btn btn-success">Editar</button>
+                                                    <td className="server_td">
+                                                        <button onClick={() => { LoadEdit(item.id); }} className="server_btn server_btn-success">Editar</button>
                                                         &nbsp;
-                                                        <button onClick={() => { Removefunction(item.id); }} className="btn btn-danger">Remover</button>
+                                                        <button onClick={() => { Removefunction(item.id); }} className="server_btn server_btn-danger">Remover</button>
                                                         &nbsp;
-                                                        <button onClick={() => { LoadDetail(item.id); }} className="btn btn-primary">Detalhar</button>
+                                                        <button onClick={() => { LoadDetail(item.id); }} className="server_btn server_btn-primary">Detalhar</button>
                                                     </td>
                                                 </tr>
                                             ))
