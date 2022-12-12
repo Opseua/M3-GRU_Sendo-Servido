@@ -45,12 +45,12 @@ function AppHome() {
   return (
 
     <main className='home'>
-      // Cabeçalho.
+      {/* Cabeçalho */}
       <>
         <NavBar />
       </>
        
-      // Carrossel.
+      {/* Carrossel */}
       <div>
         <motion.div ref={carousel} className='carousel' whileTop={{ cursor: "grabbing" }}>
           <motion.div
@@ -71,7 +71,7 @@ function AppHome() {
       </div>
       <hr />
   
-      // Apresentação da empresa.
+      {/* Apresentação da empresa */}
       <div className='quem-somos'>
         <h2 className='text-home-h2'>QUEM SOMOS</h2>
         <h4 className='text-home-h4'>HISTÓRIA</h4>
@@ -82,7 +82,7 @@ function AppHome() {
         <hr />
       </div>
 
-      // Cards com imóveis disponíveis.
+      {/* Cards com imóveis disponíveis */}
       <div id="App" className="App">
 
         <h1 className='text-home-h1'>DREAMS IMOBILIÁRIA</h1>
@@ -157,7 +157,7 @@ function AppHome() {
         </div>
       </div>
 
-      // Rodapé.
+      {/* Rodapé */}
       <>
         <Footer />
       </>
