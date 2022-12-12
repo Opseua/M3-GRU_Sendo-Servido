@@ -1,6 +1,7 @@
 // eslint-disable-next-line
+/*eslint eqeqeq: "off"*/
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../css/style_login.css";
 
 
@@ -71,18 +72,12 @@ function AppLogin() {
 
             <div className="container-login-form-btn">
               <button onClick={validate} className="login-form-btn">Login</button>
-              <Link to="/corretores/listar" onClick={validate} className="login-form-btn">TESTE</Link>
-              <button onClick={validate} className="login-form-btn" type='button'>submit</button>
             </div>
-
-
-
-
 
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
-              <a className="txt2" href="#">
+              <a className="txt2" href="/login">
                 Criar conta
               </a>
             </div>
