@@ -26,6 +26,11 @@ import ImovelComercialDetalhar from './ImovelComercialDetalhar';
 import ImovelComercialEditar from './ImovelComercialEditar';
 import ImovelComercialAdicionar from './ImovelComercialAdicionar';
 
+// Páginas: Imóveis Residenciais //
+import ImoveisResidenciaisListar from './ImoveisResidenciaisListar';
+import ImovelResidencialDetalhar from './ImovelResidencialDetalhar';
+import ImovelResidencialEditar from './ImovelResidencialEditar';
+import ImovelResidencialAdicionar from './ImovelResidencialAdicionar';
 
 
 
@@ -64,6 +69,11 @@ function AppRotas() {
           <Route exact path='/imovel_comercial/detalhar/:empid' element={<ImovelComercialDetalhar />}></Route>
           <Route exact path='/imovel_comercial/editar/:empid' element={<ImovelComercialEditar />}></Route>
           <Route exact path='/imovel_comercial/adicionar' element={<ImovelComercialAdicionar />}></Route>
+
+          <Route exact path='/imoveis_residenciais/listar' element={<ImoveisResidenciaisListar />}></Route>
+          <Route exact path='/imovel_residencial/detalhar/:empid' element={<ImovelResidencialDetalhar />}></Route>
+          <Route exact path='/imovel_residencial/editar/:empid' element={<ImovelResidencialEditar />}></Route>
+          <Route exact path='/imovel_residencial/adicionar' element={<ImovelResidencialAdicionar />}></Route>
 
 
         </Routes>
