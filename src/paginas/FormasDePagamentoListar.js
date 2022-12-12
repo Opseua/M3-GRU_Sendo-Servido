@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
+import '../css/style_server.css';
 
 const FormasDePagamento = () => {
   const [loading, setLoading] = useState(false);

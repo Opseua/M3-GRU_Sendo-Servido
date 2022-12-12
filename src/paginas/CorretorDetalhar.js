@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
+import '../css/style_server.css';
 
 const CorretorDetalhar = () => {
   const [loading, setLoading] = useState(false);

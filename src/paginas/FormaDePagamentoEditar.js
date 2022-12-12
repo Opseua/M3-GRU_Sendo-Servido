@@ -5,6 +5,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
+import '../css/style_server.css';
 
 
 const FormaDePagamentoEditar = () => {
@@ -22,7 +23,7 @@ const FormaDePagamentoEditar = () => {
         idchange(resp.id);
         metodochange(resp.metodo);
         contachange(resp.conta);
-        limitededepositochange(resp.limite_de_deposito);
+        limite_de_depositochange(resp.limite_de_deposito);
       })
       .catch((err) => {
         setLoading(false);
@@ -41,7 +42,7 @@ const FormaDePagamentoEditar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
-    const empdata = { id, conta, limite_de_deposito, validation };
+    const empdata = { id, metodo, conta, limite_de_deposito };
 
     setLoading(false);
     fetch("https://server-2.onrender.com/forma_de_pagamento/editar/" + empid, {
@@ -115,7 +116,7 @@ const FormaDePagamentoEditar = () => {
                           <label className="server_label">
                             <b className="server_b">Limite de depósito</b>
                           </label>
-                          <input required value={limite_de_deposito} onMouseDown={(e) => valchange(true)} onChange={(e) => limite_de_deposito(e.target.value)} className="server_form-control"></input>
+                          <input required value={limite_de_deposito} onMouseDown={(e) => valchange(true)} onChange={(e) => limite_de_depositochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
 
@@ -126,7 +127,7 @@ const FormaDePagamentoEditar = () => {
                             Salvar
                           </button>
                           &nbsp;
-                          <Link to="/corretores/listar" className="server_btn server_btn-danger">Voltar</Link>
+                          <Link to="/formas_de_pagamento/listar" className="server_btn server_btn-danger">Voltar</Link>
                         </div>
                       </div>
                     </div>
