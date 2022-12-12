@@ -1,41 +1,35 @@
 // eslint-disable-next-line
-/*eslint eqeqeq: "off"*/
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 import "../css/style_login.css";
 
 
 function AppLogin() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const [emailErr, setEmailErr] = useState(false);
-  const [passwordErr, setPasswordErr] = useState(false);
-
-  const validarEmail = new RegExp("^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$");
-  const validarSenha = new RegExp("^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,}$");
+  const navigate = useNavigate();
 
   const validate = () => {
-    if (!validarEmail.test(email)) {
-      setEmailErr(true);
-      return
-    } else {
-      setEmailErr(false);
-    }
 
-    if (!validarSenha.test(password)) {
-      setPasswordErr(true);
+
+    if (document.getElementById("input_email").value.match(/@/) &&
+      document.getElementById("input_email").value.match(/.com/) &&
+      document.getElementById("input_senha").value.length > 7) {
+        navigate("/corretores/listar/");
+    }
+    else {
+
+      Swal.fire({
+        title: 'Erro!',
+        text: 'Confira o seu email e senha',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      });
       return
-    } else {
-      setPasswordErr(false);
+
     }
   }
 
-  if (emailErr == false && passwordErr == false) {
-    <Link to='/componentURL' />
-  }
 
-  console.log({ email, password });
 
   return (
     <div className="container">
@@ -47,32 +41,26 @@ function AppLogin() {
             <span className="login-form-title">
             </span>
 
+
             <div className="wrap-input">
               <input
-                className={email !== "" ? "has-val input" : "input"}
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+                className='input' id="input_email" type="email" />
               <span className="focus-input" data-placeholder="E-mail"></span>
-              {emailErr && <p>Por favor, digite um e-mail válido.</p>}
             </div>
 
             <div className="wrap-input">
               <input
-                className={password !== "" ? "has-val input" : "input"}
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)} required
-              />
+                className='input' id="input_senha" type="password" />
               <span className="focus-input" data-placeholder="Senha"></span>
-              {passwordErr && <p>Por favor, digite uma senha mais segura.</p>}
             </div>
-
 
             <div className="container-login-form-btn">
-              <button onClick={validate} className="login-form-btn">Login</button>
+              <button className="login-form-btn" type='button' onClick={validate}>Login</button>
             </div>
+
+
+
+
 
 
             <div className="text-center">

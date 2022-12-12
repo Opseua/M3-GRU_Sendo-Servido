@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
@@ -33,7 +33,13 @@ const CorretorAdicionar = () => {
         setLoading(false);
 
 
-        swal("Concluído", "Adicionado com sucesso!", "success");
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Adicionado com sucesso!',
+          showConfirmButton: false,
+          timer: 1500
+        })
 
 
         navigate("/corretores/listar");

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
@@ -56,7 +56,15 @@ const CorretorEditar = () => {
       .then((res) => {
         setLoading(false);
 
-        swal("Concluído", "Editada com sucesso!", "success");
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Editado com sucesso!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
+
         navigate("/corretores/listar/");
       })
       .catch((err) => {

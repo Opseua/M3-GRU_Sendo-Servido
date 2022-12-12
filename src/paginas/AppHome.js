@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import '../css/style_home.css';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import swal from 'sweetalert';
+import Swal from 'sweetalert2'
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
@@ -21,6 +22,9 @@ const CorretoresListar = () => {
   };
 
   const Removefunction = (id) => {
+    
+
+
 
     swal({
       title: "Remover",
@@ -40,13 +44,17 @@ const CorretoresListar = () => {
         })
           .then((res) => {
 
-            
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Removido com sucesso!',
+              showConfirmButton: false,
+              timer: 1500
+            })
 
-            swal("Concluído", "Removido com sucesso!", "success").then((value) => {
-              if (!value == "") { window.location.reload(); } else { window.location.reload(); }
+            window.location.reload();
 
-            });
-
+  
 
           })
           .catch((err) => {
@@ -96,7 +104,6 @@ const CorretoresListar = () => {
               <div className="server_card-body">
                 <div className="server_divserver_btn">
                   <Link to="/corretor/adicionar" className="server_btn server_btn-success">Adicionar (+)</Link>
-                  <Link to="/corretor/adicionar" className="server_btn server_btn-success_2">TESTE (+)</Link>
                   &nbsp;
                   <Link to="/corretores/listar" className="server_btn server_btn-success">Corretores</Link>
                   &nbsp;
