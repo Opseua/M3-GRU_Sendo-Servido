@@ -8,16 +8,16 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-const FormasDePagamento = () => {
+const InquilinosListar = () => {
   const [loading, setLoading] = useState(false);
   const [empdata, empdatachange] = useState(null);
   const navigate = useNavigate();
 
   const LoadDetail = (id) => {
-    navigate("/forma_de_pagamento/detalhar/" + id);
+    navigate("/inquilino/detalhar/" + id);
   };
   const LoadEdit = (id) => {
-    navigate("/forma_de_pagamento/editar/" + id);
+    navigate("/inquilino/editar/" + id);
   };
 
   const Removefunction = (id) => {
@@ -35,12 +35,12 @@ const FormasDePagamento = () => {
       if (!value == "") {
 
         setLoading(true);
-        fetch("https://server-2.onrender.com/forma_de_pagamento/deletar/" + id, {
+        fetch("https://server-2.onrender.com/inquilino/deletar/" + id, {
           method: "DELETE",
         })
           .then((res) => {
 
-
+            
 
             swal("Concluído", "Removido com sucesso!", "success").then((value) => {
               if (!value == "") { window.location.reload(); } else { window.location.reload(); }
@@ -59,7 +59,7 @@ const FormasDePagamento = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://server-2.onrender.com/formas_de_pagamento/listar")
+    fetch("https://server-2.onrender.com/inquilinos/listar")
       .then((res) => {
         return res.json();
       })
@@ -90,12 +90,12 @@ const FormasDePagamento = () => {
           <div className="server_container">
             <div className="server_card">
               <div className="server_card-title">
-                <br></br>
-                <h2 className="server_h2">Listar formas de pagamento</h2>
+              <br></br>
+                <h2 className="server_h2">Listar inquilinos</h2>
               </div>
               <div className="server_card-body">
                 <div className="server_divserver_btn">
-                  <Link to="/forma_de_pagamento/adicionar" className="server_btn server_btn-success">Adicionar (+)</Link>
+                  <Link to="/inquilino/adicionar" className="server_btn server_btn-success">Adicionar (+)</Link>
                   &nbsp;
                   <Link to="/corretores/listar" className="server_btn server_btn-success">Corretores</Link>
                   &nbsp;
@@ -117,13 +117,13 @@ const FormasDePagamento = () => {
                       </td>
 
                       <td className="server_td">
-                        <b className="server_b">Método</b>
+                        <b className="server_b">Nome</b>
                       </td>
                       <td className="server_td">
-                        <b className="server_b">Conta</b>
+                        <b className="server_b">Salário</b>
                       </td>
                       <td className="server_td">
-                        <b className="server_b">Limite de depósito</b>
+                        <b className="server_b">CPF</b>
                       </td>
 
                       <td className="server_td">
@@ -136,9 +136,9 @@ const FormasDePagamento = () => {
                       empdata.map((item) => (
                         <tr key={item.id}>
                           <td className="server_td">{item.id}</td>
-                          <td className="server_td">{item.metodo}</td>
-                          <td className="server_td">{item.conta}</td>
-                          <td className="server_td">{item.limite_de_deposito}</td>
+                          <td className="server_td">{item.nome}</td>
+                          <td className="server_td">{item.salario}</td>
+                          <td className="server_td">{item.cpf}</td>
 
                           <td className="server_td">
                             <button onClick={() => { LoadEdit(item.id); }} className="server_btn server_btn-success">Editar</button>
@@ -161,4 +161,4 @@ const FormasDePagamento = () => {
   );
 };
 
-export default FormasDePagamento;
+export default InquilinosListar;

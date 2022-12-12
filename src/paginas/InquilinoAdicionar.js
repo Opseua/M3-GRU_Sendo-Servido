@@ -1,69 +1,53 @@
 // eslint-disable-next-line
-/*eslint eqeqeq: "off"*/
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import swal from 'sweetalert';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-
-const CorretorEditar = () => {
+const InquilinoAdicionar = () => {
   const [loading, setLoading] = useState(false);
-  const { empid } = useParams();
-
-  useEffect(() => {
-    setLoading(true);
-    fetch("https://server-2.onrender.com/corretor/editar/" + empid)
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        setLoading(false);
-        idchange(resp.id);
-        nomechange(resp.nome);
-        cpfchange(resp.cpf);
-        idadechange(resp.idade);
-        salariochange(resp.salario);
-      })
-      .catch((err) => {
-        setLoading(false);
-        console.log(err.message);
-      });
-  }, [empid]);
-
   const [id, idchange] = useState("");
   const [nome, nomechange] = useState("");
+  const [salario, salariochange] = useState("");
   const [cpf, cpfchange] = useState("");
   const [idade, idadechange] = useState("");
-  const [salario, salariochange] = useState("");
+  const [profissao, profissaochange] = useState("");
+  const [contato, contatochange] = useState("");
+  const [tempo_como_inquilino, tempo_como_inquilinochange] = useState("");
   const [validation, valchange] = useState(false);
 
-  console.log(validation);
+  console.log(idchange, validation);
 
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
-    const empdata = { id, nome, cpf, idade, salario };
+    const empdata = { nome, salario, cpf, idade, profissao, contato, tempo_como_inquilino };
 
-    setLoading(false);
-    fetch("https://server-2.onrender.com/corretor/editar/" + empid, {
-      method: "PUT",
+    setLoading(true);
+    fetch("https://server-2.onrender.com/inquilino/adicionar", {
+      method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
     })
       .then((res) => {
         setLoading(false);
 
-        swal("Concluído", "Editada com sucesso!", "success");
-        navigate("/corretores/listar/");
+
+        swal("Concluído", "Adicionado com sucesso!", "success");
+
+
+        navigate("/inquilinos/listar");
+
       })
       .catch((err) => {
         setLoading(false);
         console.log(err.message);
       });
   };
+
   return (
     <div className="server_tudo">
       {loading ? (
@@ -83,8 +67,7 @@ const CorretorEditar = () => {
               <form className="server_container" onSubmit={handlesubmit}>
                 <div className="server_card" style={{ textAlign: "left" }}>
                   <div className="server_card-title">
-                  <br></br>
-                    <h2 className="server_h2">&nbsp;&nbsp;Editar corretor</h2>
+                    <h2 className="server_h2">Adicionar inquilino</h2>
                   </div>
                   <div className="server_card-body">
                     <div className="server_row">
@@ -102,7 +85,16 @@ const CorretorEditar = () => {
                           <label className="server_label">
                             <b className="server_b">Nome</b>
                           </label>
-                          <input required value={nome} onMouseDown={(e) => valchange(true)} onChange={(e) => nomechange(e.target.value)} className="server_form-control"></input>
+                          <input requiredvalue={nome} onMouseDown={(e) => valchange(true)} onChange={(e) => nomechange(e.target.value)} className="server_form-control"></input>
+                        </div>
+                      </div>
+
+                      <div className="server_col-lg-12">
+                        <div className="form-group">
+                          <label className="server_label">
+                            <b className="server_b">Salário</b>
+                          </label>
+                          <input required value={salario} onMouseDown={(e) => valchange(true)} onChange={(e) => salariochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
 
@@ -127,9 +119,27 @@ const CorretorEditar = () => {
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
-                            <b className="server_b">Salário</b>
+                            <b className="server_b">Profissão</b>
                           </label>
-                          <input required value={salario} onMouseDown={(e) => valchange(true)} onChange={(e) => salariochange(e.target.value)} className="server_form-control"></input>
+                          <input required value={profissao} onMouseDown={(e) => valchange(true)} onChange={(e) => profissaochange(e.target.value)} className="server_form-control"></input>
+                        </div>
+                      </div>
+
+                      <div className="server_col-lg-12">
+                        <div className="form-group">
+                          <label className="server_label">
+                            <b className="server_b">Contato</b>
+                          </label>
+                          <input required value={contato} onMouseDown={(e) => valchange(true)} onChange={(e) => contatochange(e.target.value)} className="server_form-control"></input>
+                        </div>
+                      </div>
+
+                      <div className="server_col-lg-12">
+                        <div className="form-group">
+                          <label className="server_label">
+                            <b className="server_b">Tempo como inquilino</b>
+                          </label>
+                          <input required value={tempo_como_inquilino} onMouseDown={(e) => valchange(true)} onChange={(e) => tempo_como_inquilinochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
 
@@ -140,7 +150,7 @@ const CorretorEditar = () => {
                             Salvar
                           </button>
                           &nbsp;
-                          <Link to="/corretores/listar" className="server_btn server_btn-danger">Voltar</Link>
+                          <Link to="/inquilinos/listar" className="server_btn server_btn-danger">Voltar</Link>
                         </div>
                       </div>
                     </div>
@@ -156,4 +166,4 @@ const CorretorEditar = () => {
   );
 };
 
-export default CorretorEditar;
+export default InquilinoAdicionar;

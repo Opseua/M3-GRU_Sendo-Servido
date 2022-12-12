@@ -1,50 +1,51 @@
-
 // eslint-disable-next-line
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-// Home //
+// Home (Mariana | Lara) //
 import AppHome from './AppHome';
 
-// Login //
+// Login (Brian) //
 import AppLogin from './AppLogin';
 
-// Páginas: Corretores //
+// Páginas: Corretores (Orlando) //
 import CorretoresListar from './CorretoresListar';
 import CorretorDetalhar from './CorretorDetalhar';
 import CorretorEditar from './CorretorEditar';
 import CorretorAdicionar from './CorretorAdicionar';
 
-// Páginas: Formas de pagamento //
+// Páginas: Formas de Pagamento (Orlando) //
 import FormasDePagamentoListar from './FormasDePagamentoListar';
 import FormaDePagamentoDetalhar from './FormaDePagamentoDetalhar';
 import FormaDePagamentoEditar from './FormaDePagamentoEditar';
 import FormaDePagamentoAdicionar from './FormaDePagamentoAdicionar';
 
-// Páginas: Imóveis Comerciais //
+// Páginas: Imóveis Comerciais (Orlando) //
 import ImoveisComerciaisListar from './ImoveisComerciaisListar';
 import ImovelComercialDetalhar from './ImovelComercialDetalhar';
 import ImovelComercialEditar from './ImovelComercialEditar';
 import ImovelComercialAdicionar from './ImovelComercialAdicionar';
 
-// Páginas: Imóveis Residenciais //
+// Páginas: Imóveis Residenciais (Orlando) //
 import ImoveisResidenciaisListar from './ImoveisResidenciaisListar';
 import ImovelResidencialDetalhar from './ImovelResidencialDetalhar';
 import ImovelResidencialEditar from './ImovelResidencialEditar';
 import ImovelResidencialAdicionar from './ImovelResidencialAdicionar';
 
-
+// Páginas: Imóveis Inquilinos (Orlando) //
+import InquilinosListar from './InquilinosListar';
+import InquilinoDetalhar from './InquilinoDetalhar';
+import InquilinoEditar from './InquilinoEditar';
+import InquilinoAdicionar from './InquilinoAdicionar';
 
 // Main //
 import Main from './Main';
 
 
-
-
 function AppRotas() {
+
   return (
     <div className="App">
       <header className="App-header">
-
 
      <BrowserRouter>
         <Routes>
@@ -75,10 +76,13 @@ function AppRotas() {
           <Route exact path='/imovel_residencial/editar/:empid' element={<ImovelResidencialEditar />}></Route>
           <Route exact path='/imovel_residencial/adicionar' element={<ImovelResidencialAdicionar />}></Route>
 
+          <Route exact path='/inquilinos/listar' element={<InquilinosListar />}></Route>
+          <Route exact path='/inquilino/detalhar/:empid' element={<InquilinoDetalhar />}></Route>
+          <Route exact path='/inquilino/editar/:empid' element={<InquilinoEditar />}></Route>
+          <Route exact path='/inquilino/adicionar' element={<InquilinoAdicionar />}></Route>
 
         </Routes>
       </BrowserRouter>
-
 
       </header>
     </div>

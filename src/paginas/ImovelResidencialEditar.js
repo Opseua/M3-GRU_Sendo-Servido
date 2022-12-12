@@ -94,7 +94,8 @@ const ImovelResidencialEditar = () => {
               <form className="server_container" onSubmit={handlesubmit}>
                 <div className="server_card" style={{ textAlign: "left" }}>
                   <div className="server_card-title">
-                    <h2 className="server_h2">Editar imóvel residencial</h2>
+                  <br></br>
+                    <h2 className="server_h2">&nbsp;&nbsp;Editar imóvel residencial</h2>
                   </div>
                   <div className="server_card-body">
                     <div className="server_row">

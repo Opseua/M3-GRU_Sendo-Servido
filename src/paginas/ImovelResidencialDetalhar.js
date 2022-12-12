@@ -43,6 +43,7 @@ const ImovelResidencialDetalhar = () => {
           <div className="server_container">
             <div className="server_card server_row" style={{ textAlign: "left" }}>
               <div className="server_card-title">
+              <br></br>
                 <h2 className="server_h2">Detalhe imóvel residencial</h2>
               </div>
               <div className="server_card-body"></div>

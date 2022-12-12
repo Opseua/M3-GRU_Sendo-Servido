@@ -43,6 +43,7 @@ const ImovelComercialDetalhar = () => {
           <div className="server_container">
             <div className="server_card server_row" style={{ textAlign: "left" }}>
               <div className="server_card-title">
+                <br></br>
                 <h2 className="server_h2">Detalhe imóvel comercial</h2>
               </div>
               <div className="server_card-body"></div>
@@ -63,7 +64,7 @@ const ImovelComercialDetalhar = () => {
                   <h5 className="server_h5">Tipo de imóvel: {empdata.valor_do_imovel}</h5>
                   <h5 className="server_h5">Valor do condomínio: {empdata.valor_do_condominio}</h5>
                   <br></br>
-                  
+
                   <Link to="/imoveis_comerciais/listar" className="server_btn server_btn-danger">Voltar</Link>
                   <br></br>
                   <br></br>

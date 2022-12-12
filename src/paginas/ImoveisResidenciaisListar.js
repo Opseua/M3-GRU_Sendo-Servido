@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+/*eslint eqeqeq: "off"*/
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -89,6 +90,7 @@ const ImoveisResidenciaisListar = () => {
           <div className="server_container">
             <div className="server_card">
               <div className="server_card-title">
+              <br></br>
                 <h2 className="server_h2">Listar imóveis residenciais</h2>
               </div>
               <div className="server_card-body">

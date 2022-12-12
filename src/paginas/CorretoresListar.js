@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+/*eslint eqeqeq: "off"*/
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
@@ -89,11 +90,13 @@ const CorretoresListar = () => {
           <div className="server_container">
             <div className="server_card">
               <div className="server_card-title">
+                <br></br>
                 <h2 className="server_h2">Listar corretores</h2>
               </div>
               <div className="server_card-body">
                 <div className="server_divserver_btn">
                   <Link to="/corretor/adicionar" className="server_btn server_btn-success">Adicionar (+)</Link>
+                  <Link to="/corretor/adicionar" className="server_btn server_btn-success_2">TESTE (+)</Link>
                   &nbsp;
                   <Link to="/corretores/listar" className="server_btn server_btn-success">Corretores</Link>
                   &nbsp;
