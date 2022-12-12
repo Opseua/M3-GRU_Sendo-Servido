@@ -37,9 +37,6 @@ import InquilinoDetalhar from './InquilinoDetalhar';
 import InquilinoEditar from './InquilinoEditar';
 import InquilinoAdicionar from './InquilinoAdicionar';
 
-// Main //
-import Main from './Main';
-
 
 function AppRotas() {
 
@@ -49,8 +46,6 @@ function AppRotas() {
 
      <BrowserRouter>
         <Routes>
-
-          <Route exact path='/main' element={<Main />}></Route>
 
           <Route exact path='/' element={<AppHome />}></Route>
 
