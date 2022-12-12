@@ -1,3 +1,4 @@
+
 // eslint-disable-next-line
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -43,12 +44,13 @@ import Main from './Main';
 
 
 
-
-// ROTAS //
 function AppRotas() {
   return (
-    <div id="AppServer" className="AppServer">
-      <BrowserRouter>
+    <div className="App">
+      <header className="App-header">
+
+
+     <BrowserRouter>
         <Routes>
 
           <Route exact path='/main' element={<Main />}></Route>
@@ -84,9 +86,11 @@ function AppRotas() {
 
         </Routes>
       </BrowserRouter>
-    </div >
-  );
 
+
+      </header>
+    </div>
+  );
 }
 
 export default AppRotas;

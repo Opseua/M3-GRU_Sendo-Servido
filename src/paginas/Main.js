@@ -8,8 +8,10 @@ export default function Main() {
   return (
     <>
         <NavBar />
-        <div className={style.main}>
+        <div className={style.main} >
           
+          <t>CASA</t>
+
         </div>
         <Footer />
     </>
