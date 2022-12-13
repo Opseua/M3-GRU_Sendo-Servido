@@ -21,8 +21,11 @@ const CorretorAdicionar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    // Informações para serem enviadas ao Render
     const empdata = { nome, cpf, idade, salario };
 
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/corretor/adicionar", {
       method: "POST",
@@ -30,9 +33,10 @@ const CorretorAdicionar = () => {
       body: JSON.stringify(empdata),
     })
       .then((res) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
 
-
+        // Alerta de sucesso no envio ao Render e ir para a listagem da rota
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -40,18 +44,19 @@ const CorretorAdicionar = () => {
           showConfirmButton: false,
           timer: 1500
         })
-
-
         navigate("/corretores/listar");
 
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   };
 
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -65,6 +70,8 @@ const CorretorAdicionar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_row">
             <div className="server_offset-lg-3 col-lg-6">
               <form className="server_container" onSubmit={handlesubmit}>
@@ -72,6 +79,8 @@ const CorretorAdicionar = () => {
                   <div className="server_card-title">
                     <h2 className="server_h2">Adicionar corretor</h2>
                   </div>
+
+                  {/* Formulário */}
                   <div className="server_card-body">
                     <div className="server_row">
                       <div className="server_col-lg-12">
@@ -122,6 +131,8 @@ const CorretorAdicionar = () => {
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <br></br>
+
+                          {/* Botões 'Salvar' e 'Voltar' */}
                           <button className="server_btn server_btn-success" type="submit">
                             Salvar
                           </button>

@@ -7,7 +7,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-
 const ImovelResidencialEditar = () => {
   const [loading, setLoading] = useState(false);
   const { empid } = useParams();
@@ -188,7 +187,6 @@ const ImovelResidencialEditar = () => {
                           <input required value={valor_do_condominio} onMouseDown={(e) => valchange(true)} onChange={(e) => valor_do_condominiochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-
 
                       <div className="server_col-lg-12">
                         <div className="form-group">

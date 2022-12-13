@@ -7,7 +7,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-
 const FormaDePagamentoEditar = () => {
   const [loading, setLoading] = useState(false);
   const { empid } = useParams();
@@ -55,6 +54,7 @@ const FormaDePagamentoEditar = () => {
 
         swal("Concluído", "Editada com sucesso!", "success");
         navigate("/formas_de_pagamento/listar/");
+        
       })
       .catch((err) => {
         setLoading(false);

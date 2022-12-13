@@ -25,8 +25,11 @@ const ImovelComercialAdicionar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    // Informações para serem enviadas ao Render
     const empdata = { tipo_de_imovel, endereco, salas, banheiros, garagens, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
 
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/imovel_comercial/adicionar", {
       method: "POST",
@@ -34,22 +37,24 @@ const ImovelComercialAdicionar = () => {
       body: JSON.stringify(empdata),
     })
       .then((res) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
 
-
+        // Alerta de sucesso no envio ao Render e ir para a listagem da rota
         swal("Concluído", "Adicionado com sucesso!", "success");
-
-
         navigate("/imoveis_comerciais/listar");
 
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   };
 
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -63,6 +68,8 @@ const ImovelComercialAdicionar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_row">
             <div className="server_offset-lg-3 col-lg-6">
               <form className="server_container" onSubmit={handlesubmit}>
@@ -70,6 +77,8 @@ const ImovelComercialAdicionar = () => {
                   <div className="server_card-title">
                     <h2 className="server_h2">Adicionar imóvel comercial</h2>
                   </div>
+
+                  {/* Formulário */}
                   <div className="server_card-body">
                     <div className="server_row">
                       <div className="server_col-lg-12">
@@ -153,7 +162,7 @@ const ImovelComercialAdicionar = () => {
                         </div>
                       </div>
 
-
+                      {/* Botões 'Salvar' e 'Voltar' */}
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <br></br>

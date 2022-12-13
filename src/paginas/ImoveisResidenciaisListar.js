@@ -40,13 +40,9 @@ const ImoveisResidenciaisListar = () => {
         })
           .then((res) => {
 
-            
-
             swal("Concluído", "Removido com sucesso!", "success").then((value) => {
               if (!value == "") { window.location.reload(); } else { window.location.reload(); }
-
             });
-
 
           })
           .catch((err) => {

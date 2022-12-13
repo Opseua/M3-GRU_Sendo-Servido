@@ -26,8 +26,11 @@ const ImovelResidencialAdicionar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    // Informações para serem enviadas ao Render
     const empdata = { tipo_de_imovel, area, quartos, banheiros, garagens, endereco, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
 
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/imovel_residencial/adicionar", {
       method: "POST",
@@ -37,20 +40,21 @@ const ImovelResidencialAdicionar = () => {
       .then((res) => {
         setLoading(false);
 
-
+        // Alerta de sucesso no envio ao Render e ir para a listagem da rota
         swal("Concluído", "Adicionado com sucesso!", "success");
-
-
         navigate("/imoveis_residenciais/listar");
 
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   };
 
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -64,6 +68,8 @@ const ImovelResidencialAdicionar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_row">
             <div className="server_offset-lg-3 col-lg-6">
               <form className="server_container" onSubmit={handlesubmit}>
@@ -71,6 +77,8 @@ const ImovelResidencialAdicionar = () => {
                   <div className="server_card-title">
                     <h2 className="server_h2">Adicionar imóvel residencial</h2>
                   </div>
+
+                  {/* Formulário */}
                   <div className="server_card-body">
                     <div className="server_row">
                       <div className="server_col-lg-12">
@@ -108,7 +116,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={quartos} onMouseDown={(e) => valchange(true)} onChange={(e) => quartoschange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -117,7 +125,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={banheiros} onMouseDown={(e) => valchange(true)} onChange={(e) => banheiroschange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -126,7 +134,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={garagens} onMouseDown={(e) => valchange(true)} onChange={(e) => garagenschange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -135,7 +143,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={endereco} onMouseDown={(e) => valchange(true)} onChange={(e) => enderecochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -144,7 +152,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={tipo_de_contrato} onMouseDown={(e) => valchange(true)} onChange={(e) => tipo_de_contratochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -153,7 +161,7 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={valor_do_imovel} onMouseDown={(e) => valchange(true)} onChange={(e) => valor_do_imovelchange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -162,8 +170,8 @@ const ImovelResidencialAdicionar = () => {
                           <input required value={valor_do_condominio} onMouseDown={(e) => valchange(true)} onChange={(e) => valor_do_condominiochange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
 
+                      {/* Botões 'Salvar' e 'Voltar' */}
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <br></br>

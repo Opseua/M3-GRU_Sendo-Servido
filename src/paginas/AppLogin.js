@@ -6,6 +6,8 @@ import "../css/style_login.css";
 function AppLogin() {
 
   const navigate = useNavigate();
+
+  // Checar se o email tem '@', '.com' e se a senha possui mais de 7 caracteres
   const validate = () => {
 
     if (document.getElementById("input_email").value.match(/@/) &&
@@ -15,6 +17,7 @@ function AppLogin() {
     }
     else {
 
+      // Checar não tiver, mostrar alerta de 'checagem de email e senha'
       Swal.fire({
         title: 'Erro!',
         text: 'Confira o seu email e senha',

@@ -1,10 +1,10 @@
 // eslint-disable-next-line
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-// Home (Mariana | Lara) //
+// Página Home (Mariana | Lara) //
 import AppHome from './AppHome';
 
-// Login (Brian) //
+// Página Login (Brian) //
 import AppLogin from './AppLogin';
 
 // Páginas: Corretores (Orlando) //
@@ -36,7 +36,6 @@ import InquilinosListar from './InquilinosListar';
 import InquilinoDetalhar from './InquilinoDetalhar';
 import InquilinoEditar from './InquilinoEditar';
 import InquilinoAdicionar from './InquilinoAdicionar';
-
 
 function AppRotas() {
 

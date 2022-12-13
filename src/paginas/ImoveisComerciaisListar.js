@@ -40,13 +40,9 @@ const ImoveisComerciaisListar = () => {
         })
           .then((res) => {
 
-
-
             swal("Concluído", "Removido com sucesso!", "success").then((value) => {
               if (!value == "") { window.location.reload(); } else { window.location.reload(); }
-
             });
-
 
           })
           .catch((err) => {
@@ -90,7 +86,7 @@ const ImoveisComerciaisListar = () => {
           <div className="server_container">
             <div className="server_card">
               <div className="server_card-title">
-              <br></br>
+                <br></br>
                 <h2 className="server_h2">Listar imóveis comerciais</h2>
               </div>
               <div className="server_card-body">
@@ -125,7 +121,7 @@ const ImoveisComerciaisListar = () => {
                       <td className="server_td">
                         <b className="server_b">Salas</b>
                       </td>
-                     
+
                       <td className="server_td">
                         <b className="server_b">Opções</b>
                       </td>
@@ -139,7 +135,6 @@ const ImoveisComerciaisListar = () => {
                           <td className="server_td">{item.tipo_de_imovel}</td>
                           <td className="server_td">{item.endereco}</td>
                           <td className="server_td">{item.salas}</td>
-
 
                           <td className="server_td">
                             <button onClick={() => { LoadEdit(item.id); }} className="server_btn server_btn-success">Editar</button>

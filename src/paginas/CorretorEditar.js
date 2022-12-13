@@ -8,7 +8,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-
 const CorretorEditar = () => {
   const [loading, setLoading] = useState(false);
   const { empid } = useParams();
@@ -63,7 +62,6 @@ const CorretorEditar = () => {
           showConfirmButton: false,
           timer: 1500
         })
-
 
         navigate("/corretores/listar/");
       })

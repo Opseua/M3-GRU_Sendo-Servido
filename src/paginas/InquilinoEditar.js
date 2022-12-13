@@ -7,7 +7,6 @@ import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 import '../css/style_server.css';
 
-
 const InquilinoEditar = () => {
   const [loading, setLoading] = useState(false);
   const { empid } = useParams();
