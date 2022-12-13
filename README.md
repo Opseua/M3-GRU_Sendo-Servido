@@ -146,12 +146,19 @@ _**Yasmim:**_ Colaborador III
 
 
 
+# Tecnologias utilizadas
+
+- NodeJS
+- JavaScript
+- React
 
 
 
 
+# Bibliotecas utilizadas
 
-
-
-
-
+- framer-motion
+- axios
+- react-router-dom
+- react-spinners
+- sweetalert
