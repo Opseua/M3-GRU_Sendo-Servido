@@ -103,9 +103,19 @@ _**Yasmim:**_ Colaborador III
 
 # Layout do site
 
-![desktop_home_1](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_1.png) ![desktop_home_2](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_2.png) ![desktop_home_3](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_3.png) ![desktop_home_4](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_4.png) ![desktop_login.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login.png) ![desktop_login_checagem_email_e_senha.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login_checagem_email_e_senha.png) ![desktop_server_confirmacao_de_exclusao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_confirmacao_de_exclusao.png)  ![desktop_server_detalhar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_detalhar_informacao.png) ![desktop_server_editar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_editar_informacao.png) ![desktop_server_listar_informacoes.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_listar_informacoes.png)
+<details>
+  <summary>Desktop</summary>
+ 
+ ![desktop_home_1](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_1.png) ![desktop_home_2](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_2.png) ![desktop_home_3](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_3.png) ![desktop_home_4](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_4.png) ![desktop_login.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login.png) ![desktop_login_checagem_email_e_senha.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login_checagem_email_e_senha.png) ![desktop_server_confirmacao_de_exclusao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_confirmacao_de_exclusao.png)  ![desktop_server_detalhar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_detalhar_informacao.png) ![desktop_server_editar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_editar_informacao.png) ![desktop_server_listar_informacoes.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_listar_informacoes.png)
+ 
+</details>
 
-
+<details>
+  <summary>Mobile</summary>
+ 
+ ![mobile_home_1](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_home_1.jpeg) ![mobile_home_2](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_home_2.jpeg) ![mobile_login](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_login.jpeg) ![mobile_server_confirmacao_de_edicao](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_server_confirmacao_de_edicao.jpeg) ![mobile_server_confirmacao_de_exclusao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_server_confirmacao_de_exclusao.jpeg) ![mobile_server_listar_informacoes.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/mobile_server_listar_informacoes.jpeg) 
+ 
+</details>
 
 
 
