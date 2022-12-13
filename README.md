@@ -3,11 +3,29 @@
 
 # Sobre o projeto
 
-https://wmazoni-sds1.netlify.app
-
 [Dreams Imobiliária](https://m3-gru-sendo-servido.netlify.app/ "Site da Imobiliária")
 
 A proposta do projeto foi criar um sistema interno onde a imobiliária tivesse acesso a: visualizar; editar; cadastrar e remover informações de um banco de dados.
+
+Essas informações ficam armazenadas diretamente no **Render**, todas elas separadas em rotas específicas que podem ser personalizadas de acordo com o gosto do nosso cliente (Dreams Imobiliária).
+
+Além do armazenamento, o sistema de gestão permite por exemplo, que a imobiliária visualize todos os seus corretores, altere o valor dos imóveis, adicione novos inquilinos e remova formas de pagamento.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
