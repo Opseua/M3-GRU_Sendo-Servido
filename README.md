@@ -30,7 +30,8 @@ _**Mariana:**_ Co-facilitadora
 
 ✅ Contribuições
 - Página 'Home'
-- Função de validação de email e senha da página 'Login'
+- Carrosel de imagens
+- Validação de formulário da página 'Login'
 - Elaboração do material de apresentação
 
 <br>
@@ -42,9 +43,10 @@ _**Orlando:**_ Gestor de Gente
 </div>
 
 ✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
-- CONTRIBUIÇÃO 
+- API Json-Server
+- Páginas do 'Server' 
+- Criação das rotas
+- Elaboração do material de apresentação
 
 <br>
 
@@ -57,7 +59,7 @@ _**Gabrielly:**_ Gestora de Conhecimento
 ✅ Contribuições
 - CONTRIBUIÇÃO 
 - CONTRIBUIÇÃO
-- CONTRIBUIÇÃO 
+- Elaboração do material de apresentação
 
 <br>
 
@@ -68,9 +70,10 @@ _**Brian:**_ Colaborador I
 </div>
 
 ✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
-- CONTRIBUIÇÃO 
+- Servidor Json-Server
+- Página 'Login'
+- Cards de 
+- Elaboração do material de apresentação
 
 <br>
 
@@ -83,7 +86,7 @@ _**Lara:**_ Colaborador II
 ✅ Contribuições
 - CONTRIBUIÇÃO 
 - CONTRIBUIÇÃO
-- CONTRIBUIÇÃO 
+- Elaboração do material de apresentação
 
 <br>
 
@@ -96,7 +99,7 @@ _**Yasmim:**_ Colaborador III
 ✅ Contribuições
 - CONTRIBUIÇÃO 
 - CONTRIBUIÇÃO
-- CONTRIBUIÇÃO 
+- Elaboração do material de apresentação
 
 
 
