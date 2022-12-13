@@ -6,7 +6,7 @@
 
 # Sobre o projeto
 
-[Dreams Imobiliária](https://m3-gru-sendo-servido.netlify.app/ "Site da Imobiliária")
+[Dreams Imobiliária](https://m3-gru-sendo-servido.netlify.app/)
 
 A proposta do projeto foi criar um sistema interno onde a imobiliária tivesse acesso a: visualizar; editar; cadastrar e remover informações de um banco de dados.
 
@@ -41,6 +41,107 @@ O sistema em si é composto por três páginas:
  
 </details>
 
+
+
+# Tecnologias utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+
+
+
+## Bibliotecas utilizadas
+
+- framer-motion
+- axios
+- react-router-dom
+- react-spinners
+- sweetalert
+
+
+
+
+# Endpoints
+
+
+[Corretores](https://servidor-json.onrender.com/corretores/)
+<br>
+```
+GET      /corretores/listar
+GET      /corretor/detalhar/:id
+POST     /corretor/adicionar
+PUT      /corretor/editar/:id
+PATCH    /corretor/editar/:id
+DELETE   /corretor/deletar/:id
+```
+
+
+
+[Formas de pagamento](https://servidor-json.onrender.com/formas_de_pagamento/)
+<br>
+```
+GET      /formas_de_pagamento/listar
+GET      /forma_de_pagamento/detalhar/:id
+POST     /forma_de_pagamento/adicionar
+PUT      /forma_de_pagamento/editar/:id
+PATCH    /forma_de_pagamento/editar/:id
+DELETE   /forma_de_pagamento/deletar/:id
+```
+
+
+[Imóveis comerciais](https://servidor-json.onrender.com/imoveis_comerciais/)
+<br>
+```
+GET      /imoveis_comerciais/listar
+GET      /imovel_comercial/detalhar/:id
+POST     /imovel_comercial/adicionar
+PUT      /imovel_comercial/editar/:id
+PATCH    /imovel_comercial/editar/:id
+DELETE   /imovel_comercial/deletar/:id
+```
+
+
+[Imóveis residenciais](https://servidor-json.onrender.com/imoveis_residenciais/)
+<br>
+```
+GET      /imoveis_residenciais/listar
+GET      /imovel_residencial/detalhar/:id
+POST     /imovel_residencial/adicionar
+PUT      /imovel_residencial/editar/:id
+PATCH    /imovel_residencial/editar/:id
+DELETE   /imovel_residencial/deletar/:id
+```
+
+
+[Inquilinos](https://servidor-json.onrender.com/inquilinos/)
+<br>
+```
+GET      /inquilinos/listar
+GET      /inquilino/detalhar/:id
+POST     /inquilino/adicionar
+PUT      /inquilino/editar/:id
+PATCH    /inquilino/editar/:id
+DELETE   /inquilino/deletar/:id
+```
+
+
+
+
+# Como executar o projeto
+
+```bash
+# clonar repositório
+git clone https://github.com/Opseua/M3-GRU_Sendo-Servido
+
+# instalar dependências
+npm install
+
+# executar o projeto
+npm start
+```
 
 
 
@@ -145,20 +246,3 @@ _**Yasmim:**_ Colaborador III
 
 
 
-
-# Tecnologias utilizadas
-
-- NodeJS
-- JavaScript
-- React
-
-
-
-
-# Bibliotecas utilizadas
-
-- framer-motion
-- axios
-- react-router-dom
-- react-spinners
-- sweetalert
