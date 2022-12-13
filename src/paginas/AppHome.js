@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Footer from "../componentes/Footer/Footer";
 import NavBar from "../componentes/NavBar/NavBar";
 
+// Imagens utilizadas no carrossel.
 import carrossel_1 from '../imagens/carrossel_1.jpg';
 import carrossel_2 from '../imagens/carrossel_2.jpg';
 import carrossel_3 from '../imagens/carrossel_3.jpg';
@@ -23,12 +24,14 @@ const icon = [icon_chevron];
 function AppHome() {
   const carousel = useRef();
   const [width, setWidth] = useState(0);
-
+  
+  // Hook utilizado para que o carrossel tenha uma largura definida.
   useEffect(() => {
     console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth);
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, []);
-
+  
+  // Funções utilizadas para funcionalidade dos botões do carrossel.
   const handleLeftClick = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft -= carousel.current.offsetWidth;
@@ -41,12 +44,13 @@ function AppHome() {
 
   return (
 
-
-
     <main className='home'>
+      {/* Cabeçalho */}
       <>
         <NavBar />
       </>
+       
+      {/* Carrossel */}
       <div>
         <motion.div ref={carousel} className='carousel' whileTop={{ cursor: "grabbing" }}>
           <motion.div
@@ -66,7 +70,8 @@ function AppHome() {
         </div>
       </div>
       <hr />
-
+  
+      {/* Apresentação da empresa */}
       <div className='quem-somos'>
         <h2 className='text-home-h2'>QUEM SOMOS</h2>
         <h4 className='text-home-h4'>HISTÓRIA</h4>
@@ -77,6 +82,7 @@ function AppHome() {
         <hr />
       </div>
 
+      {/* Cards com imóveis disponíveis */}
       <div id="App" className="App">
 
         <h1 className='text-home-h1'>DREAMS IMOBILIÁRIA</h1>
@@ -150,6 +156,8 @@ function AppHome() {
           </div>
         </div>
       </div>
+
+      {/* Rodapé */}
       <>
         <Footer />
       </>
