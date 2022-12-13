@@ -101,6 +101,9 @@ _**Yasmim:**_ Colaborador III
 - CONTRIBUIÇÃO
 - Elaboração do material de apresentação
 
+# Layout do site
+
+![desktop_home_1](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_1.png) ![desktop_home_2](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_2.png) ![desktop_home_3](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_3.png) ![desktop_home_4](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_home_4.png) ![desktop_login.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login.png) ![desktop_login_checagem_email_e_senha.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_login_checagem_email_e_senha.png) ![desktop_server_confirmacao_de_exclusao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_confirmacao_de_exclusao.png)  ![desktop_server_detalhar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_detalhar_informacao.png) ![desktop_server_editar_informacao.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_editar_informacao.png) ![desktop_server_listar_informacoes.png](https://raw.githubusercontent.com/Opseua/M3-GRU_Sendo-Servido/main/src/readme/desktop_server_listar_informacoes.png)
 
 
 
