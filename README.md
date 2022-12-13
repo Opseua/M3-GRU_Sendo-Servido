@@ -224,8 +224,8 @@ _**Lara:**_ Colaborador II
 </div>
 
 ✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
+- Página 'Home'
+- Cards de imóveis 
 - Elaboração do material de apresentação
 
 <br>
@@ -240,8 +240,8 @@ _**Yasmim:**_ Colaborador III
 </div>
 
 ✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
+- Introdução da imobiliária 
+- Material visual
 - Elaboração do material de apresentação
 
 
