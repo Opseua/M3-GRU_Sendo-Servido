@@ -3,18 +3,15 @@ import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
 import "../css/style_login.css";
 
-
 function AppLogin() {
 
   const navigate = useNavigate();
-
   const validate = () => {
-
 
     if (document.getElementById("input_email").value.match(/@/) &&
       document.getElementById("input_email").value.match(/.com/) &&
       document.getElementById("input_senha").value.length > 7) {
-        navigate("/corretores/listar/");
+      navigate("/corretores/listar/");
     }
     else {
 
@@ -29,8 +26,6 @@ function AppLogin() {
     }
   }
 
-
-
   return (
     <div className="container">
       <div className="container-login">
@@ -40,7 +35,6 @@ function AppLogin() {
 
             <span className="login-form-title">
             </span>
-
 
             <div className="wrap-input">
               <input
@@ -57,11 +51,6 @@ function AppLogin() {
             <div className="container-login-form-btn">
               <button className="login-form-btn" type='button' onClick={validate}>Login</button>
             </div>
-
-
-
-
-
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
