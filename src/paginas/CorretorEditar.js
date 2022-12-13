@@ -13,13 +13,18 @@ const CorretorEditar = () => {
   const { empid } = useParams();
 
   useEffect(() => {
+
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/corretor/editar/" + empid)
       .then((res) => {
         return res.json();
       })
       .then((resp) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
+
+        // Informações a serem enviadas ao Render
         idchange(resp.id);
         nomechange(resp.nome);
         cpfchange(resp.cpf);
@@ -27,8 +32,9 @@ const CorretorEditar = () => {
         salariochange(resp.salario);
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   }, [empid]);
 
@@ -44,17 +50,22 @@ const CorretorEditar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    // Informações a serem enviadas ao Render
     const empdata = { id, nome, cpf, idade, salario };
 
-    setLoading(false);
+    // Mostrar animação de carregamento das informações (círculo giratório)
+    setLoading(true);
     fetch("https://server-2.onrender.com/corretor/editar/" + empid, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
     })
       .then((res) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
 
+        // Alerta de sucesso no envio ao Render e ir para a listagem da rota
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -66,11 +77,14 @@ const CorretorEditar = () => {
         navigate("/corretores/listar/");
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   };
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -84,12 +98,16 @@ const CorretorEditar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_row">
             <div className="server_offset-lg-3 col-lg-6">
               <form className="server_container" onSubmit={handlesubmit}>
                 <div className="server_card" style={{ textAlign: "left" }}>
                   <div className="server_card-title">
-                  <br></br>
+                    <br></br>
+
+                    {/* Formulário */}
                     <h2 className="server_h2">&nbsp;&nbsp;Editar corretor</h2>
                   </div>
                   <div className="server_card-body">
@@ -139,6 +157,7 @@ const CorretorEditar = () => {
                         </div>
                       </div>
 
+                      {/* Botões 'Salvar' e 'Voltar' */}
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <br></br>

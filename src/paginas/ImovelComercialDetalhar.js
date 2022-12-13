@@ -12,21 +12,27 @@ const ImovelComercialDetalhar = () => {
   const [empdata, empdatachange] = useState({});
 
   useEffect(() => {
+
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/imovel_comercial/detalhar/" + empid)
       .then((res) => {
         return res.json();
       })
       .then((resp) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
         empdatachange(resp);
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   }, [empid]);
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -40,6 +46,8 @@ const ImovelComercialDetalhar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_container">
             <div className="server_card server_row" style={{ textAlign: "left" }}>
               <div className="server_card-title">
@@ -48,6 +56,7 @@ const ImovelComercialDetalhar = () => {
               </div>
               <div className="server_card-body"></div>
 
+              {/* Formulário */}
               {empdata && (
                 <div>
                   <h5 className="server_h5">ID: {empdata.id}</h5>
@@ -65,6 +74,7 @@ const ImovelComercialDetalhar = () => {
                   <h5 className="server_h5">Valor do condomínio: {empdata.valor_do_condominio}</h5>
                   <br></br>
 
+                  {/* Botão 'Voltar' */}
                   <Link to="/imoveis_comerciais/listar" className="server_btn server_btn-danger">Voltar</Link>
                   <br></br>
                   <br></br>

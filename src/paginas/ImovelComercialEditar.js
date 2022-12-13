@@ -12,13 +12,18 @@ const ImovelComercialEditar = () => {
   const { empid } = useParams();
 
   useEffect(() => {
+
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/imovel_comercial/editar/" + empid)
       .then((res) => {
         return res.json();
       })
       .then((resp) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
+
+        // Informações a serem enviadas ao Render
         idchange(resp.id);
         tipo_de_imovelchange(resp.tipo_de_imovel);
         enderecochange(resp.endereco);
@@ -30,8 +35,9 @@ const ImovelComercialEditar = () => {
         valor_do_condominiochange(resp.valor_do_condominio);
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   }, [empid]);
 
@@ -52,26 +58,34 @@ const ImovelComercialEditar = () => {
   const navigate = useNavigate();
   const handlesubmit = (e) => {
     e.preventDefault();
+
+    // Informações a serem enviadas ao Render
     const empdata = { id, tipo_de_imovel, endereco, salas, banheiros, garagens, tipo_de_contrato, valor_do_imovel, valor_do_condominio };
 
-    setLoading(false);
+    // Mostrar animação de carregamento das informações (círculo giratório)
+    setLoading(true);
     fetch("https://server-2.onrender.com/imovel_comercial/editar/" + empid, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(empdata),
     })
       .then((res) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
 
+        // Alerta de sucesso no envio ao Render e ir para a listagem da rota
         swal("Concluído", "Editada com sucesso!", "success");
         navigate("/imoveis_comerciais/listar/");
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório) e alerta de erro no enviado ao Render
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   };
   return (
+
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -85,12 +99,16 @@ const ImovelComercialEditar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_row">
             <div className="server_offset-lg-3 col-lg-6">
               <form className="server_container" onSubmit={handlesubmit}>
                 <div className="server_card" style={{ textAlign: "left" }}>
                   <div className="server_card-title">
-                  <br></br>
+                    <br></br>
+
+                    {/* Formulário */}
                     <h2 className="server_h2">&nbsp;&nbsp;Editar imóvel comercial</h2>
                   </div>
                   <div className="server_card-body">
@@ -139,7 +157,7 @@ const ImovelComercialEditar = () => {
                           <input required value={banheiros} onMouseDown={(e) => valchange(true)} onChange={(e) => banheiroschange(e.target.value)} className="server_form-control"></input>
                         </div>
                       </div>
-                      
+
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <label className="server_label">
@@ -176,6 +194,7 @@ const ImovelComercialEditar = () => {
                         </div>
                       </div>
 
+                      {/* Botões 'Salvar' e 'Voltar' */}
                       <div className="server_col-lg-12">
                         <div className="form-group">
                           <br></br>
