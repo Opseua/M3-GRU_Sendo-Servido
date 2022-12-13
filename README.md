@@ -7,7 +7,7 @@
 
 A proposta do projeto foi criar um sistema interno onde a imobiliária tivesse acesso a: visualizar; editar; cadastrar e remover informações de um banco de dados.
 
-Essas informações ficam armazenadas diretamente no **Render**, todas elas separadas em rotas específicas que podem ser personalizadas de acordo com o gosto do nosso cliente (Dreams Imobiliária).
+Essas informações ficam armazenadas diretamente no Render, todas elas separadas em rotas específicas que podem ser personalizadas de acordo com o gosto do nosso cliente **Dreams Imobiliária**.
 
 Além do armazenamento, o sistema de gestão permite por exemplo, que a imobiliária visualize todos os seus corretores, altere o valor dos imóveis, adicione novos inquilinos e remova formas de pagamento.
 
@@ -29,58 +29,74 @@ _**Mariana:**_ Co-facilitadora
 </div>
 
 ✅ Contribuições
-- Criação da página 'Home'
+- Página 'Home'
 - Função de validação de email e senha da página 'Login'
+- Elaboração do material de apresentação
 
-<br></br>
+<br>
 
 _**Orlando:**_ Gestor de Gente
 
 <div>
-
 <a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-
 </div>
 
-<br></br>
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- CONTRIBUIÇÃO 
+
+<br>
 
 _**Gabrielly:**_ Gestora de Conhecimento
 
 <div>
-
 <a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-
 </div>
 
-<br></br>
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- CONTRIBUIÇÃO 
+
+<br>
 
 _**Brian:**_ Colaborador I
 
 <div>
-
 <a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-
 </div>
 
-<br></br>
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- CONTRIBUIÇÃO 
+
+<br>
 
 _**Lara:**_ Colaborador II
 
 <div>
-
 <a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-
 </div>
 
-<br></br>
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- CONTRIBUIÇÃO 
+
+<br>
 
 _**Yasmim:**_ Colaborador III
 
 <div>
-
 <a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-
 </div>
+
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- CONTRIBUIÇÃO 
 
 
 
