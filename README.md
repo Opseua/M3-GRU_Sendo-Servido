@@ -1,6 +1,9 @@
 # Sendo Servido
 ![NPM](https://img.shields.io/npm/l/react)
 
+
+
+
 # Sobre o projeto
 
 [Dreams Imobiliária](https://m3-gru-sendo-servido.netlify.app/ "Site da Imobiliária")
@@ -20,86 +23,7 @@ O sistema em si é composto por três páginas:
 **III - TELA DE GERENCIAMENTO:** onde os funcionários podem manipular todas as informações do banco de dados. OBS: todas as rotas acompanham os métodos GET/POST/PUT/DELETE
 
 
-# Apresentação da equipe
 
-_**Mariana:**_ Co-facilitadora 
-
-<div>
-<a href="https://www.linkedin.com/in/marianafigueiredoi/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/MarianaFigueiredoI" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- Página 'Home'
-- Carrossel de imagens
-- Validação de formulário da página 'Login'
-- Elaboração do material de apresentação
-
-<br>
-
-_**Orlando:**_ Gestor de Gente
-
-<div>
-<a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- API Json-Server
-- Páginas do 'Server' 
-- Criação das rotas
-- Elaboração do material de apresentação
-
-<br>
-
-_**Gabrielly:**_ Gestora de Conhecimento
-
-<div>
-<a href="https://www.linkedin.com/in/gabriellyfranca810/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/vlwgaby" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
-- Elaboração do material de apresentação
-
-<br>
-
-_**Brian:**_ Colaborador I
-
-<div>
-<a href="https://www.linkedin.com/in/briancerqueira/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/briancerqueira" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- Servidor Json-Server
-- Página 'Login'
-- Cards de 
-- Elaboração do material de apresentação
-
-<br>
-
-_**Lara:**_ Colaborador II
-
-<div>
-<a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/LaraSharmon" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
-- Elaboração do material de apresentação
-
-<br>
-
-_**Yasmim:**_ Colaborador III
-
-<div>
-<a href="https://www.linkedin.com/in/yasmimalves/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Yasmim75" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
-</div>
-
-✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
-- Elaboração do material de apresentação
 
 # Layout do site
 
@@ -119,6 +43,105 @@ _**Yasmim:**_ Colaborador III
 
 
 
+
+# Apresentação da equipe
+
+
+
+
+_**Mariana:**_ Co-facilitadora 
+
+<div>
+<a href="https://www.linkedin.com/in/marianafigueiredoi/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/MarianaFigueiredoI" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- Página 'Home'
+- Carrossel de imagens
+- Validação de formulário da página 'Login'
+- Elaboração do material de apresentação
+
+<br>
+
+
+
+
+_**Orlando:**_ Gestor de Gente
+
+<div>
+<a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Opseua" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- API Json-Server
+- Páginas do 'Server' 
+- Criação das rotas
+- Elaboração do material de apresentação
+
+<br>
+
+
+
+
+_**Gabrielly:**_ Gestora de Conhecimento
+
+<div>
+<a href="https://www.linkedin.com/in/gabriellyfranca810/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/vlwgaby" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- Elaboração do material de apresentação
+
+<br>
+
+
+
+
+_**Brian:**_ Colaborador I
+
+<div>
+<a href="https://www.linkedin.com/in/briancerqueira/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/briancerqueira" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- Servidor Json-Server
+- Página 'Login'
+- Cards de 
+- Elaboração do material de apresentação
+
+<br>
+
+
+
+
+_**Lara:**_ Colaborador II
+
+<div>
+<a href="https://www.linkedin.com/in/orlando-santana/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/LaraSharmon" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- Elaboração do material de apresentação
+
+<br>
+
+
+
+
+_**Yasmim:**_ Colaborador III
+
+<div>
+<a href="https://www.linkedin.com/in/yasmimalves/" target="_blank"><img src="https://camo.githubusercontent.com/839a92c15fa7396af70ffceaa77f11ca3f1ee84e76c19d6d8ab1778466a9ded9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564696e2d3332333333303f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d626c7565" target="_blank"></a><a href="https://github.com/Yasmim75" target="_blank"><img src="https://camo.githubusercontent.com/69a8eab46810b62de859aa2c16750ec4a73a027cfec48ad55419c8ad6ee62821/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6769746875622d2532333132313031312e7376673f6c6f676f3d676974687562266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" target="_blank"></a>
+</div>
+
+✅ Contribuições
+- CONTRIBUIÇÃO 
+- CONTRIBUIÇÃO
+- Elaboração do material de apresentação
 
 
 
