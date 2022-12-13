@@ -20,7 +20,7 @@ O sistema em si é composto por três páginas:
 
 **II -  TELA DE LOGIN:** para controlar o acesso ao sistema de gestão;
 
-**III - TELA DE GERENCIAMENTO:** onde os funcionários podem manipular todas as informações do banco de dados. OBS: todas as rotas acompanham os métodos GET/POST/PUT/DELETE
+**III - TELA DE GERENCIAMENTO:** onde os funcionários podem manipular todas as informações do banco de dados.
 
 
 
@@ -191,8 +191,8 @@ _**Gabrielly:**_ Gestora de Conhecimento
 </div>
 
 ✅ Contribuições
-- CONTRIBUIÇÃO 
-- CONTRIBUIÇÃO
+- NavBar 
+- Footer
 - Elaboração do material de apresentação
 
 <br>
@@ -209,7 +209,7 @@ _**Brian:**_ Colaborador I
 ✅ Contribuições
 - Servidor Json-Server
 - Página 'Login'
-- Cards de 
+- Cards de imóveis
 - Elaboração do material de apresentação
 
 <br>
