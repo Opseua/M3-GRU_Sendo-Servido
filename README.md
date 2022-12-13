@@ -30,7 +30,7 @@ _**Mariana:**_ Co-facilitadora
 
 ✅ Contribuições
 - Página 'Home'
-- Carrosel de imagens
+- Carrossel de imagens
 - Validação de formulário da página 'Login'
 - Elaboração do material de apresentação
 
