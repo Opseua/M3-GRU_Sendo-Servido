@@ -22,6 +22,7 @@ const ImoveisComerciaisListar = () => {
 
   const Removefunction = (id) => {
 
+    // Alerta de confirmação de exclusão
     swal({
       title: "Remover",
       text: "Tem certeza que deseja apagar?",
@@ -34,42 +35,51 @@ const ImoveisComerciaisListar = () => {
     }).then((value) => {
       if (!value == "") {
 
+        // Mostrar animação de carregamento das informações (círculo giratório)
         setLoading(true);
         fetch("https://server-2.onrender.com/imovel_comercial/deletar/" + id, {
           method: "DELETE",
         })
           .then((res) => {
 
+            // Alerta de informação removida com sucesso do Render
             swal("Concluído", "Removido com sucesso!", "success").then((value) => {
+
+              // Recarregar página
               if (!value == "") { window.location.reload(); } else { window.location.reload(); }
             });
 
           })
           .catch((err) => {
+            // Remover animação de carregamento das informações (círculo giratório)
             setLoading(false);
-            console.log(err.message);
+            alert(err.message);
           });
       }
     });
   }
 
   useEffect(() => {
+    // Mostrar animação de carregamento das informações (círculo giratório)
     setLoading(true);
     fetch("https://server-2.onrender.com/imoveis_comerciais/listar")
       .then((res) => {
         return res.json();
       })
       .then((resp) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
         empdatachange(resp);
       })
       .catch((err) => {
+        // Remover animação de carregamento das informações (círculo giratório)
         setLoading(false);
-        console.log(err.message);
+        alert(err.message);
       });
   }, []);
   return (
 
+    // Animação de carregamento das informações (círculo giratório)
     <div className="server_tudo">
       {loading ? (
         <ClipLoader
@@ -83,10 +93,14 @@ const ImoveisComerciaisListar = () => {
       ) : (
         <>
           <NavBar />
+
+          {/* Título da página */}
           <div className="server_container">
             <div className="server_card">
               <div className="server_card-title">
                 <br></br>
+
+                {/* Formulário */}
                 <h2 className="server_h2">Listar imóveis comerciais</h2>
               </div>
               <div className="server_card-body">
@@ -136,6 +150,7 @@ const ImoveisComerciaisListar = () => {
                           <td className="server_td">{item.endereco}</td>
                           <td className="server_td">{item.salas}</td>
 
+                          {/* Botões 'Editar', 'Remover' e 'Detalhar' */}
                           <td className="server_td">
                             <button onClick={() => { LoadEdit(item.id); }} className="server_btn server_btn-success">Editar</button>
                             &nbsp;
