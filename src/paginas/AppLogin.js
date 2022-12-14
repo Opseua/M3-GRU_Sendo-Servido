@@ -30,6 +30,9 @@ function AppLogin() {
   }
 
   return (
+    
+    // criando formulário de login
+    
     <div className="container">
       <div className="container-login">
         <div className="wrap-login">
@@ -41,16 +44,18 @@ function AppLogin() {
 
             <div className="wrap-input">
               <input
+    // insira seu email
                 className='input' id="input_email" type="email" />
               <span className="focus-input" data-placeholder="E-mail"></span>
             </div>
 
             <div className="wrap-input">
               <input
+    // insira sua senha
                 className='input' id="input_senha" type="password" />
               <span className="focus-input" data-placeholder="Senha"></span>
             </div>
-
+    // botão login
             <div className="container-login-form-btn">
               <button className="login-form-btn" type='button' onClick={validate}>Login</button>
             </div>
